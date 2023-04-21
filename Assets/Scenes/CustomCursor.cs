@@ -19,10 +19,12 @@ public class CustomCursor : MonoBehaviour
     
     public void BuildMode(){
         Cursor.SetCursor(building, Vector2.zero, CursorMode.Auto);
+        GameManager.Instance.buildMode = true;
     }
 
     public void Reset() {
             Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
+            GameManager.Instance.buildMode = false;
         }
 
 }

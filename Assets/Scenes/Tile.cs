@@ -12,6 +12,8 @@ public class Tile : MonoBehaviour
 
     private SpriteRenderer rend;
 
+    private bool mouseEntered = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -26,17 +28,32 @@ public class Tile : MonoBehaviour
         }else{
             rend.color = greenColor;
         }
-        
-    }
-
-    void OnMouseEnter(){
-        if(Input.GetMouseButtonDown(0) && !isOccupied ){
+        if(mouseEntered){
+            if(Input.GetMouseButtonDown(0) && !isOccupied && GameManager.Instance.gold >= 1 && GameManager.Instance.buildMode){
                 //buildingToPlace = null;
                 isOccupied = true;
                 GameManager.Instance.customCursor.Reset();
-                GameManager.Instance.gold -= GameManager.Instance.buildingCost;
+                GameManager.Instance.gold -= GameManager.Instance.gfHouseCost;
                 //GameManager.buildingToPlace = building;
-                gameObject.GetComponent<SpriteRenderer>().sprite = GameManager.Instance.buildingSprite;
+                gameObject.GetComponent<SpriteRenderer>().sprite = GameManager.Instance.gfHouseSprite;
+                //GameManager.Instance.gold
+                GameManager.Instance.houseCount += 1;
+                //somehow turn the tile into a house
+                //foreach(tile t in array name)
+                // t.setactive(false)
+                //tileT = A[i].pop   s.appened[t]
+                GameManager.Instance.grid.SetActive(false);
             }
+        }
     }
+
+    public void OnMouseEnter(){
+        mouseEntered = true;
+    }
+
+    public void OnMouseExit() {
+        mouseEntered = false;
+    }
+
+
 }
