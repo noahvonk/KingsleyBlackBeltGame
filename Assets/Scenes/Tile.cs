@@ -10,9 +10,13 @@ public class Tile : MonoBehaviour
     public Color greenColor;
     public Color redColor;
 
+    public Building attachedBuilding;
+
     private SpriteRenderer rend;
 
     private bool mouseEntered = false;
+
+    public int indexNumber;
 
     // Start is called before the first frame update
     void Start()
@@ -34,7 +38,6 @@ public class Tile : MonoBehaviour
                 isOccupied = true;
                 GameManager.Instance.customCursor.Reset();
                 GameManager.Instance.gold -= GameManager.Instance.gfHouseCost;
-                //GameManager.buildingToPlace = building;
                 gameObject.GetComponent<SpriteRenderer>().sprite = GameManager.Instance.gfHouseSprite;
                 //GameManager.Instance.gold
                 GameManager.Instance.houseCount += 1;
@@ -42,7 +45,8 @@ public class Tile : MonoBehaviour
                 //foreach(tile t in array name)
                 // t.setactive(false)
                 //tileT = A[i].pop   s.appened[t]
-                GameManager.Instance.grid.SetActive(false);
+                GameManager.Instance.TileSwitcher(indexNumber);
+                GameManager.Instance.HideTiles();
             }
         }
     }

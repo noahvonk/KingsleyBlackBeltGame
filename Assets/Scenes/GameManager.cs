@@ -19,7 +19,8 @@ public class GameManager : MonoBehaviour
     public CustomCursor customCursor;
 
     public Tile[] tiles;
-    public Building[] building;
+    public Tile[] building;
+    private int bIndex = 0;
     public int gfHouseCost = 25;
 
     public Texture2D gfHouseImage;
@@ -29,7 +30,6 @@ public class GameManager : MonoBehaviour
     public int houseEarnings = 10;
 
     public bool buildMode = false;
-    //public  TileIndex;
     // Start is called before the first frame update
     void Awake()
     {
@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         StartCoroutine(GoldTimer());
+        building = new Tile[tiles.Length];
     }
 
     // Update is called once per frame
@@ -47,9 +48,34 @@ public class GameManager : MonoBehaviour
         
     }
 
+    public void TileSwitcher(int index)
+    {
+        building[bIndex] = tiles[index];
+        tiles[index] = null;
+        bIndex++;
+    }
+
+    public void HideTiles()
+    {
+        foreach(Tile t in tiles){
+            if(t != null){
+                t.gameObject.SetActive(false);
+            }
+        }
+    }
+
+    public void ShowTiles()
+    {
+        foreach(Tile t in tiles){
+            if(t != null){
+                t.gameObject.SetActive(true);
+            }
+        }
+    }
+
     public void BuyBuilding()
     {
-            grid.SetActive(true);
+            ShowTiles();
             customCursor.BuildMode();
     }
 
