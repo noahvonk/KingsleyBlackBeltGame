@@ -18,10 +18,13 @@ public class Tile : MonoBehaviour
 
     public int indexNumber;
 
+    GameManager GameManag;
+
     // Start is called before the first frame update
     void Start()
     {
         rend = GetComponent<SpriteRenderer>();
+        GameManag = GameManager.Instance;
     }
 
     // Update is called once per frame
@@ -33,20 +36,20 @@ public class Tile : MonoBehaviour
             rend.color = greenColor;
         }
         if(mouseEntered){
-            if(Input.GetMouseButtonDown(0) && !isOccupied && GameManager.Instance.gold >= 1 && GameManager.Instance.buildMode){
+            if(Input.GetMouseButtonDown(0) && !isOccupied && GameManag.gold >= 1 && GameManag.buildMode){
                 //buildingToPlace = null;
                 isOccupied = true;
-                GameManager.Instance.customCursor.Reset();
-                GameManager.Instance.gold -= GameManager.Instance.gfHouseCost;
-                gameObject.GetComponent<SpriteRenderer>().sprite = GameManager.Instance.gfHouseSprite;
+                GameManag.customCursor.Reset();
+                GameManag.gold -= GameManag.houseTypes[GameManag.GetCurHouseIndex()].cost;
+                gameObject.GetComponent<SpriteRenderer>().sprite = GameManag.houseTypes[GameManag.GetCurHouseIndex()].sprite;
                 //GameManager.Instance.gold
-                GameManager.Instance.houseCount += 1;
+                GameManag.houseCount += 1;
                 //somehow turn the tile into a house
                 //foreach(tile t in array name)
                 // t.setactive(false)
                 //tileT = A[i].pop   s.appened[t]
-                GameManager.Instance.TileSwitcher(indexNumber);
-                GameManager.Instance.HideTiles();
+                GameManag.TileSwitcher(indexNumber);
+                GameManag.HideTiles();
             }
         }
     }

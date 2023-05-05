@@ -22,14 +22,18 @@ public class GameManager : MonoBehaviour
     public Tile[] building;
     private int bIndex = 0;
     public int gfHouseCost = 25;
+    public int trHouseCost = 25;
 
-    public Texture2D gfHouseImage;
-    public Sprite gfHouseSprite;
+    public Building[] houseTypes;
 
     public int houseCount = 0;
     public int houseEarnings = 10;
 
     public bool buildMode = false;
+
+    public enum btype {TRHOUSE, GFHOUSE}
+
+    public btype curHouse = btype.TRHOUSE;
     // Start is called before the first frame update
     void Awake()
     {
@@ -73,10 +77,38 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void BuyBuilding()
+    public void BuyBuilding(int b)
     {
+            ChangeCurHouse(b);
             ShowTiles();
-            customCursor.BuildMode();
+            customCursor.BuildMode(b);
+    }
+
+    public void ChangeCurHouse(int num)
+    {
+        switch (num)
+        {
+            case 0:
+                curHouse = btype.TRHOUSE;
+                return;
+            case 1:
+                curHouse = btype.GFHOUSE;
+                return;
+            default:
+                return;
+        }
+    }
+
+    public int GetCurHouseIndex(){
+        switch (curHouse)
+        {
+            case btype.TRHOUSE:
+                return 0;
+            case btype.GFHOUSE:
+                return 1;
+            default:
+                return 0;
+        }
     }
 
     IEnumerator GoldTimer()

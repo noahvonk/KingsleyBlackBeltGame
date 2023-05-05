@@ -17,8 +17,8 @@ public class CustomCursor : MonoBehaviour
         
     }
     
-    public void BuildMode(){
-        Cursor.SetCursor(building, Vector2.zero, CursorMode.Auto);
+    public void BuildMode(int b){
+        Cursor.SetCursor(GameManager.Instance.houseTypes[GameManager.Instance.GetCurHouseIndex()].image, Vector2.zero, CursorMode.Auto);
         GameManager.Instance.buildMode = true;
     }
 
