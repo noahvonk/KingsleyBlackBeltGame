@@ -11,16 +11,19 @@ public class Enemy : MonoBehaviour
 
     public int speed;
 
-    //public int goldDrops;
+    public int goldDrops;
 
     //public int drops;
 
+    public GameObject target;
 
+    public Troops[] nearestTroop;
+    //make the enemy recognize the nearest box collider 2d and target it
 
 
     public void TakeDamage()
     {
-
+            
     }
 
     public void DoDamage()
@@ -68,6 +71,6 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+           //move the enemy to the target
     }
 }

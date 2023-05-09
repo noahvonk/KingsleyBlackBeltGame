@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DarkKnight : Enemy
+public class Warrior : Troops
 {
     // Start is called before the first frame update
     void Start()
@@ -10,8 +10,6 @@ public class DarkKnight : Enemy
         health = 1000;
         damage = 1000;
         speed = 1;
-        goldDrops = 100;
-
     }
 
     // Update is called once per frame

@@ -21,8 +21,8 @@ public class GameManager : MonoBehaviour
     public Tile[] tiles;
     public Tile[] building;
     private int bIndex = 0;
-    public int gfHouseCost = 25;
-    public int trHouseCost = 25;
+    //public int gfHouseCost = 25;
+    //public int trHouseCost = 25;
 
     public Building[] houseTypes;
 
@@ -34,6 +34,11 @@ public class GameManager : MonoBehaviour
     public enum btype {TRHOUSE, GFHOUSE}
 
     public btype curHouse = btype.TRHOUSE;
+
+    public int maxTroops;
+    //Each troops takes an amount of space( ex. tank = 5tSpace) there is a max cap on how much space you can use and everytime you buy a tHouse, you will gain +5 tSpace
+
+
     // Start is called before the first frame update
     void Awake()
     {
