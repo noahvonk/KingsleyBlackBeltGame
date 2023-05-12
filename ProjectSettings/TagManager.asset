@@ -7,6 +7,7 @@ TagManager:
   - GoldFarms
   - Grid
   - TroopHouse
+  - Wallas
   layers:
   - Default
   - TransparentFX

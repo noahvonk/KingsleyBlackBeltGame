@@ -7,16 +7,11 @@ public class DarkKnight : Enemy
     // Start is called before the first frame update
     void Start()
     {
-        health = 1000;
-        damage = 1000;
-        speed = 1;
+        health = 100;
+        damage = 15;
+        speed = 13;
         goldDrops = 100;
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

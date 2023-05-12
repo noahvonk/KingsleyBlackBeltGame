@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class WallHealth : MonoBehaviour
 {
-
-    public int WallHP;
-    public Text WHPDisplay;
+    public int wallHP;
+    public int maxHp;
+    public Image health;
     // Start is called before the first frame update
     void Start()
     {
-        WHPDisplay.text = WallHP.ToString();
+        wallHP = maxHp;
     }
 
     // Update is called once per frame
@@ -19,4 +19,24 @@ public class WallHealth : MonoBehaviour
     {
         
     }
+
+    public void TakeDamage(int d)
+    {
+        if(wallHP - d < 0)
+        {
+            wallHP = 0;
+            WallDie();
+        } else {
+            wallHP -= d;
+        }
+        health.fillAmount = (float) wallHP/maxHp;
+        Debug.Log(health.fillAmount);
+    }
+
+    void WallDie()
+    {
+        Destroy(this.gameObject);
+    }   
+
+    
 }
