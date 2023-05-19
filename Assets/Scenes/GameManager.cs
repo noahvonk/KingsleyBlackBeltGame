@@ -38,6 +38,7 @@ public class GameManager : MonoBehaviour
     public int maxTroops;
     //Each troops takes an amount of space( ex. tank = 5tSpace) there is a max cap on how much space you can use and everytime you buy a tHouse, you will gain +5 tSpace
 
+    public List<GameObject> targets;
 
     // Start is called before the first frame update
     void Awake()

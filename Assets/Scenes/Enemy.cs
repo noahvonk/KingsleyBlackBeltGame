@@ -23,14 +23,19 @@ public class Enemy : MonoBehaviour
 
     //public int drops;
 
-    public GameObject target;
+ 
 
     public Troops[] nearestTroop;
+    
     //make the enemy recognize the nearest box collider 2d and target it
 
     public void MoveToTarget()
     {
-        transform.position = Vector3.MoveTowards(transform.position, target.transform.position, Time.deltaTime * speed);
+        if(curTarget != null)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, curTarget.transform.position, Time.deltaTime * speed);   
+        }
+        
     }
 
     public void TakeDamage()
@@ -101,16 +106,30 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     public virtual void Update()
     {
-        if(canAttack)
+        if (canAttack)
         {
-            MoveToTarget();  
+            MoveToTarget();
         }
 
-        if(isAttacking && canAttack){
+        if (isAttacking && canAttack)
+        {
             DoDamage();
         }
-        
-        //Debug.Log(gameObject.name + " is moving");
+        if (curTarget == null)
+        {
+            foreach (GameObject t in GameManager.Instance.targets)
+            {
+                if (curTarget == null)
+                {
+                    curTarget = t;
+                }
+                else if (Vector3.Distance(t.transform.position, transform.position) < Vector3.Distance(curTarget.transform.position, transform.position))
+                {
+                    curTarget = t;
+                }
+            }
+            //Debug.Log(gameObject.name + " is moving");
+        }
     }
 
     public IEnumerator WaitOnAttack(){
