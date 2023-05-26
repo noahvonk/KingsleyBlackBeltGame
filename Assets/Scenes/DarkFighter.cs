@@ -2,16 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DarkKnight : Enemy
+public class DarkFighter : Enemy
 {
     // Start is called before the first frame update
     void Start()
     {
         health = 100;
-        damage = 25;
-        speed = 13;
+        damage = 10;
+        speed = 20;
         goldDrops = 100;
-
     }
-
 }

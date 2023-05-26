@@ -7,8 +7,8 @@ public class MaceHandler : Enemy
     // Start is called before the first frame update
     void Start()
     {
-        health = 75;
-        damage = 50;
+        health = 150;
+        damage = 100;
         speed = 5;
         goldDrops = 100;
     }

@@ -35,7 +35,7 @@ public class WallHealth : MonoBehaviour
         }
         //health.SetActive(true);
         health.fillAmount = (float) wallHP/maxHp;
-        Debug.Log(health.fillAmount);
+        //Debug.Log(health.fillAmount);
     }
 
     public int GetIndex()
