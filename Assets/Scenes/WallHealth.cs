@@ -40,7 +40,11 @@ public class WallHealth : MonoBehaviour
 
     public int GetIndex()
     {
-        string wallName = target.name;
+        if(target == null)
+        {
+            Destroy(this.gameObject);
+        }
+        string wallName = target.gameObject.name;
 
         string[] splits = wallName.Split("_");
         Debug.Log(splits[1]);

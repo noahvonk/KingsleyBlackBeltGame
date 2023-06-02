@@ -19,7 +19,8 @@ public class Enemy : MonoBehaviour
 
     public bool isAttacking = false;
 
-    private GameObject curTarget;
+    [SerializeField]
+    private Target curTarget;
 
     //public int drops;
 
@@ -45,7 +46,7 @@ public class Enemy : MonoBehaviour
 
     public void DoDamage()
     {
-        curTarget.GetComponent<WallHealth>().TakeDamage(damage);
+        curTarget.transform.parent.GetComponent<WallHealth>().TakeDamage(damage);
         canAttack = false;
         StartCoroutine(WaitOnAttack());
     }
@@ -64,7 +65,7 @@ public class Enemy : MonoBehaviour
     {
         if(c.gameObject.CompareTag("Wallas") && canAttack)
         {
-            curTarget = c.gameObject;
+            curTarget = c.gameObject.GetComponentInChildren<Target>();
             isAttacking = true;
         }
     }
@@ -117,13 +118,13 @@ public class Enemy : MonoBehaviour
         }
         if (curTarget == null)
         {
-            foreach (GameObject t in GameManager.Instance.targets)
+            foreach (Target t in GameManager.Instance.targets)
             {
                 if (curTarget == null)
                 {
                     curTarget = t;
                 }
-                else if (Vector3.Distance(t.transform.position, transform.position) < Vector3.Distance(curTarget.transform.position, transform.position))
+                else if (Vector3.Distance(t.gameObject.transform.position, transform.position) < Vector3.Distance(curTarget.transform.position, transform.position))
                 {
                     curTarget = t;
                 }
