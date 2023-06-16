@@ -24,8 +24,6 @@ public class Enemy : MonoBehaviour
 
     //public int drops;
 
- 
-
     public Troops[] nearestTroop;
     
     //make the enemy recognize the nearest box collider 2d and target it
@@ -107,30 +105,34 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     public virtual void Update()
     {
-        if (canAttack)
+        if (!GameManager.Instance.wallsDead)
         {
-            MoveToTarget();
+            if (canAttack)
+            {
+                MoveToTarget();
+            }
+
+            if (isAttacking && canAttack)
+            {
+                DoDamage();
+            }
+            if (curTarget == null)
+            {
+                foreach (Target t in GameManager.Instance.targets)
+                {
+                    if (curTarget == null)
+                    {
+                        curTarget = t;
+                    }
+                    else if (Vector3.Distance(t.gameObject.transform.position, transform.position) < Vector3.Distance(curTarget.transform.position, transform.position))
+                    {
+                        curTarget = t;
+                    }
+                }
+                //Debug.Log(gameObject.name + " is moving");
+            }
         }
 
-        if (isAttacking && canAttack)
-        {
-            DoDamage();
-        }
-        if (curTarget == null)
-        {
-            foreach (Target t in GameManager.Instance.targets)
-            {
-                if (curTarget == null)
-                {
-                    curTarget = t;
-                }
-                else if (Vector3.Distance(t.gameObject.transform.position, transform.position) < Vector3.Distance(curTarget.transform.position, transform.position))
-                {
-                    curTarget = t;
-                }
-            }
-            //Debug.Log(gameObject.name + " is moving");
-        }
     }
 
     public IEnumerator WaitOnAttack(){

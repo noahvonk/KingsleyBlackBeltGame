@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4226234707199404}
   - component: {fileID: 212708369109147342}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Glove R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4556435224747498}
   - component: {fileID: 212923982801000528}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4126793133941652}
   - component: {fileID: 212415920039284270}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4447608726378472}
   - component: {fileID: 212727417641886404}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hand R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -346,7 +346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4915344483400820}
   - component: {fileID: 212607572681708866}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Epaulette L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -430,7 +430,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4933822569854062}
   - component: {fileID: 212174652921494568}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Cask
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -514,7 +514,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4108891953147426}
   - component: {fileID: 212611564523744616}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Foot R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -598,7 +598,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4244048478344200}
   - component: {fileID: 212413425735107338}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Hair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -682,7 +682,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4295196135027996}
   - component: {fileID: 212644428110013374}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Epaulette R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -768,9 +768,9 @@ GameObject:
   - component: {fileID: 31752635}
   - component: {fileID: 31752634}
   - component: {fileID: 31752633}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Chara_05
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -805,7 +805,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!65 &31752634
 BoxCollider:
@@ -851,7 +851,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4429335719086364}
   - component: {fileID: 212889941147904024}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Glove L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -935,7 +935,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4583400370293780}
   - component: {fileID: 212387289890564988}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Foot L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1018,7 +1018,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7226357319062231243}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}

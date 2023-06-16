@@ -36,6 +36,8 @@ public class GameManager : MonoBehaviour
     public btype curHouse = btype.TRHOUSE;
 
     public int maxTroops;
+
+    public bool wallsDead = false;
     //Each troops takes an amount of space( ex. tank = 5tSpace) there is a max cap on how much space you can use and everytime you buy a tHouse, you will gain +5 tSpace
 
     public List<Target> targets;
@@ -55,7 +57,10 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         GoldText.text = gold.ToString();
-        
+        if(targets.Count == 0)
+        {
+            wallsDead = true;
+        }
     }
 
     public void TileSwitcher(int index)
