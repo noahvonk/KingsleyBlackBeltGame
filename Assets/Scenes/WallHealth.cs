@@ -10,6 +10,7 @@ public class WallHealth : MonoBehaviour
     public Image health;
     private GameObject target;
     private bool dead = false;
+    public GameObject hpDisplay;
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +44,7 @@ public class WallHealth : MonoBehaviour
         if(target == null)
         {
             Destroy(this.gameObject);
+            Destroy(hpDisplay);
         }
         string wallName = target.gameObject.name;
 

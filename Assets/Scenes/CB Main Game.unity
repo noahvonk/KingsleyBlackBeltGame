@@ -515,6 +515,7 @@ MonoBehaviour:
   wallHP: 1000
   maxHp: 1000
   health: {fileID: 1274780980}
+  hpDisplay: {fileID: 1352751042}
 --- !u!65 &180719497
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -870,6 +871,7 @@ MonoBehaviour:
   wallHP: 1000
   maxHp: 1000
   health: {fileID: 422102026}
+  hpDisplay: {fileID: 1478519419}
 --- !u!65 &312717224
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1473,7 +1475,7 @@ MonoBehaviour:
     rate: 1
   - name: (Wave 3)
     enemy: {fileID: 1652796270759994, guid: ed3c152aba85638429bf8b50e4c24c64, type: 3}
-    count: 1
+    count: 2
     rate: 1
   spawnPoints:
   - {fileID: 721756325}
@@ -2645,6 +2647,7 @@ MonoBehaviour:
   wallHP: 1000
   maxHp: 1000
   health: {fileID: 458392695}
+  hpDisplay: {fileID: 1185379544}
 --- !u!65 &969458087
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3083,6 +3086,10 @@ PrefabInstance:
     - target: {fileID: 4857035578341831092, guid: c4cc66cd55b47462cb692a4d92bbe2de, type: 3}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4945954337656336767, guid: c4cc66cd55b47462cb692a4d92bbe2de, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4978918294568003010, guid: c4cc66cd55b47462cb692a4d92bbe2de, type: 3}
       propertyPath: m_Layer
@@ -3876,6 +3883,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c4cc66cd55b47462cb692a4d92bbe2de, type: 3}
+--- !u!1 &1185379544 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8077418077056613737, guid: c4cc66cd55b47462cb692a4d92bbe2de, type: 3}
+  m_PrefabInstance: {fileID: 1172009215}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1274780980 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7309816578358828766, guid: c4cc66cd55b47462cb692a4d92bbe2de, type: 3}
@@ -4003,6 +4015,11 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.2, y: 1.2, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1352751042 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8077418077056613737, guid: c4cc66cd55b47462cb692a4d92bbe2de, type: 3}
+  m_PrefabInstance: {fileID: 743361313}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1364805713
 GameObject:
   m_ObjectHideFlags: 0
@@ -4457,6 +4474,11 @@ MonoBehaviour:
   - {fileID: 1961667340}
   - {fileID: 905100137}
   - {fileID: 256271529}
+--- !u!1 &1478519419 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8077418077056613737, guid: c4cc66cd55b47462cb692a4d92bbe2de, type: 3}
+  m_PrefabInstance: {fileID: 1521976876}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1490567911
 GameObject:
   m_ObjectHideFlags: 0
@@ -5097,6 +5119,11 @@ Transform:
   m_Father: {fileID: 2065877117}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1559376754 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8077418077056613737, guid: c4cc66cd55b47462cb692a4d92bbe2de, type: 3}
+  m_PrefabInstance: {fileID: 1114565350}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1653728971
 GameObject:
   m_ObjectHideFlags: 0
@@ -5134,7 +5161,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -405, y: 100}
+  m_AnchoredPosition: {x: -428, y: 100}
   m_SizeDelta: {x: 65, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1653728973
@@ -5961,6 +5988,7 @@ MonoBehaviour:
   wallHP: 1000
   maxHp: 1000
   health: {fileID: 62803093}
+  hpDisplay: {fileID: 1559376754}
 --- !u!65 &1862553585
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6012,7 +6040,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -405, y: 176}
+  m_AnchoredPosition: {x: -428, y: 176}
   m_SizeDelta: {x: 65, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1891469993

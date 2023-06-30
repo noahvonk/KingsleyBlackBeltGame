@@ -1,9 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
+    public int EHP;
+
+    public int maxEHp;
+
+    public Image HealthBar;
 
     public int health;
 
@@ -24,9 +30,14 @@ public class Enemy : MonoBehaviour
 
     //public int drops;
 
+    [SerializeField]
     public Troops[] nearestTroop;
-    
+
     //make the enemy recognize the nearest box collider 2d and target it
+    void Start()
+    {
+        EHP = maxEHp;
+    }
 
     public void MoveToTarget()
     {
@@ -39,7 +50,7 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage()
     {
-        
+        HealthBar.fillAmount = (float)EHP / maxEHp;
     }
 
     public void DoDamage()
@@ -48,16 +59,7 @@ public class Enemy : MonoBehaviour
         canAttack = false;
         StartCoroutine(WaitOnAttack());
     }
-    
-    public void TargetNextTarget()
-    {
-
-    }
-
-    public void Movement()
-    {
-
-    }
+   
 
     public void OnCollisionEnter(Collision c)
     {
@@ -70,7 +72,7 @@ public class Enemy : MonoBehaviour
 
     public void OnCollisionExit(Collision c)
     {
-        if(c.gameObject.CompareTag("Wallas") && canAttack)
+        if (c.gameObject.CompareTag("Wallas") && canAttack)
             {
                 curTarget = null;
                 isAttacking = false;
@@ -96,11 +98,6 @@ public class Enemy : MonoBehaviour
 
     
     // Start is called before the first frame update
-
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     public virtual void Update()
