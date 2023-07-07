@@ -4474,6 +4474,7 @@ MonoBehaviour:
   - {fileID: 1961667340}
   - {fileID: 905100137}
   - {fileID: 256271529}
+  enemies: []
 --- !u!1 &1478519419 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8077418077056613737, guid: c4cc66cd55b47462cb692a4d92bbe2de, type: 3}

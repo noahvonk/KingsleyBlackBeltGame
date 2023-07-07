@@ -3,69 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Enemy : MonoBehaviour
+public class Enemy : HumanoidAI
 {
-    public int EHP;
+    public Target curWall;
 
-    public int maxEHp;
-
-    public Image HealthBar;
-
-    public int health;
-
-    public int damage;
-
-    public int speed;
-
-    public int goldDrops;
-
-    public int waitTime;
-
-    public bool canAttack = true;
-
-    public bool isAttacking = false;
-
-    [SerializeField]
-    private Target curTarget;
-
-    //public int drops;
-
-    [SerializeField]
-    public Troops[] nearestTroop;
-
-    //make the enemy recognize the nearest box collider 2d and target it
     void Start()
     {
-        EHP = maxEHp;
+        health = maxHealth;
+        GameManager.Instance.enemies.Add(gameObject);
     }
 
-    public void MoveToTarget()
+    public override void TakeDamage(int Tdamage)
     {
-        if(curTarget != null)
+        health -= Tdamage;
+        if (health <= 0)
         {
-            transform.position = Vector3.MoveTowards(transform.position, curTarget.transform.position, Time.deltaTime * speed);   
+            HealthBar.fillAmount = 0;
+            GameManager.Instance.enemies.Remove(gameObject);
+            Destroy(gameObject);
         }
-        
+        else
+        {
+            HealthBar.fillAmount = (float)health / maxHealth;
+        }
     }
-
-    public void TakeDamage()
-    {
-        HealthBar.fillAmount = (float)EHP / maxEHp;
-    }
-
-    public void DoDamage()
-    {
-        curTarget.transform.parent.GetComponent<WallHealth>().TakeDamage(damage);
-        canAttack = false;
-        StartCoroutine(WaitOnAttack());
-    }
-   
 
     public void OnCollisionEnter(Collision c)
     {
-        if(c.gameObject.CompareTag("Wallas") && canAttack)
+        if (c.gameObject.CompareTag("Wallas") && canAttack)
         {
-            curTarget = c.gameObject.GetComponentInChildren<Target>();
+            curWall = c.gameObject.GetComponentInChildren<Target>();
             isAttacking = true;
         }
     }
@@ -73,57 +40,38 @@ public class Enemy : MonoBehaviour
     public void OnCollisionExit(Collision c)
     {
         if (c.gameObject.CompareTag("Wallas") && canAttack)
-            {
-                curTarget = null;
-                isAttacking = false;
-            }
+        {
+            curWall = null;
+            isAttacking = false;
+        }
     }
 
-    public void Healing()
+    public void Update()
     {
-
-    }
-
-    //public void Drops()
-    
-
-    
-
-    //public void GoldDrops()
-
-
-
-    //public void VoiceLine()
-    
-
-    
-    // Start is called before the first frame update
-
-    // Update is called once per frame
-    public virtual void Update()
-    {
+        Debug.Log("Update running");
         if (!GameManager.Instance.wallsDead)
         {
-            if (canAttack)
+            if (canAttack && curWall != null)
             {
-                MoveToTarget();
+                MoveToTarget(curWall);
             }
 
             if (isAttacking && canAttack)
             {
                 DoDamage();
             }
-            if (curTarget == null)
+            if (curWall == null)
             {
                 foreach (Target t in GameManager.Instance.targets)
                 {
-                    if (curTarget == null)
+                    Debug.Log("Checking targets");
+                    if (curWall == null)
                     {
-                        curTarget = t;
+                        curWall = t;
                     }
-                    else if (Vector3.Distance(t.gameObject.transform.position, transform.position) < Vector3.Distance(curTarget.transform.position, transform.position))
+                    else if (Vector3.Distance(t.gameObject.transform.position, transform.position) < Vector3.Distance(curWall.transform.position, transform.position))
                     {
-                        curTarget = t;
+                        curWall = t;
                     }
                 }
                 //Debug.Log(gameObject.name + " is moving");
@@ -131,10 +79,10 @@ public class Enemy : MonoBehaviour
         }
 
     }
-
-    public IEnumerator WaitOnAttack(){
-        yield return new WaitForSeconds(waitTime);
-        canAttack = true;
+    public override void DoDamage()
+    {
+        curWall.transform.parent.GetComponent<WallHealth>().TakeDamage(damage);
+        canAttack = false;
+        StartCoroutine(WaitOnAttack());
     }
-
 }
