@@ -515,6 +515,7 @@ MonoBehaviour:
   wallHP: 1000
   maxHp: 1000
   health: {fileID: 1274780980}
+  target: {fileID: 256271527}
   hpDisplay: {fileID: 1352751042}
 --- !u!65 &180719497
 BoxCollider:
@@ -871,6 +872,7 @@ MonoBehaviour:
   wallHP: 1000
   maxHp: 1000
   health: {fileID: 422102026}
+  target: {fileID: 1961667338}
   hpDisplay: {fileID: 1478519419}
 --- !u!65 &312717224
 BoxCollider:
@@ -2026,7 +2028,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7460961242562989102, guid: c4cc66cd55b47462cb692a4d92bbe2de, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.6
+      value: 2.89
       objectReference: {fileID: 0}
     - target: {fileID: 7690771692706130012, guid: c4cc66cd55b47462cb692a4d92bbe2de, type: 3}
       propertyPath: m_Layer
@@ -2647,6 +2649,7 @@ MonoBehaviour:
   wallHP: 1000
   maxHp: 1000
   health: {fileID: 458392695}
+  target: {fileID: 905100135}
   hpDisplay: {fileID: 1185379544}
 --- !u!65 &969458087
 BoxCollider:
@@ -3241,11 +3244,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7460961242562989102, guid: c4cc66cd55b47462cb692a4d92bbe2de, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7460961242562989102, guid: c4cc66cd55b47462cb692a4d92bbe2de, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.97
+      value: 1.93
       objectReference: {fileID: 0}
     - target: {fileID: 7690771692706130012, guid: c4cc66cd55b47462cb692a4d92bbe2de, type: 3}
       propertyPath: m_Layer
@@ -3795,11 +3798,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7460961242562989102, guid: c4cc66cd55b47462cb692a4d92bbe2de, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7460961242562989102, guid: c4cc66cd55b47462cb692a4d92bbe2de, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -3.93
+      value: -7.77
       objectReference: {fileID: 0}
     - target: {fileID: 7690771692706130012, guid: c4cc66cd55b47462cb692a4d92bbe2de, type: 3}
       propertyPath: m_Layer
@@ -4853,7 +4856,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7460961242562989102, guid: c4cc66cd55b47462cb692a4d92bbe2de, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.54
+      value: 2.46
       objectReference: {fileID: 0}
     - target: {fileID: 7690771692706130012, guid: c4cc66cd55b47462cb692a4d92bbe2de, type: 3}
       propertyPath: m_Layer
@@ -5989,6 +5992,7 @@ MonoBehaviour:
   wallHP: 1000
   maxHp: 1000
   health: {fileID: 62803093}
+  target: {fileID: 1029146970}
   hpDisplay: {fileID: 1559376754}
 --- !u!65 &1862553585
 BoxCollider:
