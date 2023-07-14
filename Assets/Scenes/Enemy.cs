@@ -9,6 +9,7 @@ public class Enemy : HumanoidAI
     public Rigidbody rb;
     public bool inPosition;
 
+    private bool inPosition = false;
     void Start()
     {
         health = maxHealth;
@@ -52,7 +53,7 @@ public class Enemy : HumanoidAI
 
     public void Update()
     {
-        Debug.Log("Update running");
+        //Debug.Log("Update running");
         if (!GameManager.Instance.wallsDead)
         {
             if (Vector3.Distance(transform.position, curWall.transform.position) > 5)
@@ -61,10 +62,12 @@ public class Enemy : HumanoidAI
                 MoveToTarget(curWall);
             }
 
-            if (isAttacking && canAttack)
+            inPosition = curWall != null && Vector3.Distance(curWall.transform.position, transform.position) < 5;
+
+            if (isAttacking && canAttack && inPosition)
             {
                 DoDamage();
-                rb.velocity = Vector3.zero;
+                GetComponent<Rigidbody>().velocity = Vector3.zero;
             }
             if (curWall == null)
             {
@@ -75,7 +78,7 @@ public class Enemy : HumanoidAI
                     {
                         curWall = t;
                     }
-                    else if (Vector3.Distance(t.gameObject.transform.position, transform.position) < Vector3.Distance(curWall.transform.position, transform.position))
+                    else if (t != null && Vector3.Distance(t.gameObject.transform.position, transform.position) < Vector3.Distance(curWall.transform.position, transform.position))
                     {
                         curWall = t;
                     }
