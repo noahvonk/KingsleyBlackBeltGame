@@ -19,10 +19,6 @@ public class WallHealth : MonoBehaviour
     void Start()
     {
         wallHP = maxHp;
-
-        //[Serializable]
-        //target = GameObject.FindWithTag("Target");
-
     }
 
     // Update is called once per frame
@@ -63,7 +59,8 @@ public class WallHealth : MonoBehaviour
 
     void WallDie()
     {
-        GameManager.Instance.targets.RemoveAt(GetIndex());
+        Debug.Log("Wall Dead\n Target: " + target.name + "\nWall: " + name);
+        GameManager.Instance.targets.Remove(target.GetComponent<Target>());
         Destroy(this.gameObject);
     }   
 
