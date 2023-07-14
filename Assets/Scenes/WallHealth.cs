@@ -8,14 +8,21 @@ public class WallHealth : MonoBehaviour
     public int wallHP;
     public int maxHp;
     public Image health;
+
+    [SerializeField]
     private GameObject target;
+
     private bool dead = false;
     public GameObject hpDisplay;
+    
     // Start is called before the first frame update
     void Start()
     {
         wallHP = maxHp;
-        target = GameObject.FindWithTag("Target");
+
+        //[Serializable]
+        //target = GameObject.FindWithTag("Target");
+
     }
 
     // Update is called once per frame

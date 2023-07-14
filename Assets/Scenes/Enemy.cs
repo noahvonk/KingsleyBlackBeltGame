@@ -6,11 +6,15 @@ using UnityEngine.UI;
 public class Enemy : HumanoidAI
 {
     public Target curWall;
+    public Rigidbody rb;
+    public bool inPosition;
 
     void Start()
     {
         health = maxHealth;
         GameManager.Instance.enemies.Add(gameObject);
+        var rb = GetComponent<Rigidbody>();
+        GameManager.Instance.enemyList.Add(this);
     }
 
     public override void TakeDamage(int Tdamage)
@@ -51,6 +55,7 @@ public class Enemy : HumanoidAI
         Debug.Log("Update running");
         if (!GameManager.Instance.wallsDead)
         {
+            if (Vector3.Distance(transform.position, curWall.transform.position) > 5)
             if (canAttack && curWall != null)
             {
                 MoveToTarget(curWall);
@@ -59,6 +64,7 @@ public class Enemy : HumanoidAI
             if (isAttacking && canAttack)
             {
                 DoDamage();
+                rb.velocity = Vector3.zero;
             }
             if (curWall == null)
             {
