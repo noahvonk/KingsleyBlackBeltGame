@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class GameManager : MonoBehaviour
@@ -42,9 +43,7 @@ public class GameManager : MonoBehaviour
 
     public List<Target> targets;
 
-    public List<GameObject> enemies;
-
-    public List<Enemy> enemyList = new();
+    public List<GameObject> enemies = new();
 
     // Start is called before the first frame update
     void Awake()
@@ -64,6 +63,7 @@ public class GameManager : MonoBehaviour
         if(targets.Count == 0)
         {
             wallsDead = true;
+            ImagineLosing();
         }
     }
 
@@ -131,5 +131,13 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(5);
         gold += (houseEarnings * houseCount);
         StartCoroutine(GoldTimer());
+    }
+
+    void ImagineLosing()
+    {
+        if(wallsDead)
+        {
+            SceneManager.LoadScene(SceneManager.GetSceneByBuildIndex(2).name);
+        }
     }
 }

@@ -32,7 +32,7 @@ public class HumanoidAI : MonoBehaviour
     public GameObject[] nearestTarget;
 
     //make the enemy recognize the nearest box collider 2d and target it
-    void Start()
+    protected virtual void Start()
     {
         health = maxHealth;
     }

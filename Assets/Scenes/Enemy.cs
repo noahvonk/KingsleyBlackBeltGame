@@ -7,15 +7,14 @@ public class Enemy : HumanoidAI
 {
     public Target curWall;
     public Rigidbody rb;
-    public bool inPosition;
+    public bool inPosition = false;
 
-    private bool inPosition = false;
-    void Start()
+    protected override void Start()
     {
+        base.Start();
         health = maxHealth;
         GameManager.Instance.enemies.Add(gameObject);
         var rb = GetComponent<Rigidbody>();
-        GameManager.Instance.enemyList.Add(this);
     }
 
     public override void TakeDamage(int Tdamage)
@@ -56,7 +55,6 @@ public class Enemy : HumanoidAI
         //Debug.Log("Update running");
         if (!GameManager.Instance.wallsDead)
         {
-            if (Vector3.Distance(transform.position, curWall.transform.position) > 5)
             if (canAttack && curWall != null)
             {
                 MoveToTarget(curWall);

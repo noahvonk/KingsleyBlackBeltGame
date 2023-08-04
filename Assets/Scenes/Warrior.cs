@@ -5,16 +5,12 @@ using UnityEngine;
 public class Warrior : Troops
 {
     // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
-        health = 1000;
-        damage = 1000;
+        base.Start();
+        health = 100;
+        damage = 10;
         speed = 1;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
+
