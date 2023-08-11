@@ -31,15 +31,16 @@ public class GameManager : MonoBehaviour
     public int houseEarnings = 10;
 
     public bool buildMode = false;
+    public bool TroopSpawning = false;
 
     public enum btype {TRHOUSE, GFHOUSE}
 
     public btype curHouse = btype.TRHOUSE;
 
-    public int maxTroops;
+    public int maxTroops = 50;
+    //Each troops takes an amount of space( ex. tank = 5tSpace) there is a max cap on how much space you can use and everytime you buy a tHouse, you will gain +5 tSpace
 
     public bool wallsDead = false;
-    //Each troops takes an amount of space( ex. tank = 5tSpace) there is a max cap on how much space you can use and everytime you buy a tHouse, you will gain +5 tSpace
 
     public List<Target> targets;
 
@@ -64,6 +65,11 @@ public class GameManager : MonoBehaviour
         {
             wallsDead = true;
             ImagineLosing();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+
         }
     }
 
