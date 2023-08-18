@@ -13,12 +13,25 @@ public class TroopSpawner : MonoBehaviour
     {
         TroopParent = this.gameObject;
     }
+
+    Camera m_Camera;
+    void Awake()
+    {
+        m_Camera = Camera.main;
+    }
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
             TroopBuyModeOff();
+        }
+        if (Input.GetMouseButtonDown(0) && GameManager.Instance.TroopSpawning)
+        {
+            Debug.Log("Mouse Pressed");
+            Vector3 mousePosition = Input.mousePosition;
+            Debug.Log("Placed Troop");
+            PlaceTroop(mousePosition);
         }
     }
 
@@ -33,20 +46,14 @@ public class TroopSpawner : MonoBehaviour
         GameManager.Instance.TroopSpawning = true;
     }
 
-    public void PlaceTroop()
+    public void PlaceTroop(Vector3 pos)
     {
-        if (GameManager.Instance.TroopSpawning)
-        {
         // Instantiate Troop
         GameObject troop = Instantiate(TroopPrefabs[(int)SelectedTroop]);
-
-        troop.transform.position = Input.mousePosition;
-
+        troop.transform.position = pos;
         gameObject.transform.localScale = new Vector3(1, 1, 1);
 
         troop.transform.SetParent(TroopParent.transform);
-        }
-
     }
 
     public void OnWarriorButtonPressed()
@@ -55,12 +62,6 @@ public class TroopSpawner : MonoBehaviour
         TroopBuyModeOn();
     }
 
-    private void OnMouseDown()
-    {
-        PlaceTroop();   
-    }
-
-    
     public enum Troops { Warrior, Archer, None, blah, etc, misc}
     public Troops SelectedTroop = Troops.None;
 

@@ -10,7 +10,7 @@ public class Warrior : Troops
         base.Start();
         health = 100;
         damage = 10;
-        speed = 1;
+        speed = 10;
     }
 }
 
