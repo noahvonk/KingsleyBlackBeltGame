@@ -9,9 +9,13 @@ public class Troops : HumanoidAI
     {
         if (!GameManager.Instance.wallsDead)
         {
-            if (canAttack)
+            if (curTarget != null && canAttack)
             {
                 MoveToTarget(curTarget);
+            }
+            else
+            {
+                isAttacking = false;
             }
 
             if (isAttacking && canAttack)
@@ -35,5 +39,32 @@ public class Troops : HumanoidAI
             }
         }
 
+    }
+
+    public override void DoDamage()
+    {
+        Debug.Log("Attacking");
+        curTarget.transform.GetComponent<Enemy>().TakeDamage(damage);
+        canAttack = false;
+        StartCoroutine(WaitOnAttack());
+    }
+
+    public void OnTriggerEnter(Collider c)
+    {
+        Debug.Log("Collided");
+        if (c.gameObject.CompareTag("Enemy") && canAttack)
+        {
+            curTarget = c.gameObject;
+            isAttacking = true;
+        }
+    }
+
+    public void OnTriggerExit(Collider c)
+    {
+        if (c.gameObject.CompareTag("Enemy") && canAttack)
+        {
+            curTarget = null;
+            isAttacking = false;
+        }
     }
 }

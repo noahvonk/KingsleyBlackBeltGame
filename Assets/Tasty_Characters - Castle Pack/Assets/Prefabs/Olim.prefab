@@ -721,7 +721,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 0
-  HealthBar: {fileID: 0}
+  HealthBar: {fileID: 7034934948965353257}
   health: 50
   damage: 15
   speed: 1
@@ -730,8 +730,9 @@ MonoBehaviour:
   canAttack: 1
   isAttacking: 0
   curTarget: {fileID: 0}
-  nearestTarget: []
   curWall: {fileID: 0}
+  rb: {fileID: 0}
+  inPosition: 0
 --- !u!65 &683660281
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -740,7 +741,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1969890579225098}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1.230353, z: 8.307985}
@@ -1185,7 +1186,7 @@ GameObject:
   - component: {fileID: 4798019059101518102}
   - component: {fileID: 7034934948965353257}
   m_Layer: 5
-  m_Name: Image
+  m_Name: EHealth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

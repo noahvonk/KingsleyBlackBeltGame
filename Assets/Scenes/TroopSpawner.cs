@@ -28,8 +28,9 @@ public class TroopSpawner : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(0) && GameManager.Instance.TroopSpawning)
         {
-            Debug.Log("Mouse Pressed");
-            Vector3 mousePosition = Input.mousePosition;
+            Debug.Log(m_Camera.ScreenToWorldPoint(Input.mousePosition));
+            Vector3 mousePosition = m_Camera.ScreenToWorldPoint(Input.mousePosition);
+            mousePosition = new Vector3(mousePosition.x, mousePosition.y, 5);
             Debug.Log("Placed Troop");
             PlaceTroop(mousePosition);
         }

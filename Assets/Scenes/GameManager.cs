@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour
 
     public List<Target> targets;
 
-    public List<GameObject> enemies = new();
+    public List<GameObject> enemies = new List<GameObject>();
 
     // Start is called before the first frame update
     void Awake()

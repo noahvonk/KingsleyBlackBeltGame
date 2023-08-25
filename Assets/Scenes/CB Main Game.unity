@@ -1468,20 +1468,59 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waves:
   - name: Noah is a big fat nerd (Wave 1)
-    enemy: {fileID: 1969890579225098, guid: 581a401355b3afc4b810d4ee8e6e80f9, type: 3}
+    enemies:
+    - {fileID: 1969890579225098, guid: 581a401355b3afc4b810d4ee8e6e80f9, type: 3}
     count: 3
     rate: 1
   - name: Milo is a big fat nerd (Wave 2)
-    enemy: {fileID: 1969890579225098, guid: 581a401355b3afc4b810d4ee8e6e80f9, type: 3}
+    enemies:
+    - {fileID: 1969890579225098, guid: 581a401355b3afc4b810d4ee8e6e80f9, type: 3}
     count: 7
     rate: 1
   - name: (Wave 3)
-    enemy: {fileID: 1652796270759994, guid: ed3c152aba85638429bf8b50e4c24c64, type: 3}
-    count: 2
+    enemies:
+    - {fileID: 1969890579225098, guid: 581a401355b3afc4b810d4ee8e6e80f9, type: 3}
+    count: 15
     rate: 1
   - name: (Wave 4)
-    enemy: {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
-    count: 3
+    enemies:
+    - {fileID: 1652796270759994, guid: ed3c152aba85638429bf8b50e4c24c64, type: 3}
+    - {fileID: 1969890579225098, guid: 581a401355b3afc4b810d4ee8e6e80f9, type: 3}
+    count: 2
+    rate: 1
+  - name: (Wave 5)
+    enemies:
+    - {fileID: 1652796270759994, guid: ed3c152aba85638429bf8b50e4c24c64, type: 3}
+    - {fileID: 1969890579225098, guid: 581a401355b3afc4b810d4ee8e6e80f9, type: 3}
+    count: 5
+    rate: 1
+  - name: (Wave 6)
+    enemies:
+    - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
+    count: 5
+    rate: 1
+  - name: (Wave 7)
+    enemies:
+    - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
+    - {fileID: 1652796270759994, guid: ed3c152aba85638429bf8b50e4c24c64, type: 3}
+    count: 5
+    rate: 1
+  - name: (Wave 8)
+    enemies:
+    - {fileID: 1652796270759994, guid: ed3c152aba85638429bf8b50e4c24c64, type: 3}
+    - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
+    count: 10
+    rate: 1
+  - name: (Wave 9)
+    enemies:
+    - {fileID: 1652796270759994, guid: ed3c152aba85638429bf8b50e4c24c64, type: 3}
+    - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
+    count: 20
+    rate: 1
+  - name: (Wave 10) BOSS
+    enemies:
+    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
+    count: 1
     rate: 1
   spawnPoints:
   - {fileID: 721756325}
@@ -2433,7 +2472,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 886031968}
-  - component: {fileID: 886031967}
   m_Layer: 0
   m_Name: Troop Spawner
   m_TagString: Untagged
@@ -2441,21 +2479,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &886031967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 886031966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fb24994851e8744e85fa241f35f4ff2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TroopParent: {fileID: 0}
-  SelectedTroop: 0
-  TroopPrefabs: []
 --- !u!4 &886031968
 Transform:
   m_ObjectHideFlags: 0
@@ -2770,14 +2793,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1031423629}
-  m_LocalRotation: {x: -0.38268343, y: 0, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: -0.4, y: -205, z: -230.9}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.4, y: 22, z: -230.9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -45, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1080169887
 GameObject:
   m_ObjectHideFlags: 0
@@ -5938,7 +5961,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4776189847650796, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 27.59
+      value: 22.3
       objectReference: {fileID: 0}
     - target: {fileID: 4776189847650796, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
       propertyPath: m_LocalPosition.z

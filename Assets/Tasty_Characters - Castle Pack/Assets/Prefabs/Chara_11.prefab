@@ -947,6 +947,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 01913d2b9ba30244fa9e912f45084417, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 100
+  HealthBar: {fileID: 0}
   health: 100
   damage: 15
   speed: 10
@@ -955,7 +957,9 @@ MonoBehaviour:
   canAttack: 1
   isAttacking: 0
   curTarget: {fileID: 0}
-  nearestTroop: []
+  curWall: {fileID: 0}
+  rb: {fileID: 0}
+  inPosition: 0
 --- !u!1 &1681362357135472
 GameObject:
   m_ObjectHideFlags: 0

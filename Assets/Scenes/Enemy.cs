@@ -32,7 +32,7 @@ public class Enemy : HumanoidAI
         }
     }
 
-    public void OnCollisionEnter(Collision c)
+    public void OnTriggerEnter(Collider c)
     {
         if (c.gameObject.CompareTag("Wallas") && canAttack)
         {
@@ -41,7 +41,7 @@ public class Enemy : HumanoidAI
         }
     }
 
-    public void OnCollisionExit(Collision c)
+    public void OnTriggerExit(Collider c)
     {
         if (c.gameObject.CompareTag("Wallas") && canAttack)
         {

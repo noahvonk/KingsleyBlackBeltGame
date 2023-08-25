@@ -26,11 +26,6 @@ public class HumanoidAI : MonoBehaviour
     [SerializeField]
     protected GameObject curTarget;
 
-    //public int drops;
-
-    [SerializeField]
-    public GameObject[] nearestTarget;
-
     //make the enemy recognize the nearest box collider 2d and target it
     protected virtual void Start()
     {
@@ -52,7 +47,7 @@ public class HumanoidAI : MonoBehaviour
             GameObject t = (GameObject)target;
             if (target != null)
             {
-                transform.position = Vector3.MoveTowards(transform.position, t.transform.position, Time.deltaTime * speed);
+                transform.position = Vector3.MoveTowards(transform.position, t.transform.position, Time.deltaTime * speed); 
             }
         }
 
