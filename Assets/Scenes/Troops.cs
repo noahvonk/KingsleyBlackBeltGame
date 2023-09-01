@@ -5,37 +5,56 @@ using UnityEngine;
 public class Troops : HumanoidAI
 {
     // Update is called once per frame
+
+    public override void TakeDamage(int Tdamage)
+    {
+        health -= Tdamage;
+        if (health <= 0)
+        {
+            HealthBar.fillAmount = 0;
+            GameManager.Instance.Troops.Remove(gameObject);
+            Destroy(gameObject);
+        }
+        else
+        {
+            HealthBar.fillAmount = (float)health / maxHealth;
+        }
+    }
+
     public void Update()
     {
-        if (!GameManager.Instance.wallsDead)
         {
-            if (curTarget != null && canAttack)
+            if (!GameManager.Instance.wallsDead)
             {
-                MoveToTarget(curTarget);
-            }
-            else
-            {
-                isAttacking = false;
-            }
-
-            if (isAttacking && canAttack)
-            {
-                DoDamage();
-            }
-            if (curTarget == null)
-            {
-                foreach (GameObject t in GameManager.Instance.enemies)
+                if (curTarget != null && canAttack)
                 {
-                    if (curTarget == null)
-                    {
-                        curTarget = t;
-                    }
-                    else if (Vector3.Distance(t.gameObject.transform.position, transform.position) < Vector3.Distance(curTarget.transform.position, transform.position))
-                    {
-                        curTarget = t;
-                    }
+                    MoveToTarget(curTarget);
                 }
-                //Debug.Log(gameObject.name + " is moving");
+
+                if (isAttacking && canAttack)
+                {
+                    if (curTarget != null && Vector3.Distance(curTarget.gameObject.transform.position, transform.position) < 3)
+                    {
+                        DoDamage();
+                    }
+                    
+                }
+                if (curTarget == null)
+                {
+                    foreach (GameObject t in GameManager.Instance.enemies)
+                    {
+                        if (curTarget == null)
+                        {
+                            isAttacking = false;
+                            curTarget = t;
+                        }
+                        else if (Vector3.Distance(t.gameObject.transform.position, transform.position) < Vector3.Distance(curTarget.transform.position, transform.position))
+                        {
+                            curTarget = t;
+                        }
+                    }
+                    //Debug.Log(gameObject.name + " is moving");
+                }
             }
         }
 
@@ -66,5 +85,11 @@ public class Troops : HumanoidAI
             curTarget = null;
             isAttacking = false;
         }
+    }
+
+    protected virtual void Start()
+    {
+        base.Start();
+        GameManager.Instance.Troops.Add(gameObject);
     }
 }

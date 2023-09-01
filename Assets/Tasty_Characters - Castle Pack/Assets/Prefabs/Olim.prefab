@@ -720,7 +720,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26b2e5f8538c5d94a9c1479d355cf243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
+  maxHealth: 50
   HealthBar: {fileID: 7034934948965353257}
   health: 50
   damage: 15
@@ -733,6 +733,7 @@ MonoBehaviour:
   curWall: {fileID: 0}
   rb: {fileID: 0}
   inPosition: 0
+  behaviour: 2
 --- !u!65 &683660281
 BoxCollider:
   m_ObjectHideFlags: 0

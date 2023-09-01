@@ -9,6 +9,9 @@ public class Enemy : HumanoidAI
     public Rigidbody rb;
     public bool inPosition = false;
 
+    enum Behaviours { WallOnly, TroopOnly, WallWhenNoTroop }
+    [SerializeField]
+    private Behaviours behaviour = Behaviours.WallOnly;
     protected override void Start()
     {
         base.Start();
@@ -39,6 +42,11 @@ public class Enemy : HumanoidAI
             curWall = c.gameObject.GetComponentInChildren<Target>();
             isAttacking = true;
         }
+        if (c.gameObject.CompareTag("Troop") && canAttack)
+        {
+            curTarget = c.gameObject;
+            isAttacking = true;
+        }
     }
 
     public void OnTriggerExit(Collider c)
@@ -48,40 +56,82 @@ public class Enemy : HumanoidAI
             curWall = null;
             isAttacking = false;
         }
+        if (c.gameObject.CompareTag("Troop") && canAttack)
+        {
+            curTarget = null;
+            isAttacking = false;
+        }
     }
+
+   
 
     public void Update()
     {
         //Debug.Log("Update running");
-        if (!GameManager.Instance.wallsDead)
+        if (behaviour == Behaviours.WallOnly || (behaviour == Behaviours.WallWhenNoTroop && GameManager.Instance.Troops.Count <= 0))
         {
-            if (canAttack && curWall != null)
+            if (!GameManager.Instance.wallsDead)
             {
-                MoveToTarget(curWall);
-            }
-
-            inPosition = curWall != null && Vector3.Distance(curWall.transform.position, transform.position) < 5;
-
-            if (isAttacking && canAttack && inPosition)
-            {
-                DoDamage();
-                GetComponent<Rigidbody>().velocity = Vector3.zero;
-            }
-            if (curWall == null)
-            {
-                foreach (Target t in GameManager.Instance.targets)
+                if (canAttack && curWall != null)
                 {
-                    Debug.Log("Checking targets");
-                    if (curWall == null)
-                    {
-                        curWall = t;
-                    }
-                    else if (t != null && Vector3.Distance(t.gameObject.transform.position, transform.position) < Vector3.Distance(curWall.transform.position, transform.position))
-                    {
-                        curWall = t;
-                    }
+                    MoveToTarget(curWall);
                 }
-                //Debug.Log(gameObject.name + " is moving");
+
+                inPosition = curWall != null && Vector3.Distance(curWall.transform.position, transform.position) < 5;
+
+                if (isAttacking && canAttack && inPosition)
+                {
+                    DoDamage();
+                    GetComponent<Rigidbody>().velocity = Vector3.zero;
+                }
+                if (curWall == null)
+                {
+                    foreach (Target t in GameManager.Instance.targets)
+                    {
+                        Debug.Log("Checking targets");
+                        if (curWall == null)
+                        {
+
+                            curWall = t;
+                        }
+                        else if (t != null && Vector3.Distance(t.gameObject.transform.position, transform.position) < Vector3.Distance(curWall.transform.position, transform.position))
+                        {
+                            curWall = t;
+                        }
+                    }
+                    //Debug.Log(gameObject.name + " is moving");
+                }
+            }
+        }
+        else
+        {
+            if (!GameManager.Instance.wallsDead)
+            {
+                if (curTarget != null && canAttack)
+                {
+                    MoveToTarget(curTarget);
+                }
+
+                if (isAttacking && canAttack)
+                {
+                    DoDamageToTroop();
+                }
+                if (curTarget == null)
+                {
+                    foreach (GameObject t in GameManager.Instance.Troops)
+                    {
+                        if (curTarget == null)
+                        {
+                            isAttacking = false;
+                            curTarget = t;
+                        }
+                        else if (Vector3.Distance(t.gameObject.transform.position, transform.position) < Vector3.Distance(curTarget.transform.position, transform.position))
+                        {
+                            curTarget = t;
+                        }
+                    }
+                    //Debug.Log(gameObject.name + " is moving");
+                }
             }
         }
 
@@ -89,6 +139,13 @@ public class Enemy : HumanoidAI
     public override void DoDamage()
     {
         curWall.transform.parent.GetComponent<WallHealth>().TakeDamage(damage);
+        canAttack = false;
+        StartCoroutine(WaitOnAttack());
+    }
+
+    public void DoDamageToTroop()
+    {
+        curTarget.transform.GetComponent<Troops>().TakeDamage(damage);
         canAttack = false;
         StartCoroutine(WaitOnAttack());
     }
