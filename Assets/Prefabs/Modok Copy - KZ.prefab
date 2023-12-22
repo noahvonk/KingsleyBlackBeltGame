@@ -11,11 +11,10 @@ GameObject:
   - component: {fileID: 8707745935738167599}
   - component: {fileID: 7076277568114343322}
   - component: {fileID: 7125407440570454586}
-  - component: {fileID: 7514596477841726590}
-  - component: {fileID: 7764597126054707568}
-  m_Layer: 0
+  - component: {fileID: 2279258624448611454}
+  m_Layer: 9
   m_Name: Modok Copy - KZ
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -113,21 +112,8 @@ MonoBehaviour:
   curWall: {fileID: 0}
   rb: {fileID: 0}
   inPosition: 0
-  behaviour: 2
---- !u!65 &7514596477841726590
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4428212372244300410}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 9.68473, y: 7.1059113, z: 0.2}
-  m_Center: {x: -0.039408874, y: 0.11822682, z: 0}
---- !u!54 &7764597126054707568
+  behaviour: 0
+--- !u!54 &2279258624448611454
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -152,7 +138,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6252189300115293354}
-  m_Layer: 0
+  - component: {fileID: 3522102217629016991}
+  m_Layer: 9
   m_Name: Spirte
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -175,6 +162,19 @@ Transform:
   m_Father: {fileID: 8707745935738167599}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &3522102217629016991
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5947301782938095952}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.628389, y: 6.64369, z: 1}
+  m_Center: {x: -0.27029514, y: -0.63177025, z: 0}
 --- !u!1 &6217124540937312343
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,7 +186,7 @@ GameObject:
   - component: {fileID: 8964766134346474801}
   - component: {fileID: 3408782269221725431}
   - component: {fileID: 7222290418360667781}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: EHealth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 8998878930276455725}
   - component: {fileID: 5894095061670782469}
   - component: {fileID: 1751275186570387673}
-  m_Layer: 5
+  m_Layer: 9
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}

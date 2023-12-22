@@ -2,15 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DarkFighter : Enemy
+public class Spearman : Troops
 {
     // Start is called before the first frame update
     protected override void Start()
     {
         base.Start();
-        health = 100;
-        damage = 10;
-        speed = 20;
-        goldDrops = 100;
+        health = 150;
+        damage = 15;
+        speed = 7;
     }
 }
