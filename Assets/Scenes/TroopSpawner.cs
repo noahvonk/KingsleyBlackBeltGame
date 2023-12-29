@@ -5,13 +5,17 @@ using UnityEngine.UI;
 
 public class TroopSpawner : MonoBehaviour
 {
-
+    public int TroopCost;
     public GameObject TroopParent;
+    GameManager GameManag;
+    Heros Hr;
 
     // Start is called before the first frame update
     void Start()
     {
         TroopParent = this.gameObject;
+        GameManag = GameManager.Instance;
+        Hr = Heros.Instance;
     }
 
     Camera m_Camera;
@@ -53,7 +57,7 @@ public class TroopSpawner : MonoBehaviour
         GameObject troop = Instantiate(TroopPrefabs[(int)SelectedTroop]);
         troop.transform.position = pos;
         gameObject.transform.localScale = new Vector3(1, 1, 1);
-
+        GameManag.gold -= 25;
         troop.transform.SetParent(TroopParent.transform);
     }
 
@@ -73,6 +77,14 @@ public class TroopSpawner : MonoBehaviour
     {
         SelectedTroop = Troops.Spearman;
         TroopBuyModeOn();
+    }
+
+    public void OnSkillButtonPressed()
+    {
+        Hr.damage = 500;
+        
+        Hr.damage = 50;
+
     }
 
 
