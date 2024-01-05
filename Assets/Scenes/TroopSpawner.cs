@@ -8,14 +8,14 @@ public class TroopSpawner : MonoBehaviour
     public int TroopCost;
     public GameObject TroopParent;
     GameManager GameManag;
-    Heros Hr;
+    //Heros Hr;
 
     // Start is called before the first frame update
     void Start()
     {
         TroopParent = this.gameObject;
         GameManag = GameManager.Instance;
-        Hr = Heros.Instance;
+        //Hr = Heros.Instance;
     }
 
     Camera m_Camera;
@@ -79,13 +79,7 @@ public class TroopSpawner : MonoBehaviour
         TroopBuyModeOn();
     }
 
-    public void OnSkillButtonPressed()
-    {
-        Hr.damage = 500;
-        
-        Hr.damage = 50;
-
-    }
+    
 
 
     public enum Troops { Hero, Warrior, Spearman, Archer, None, etc, misc}

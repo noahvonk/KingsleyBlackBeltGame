@@ -1,18 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class DarkKnight : Enemy
+public class BlackKnight : Enemy
 {
     // Start is called before the first frame update
     protected override void Start()
     {
         base.Start();
-        health = 100;
-        damage = 15;
+        health = 300;
+        damage = 45;
         speed = 10;
-        goldDrops = 100;
-
     }
-
 }

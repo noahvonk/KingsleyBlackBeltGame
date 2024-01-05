@@ -1655,6 +1655,42 @@ MonoBehaviour:
     - {fileID: 4428212372244300410, guid: 8511887dbb03b2440a08d7d5f84746a8, type: 3}
     count: 1
     rate: 1
+  - name: Wave (11)
+    enemies:
+    - {fileID: 1652796270759994, guid: ed3c152aba85638429bf8b50e4c24c64, type: 3}
+    - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
+    count: 10
+    rate: 1
+  - name: Wave (12)
+    enemies:
+    - {fileID: 1969890579225098, guid: 581a401355b3afc4b810d4ee8e6e80f9, type: 3}
+    count: 50
+    rate: 0.5
+  - name: Wave (13)
+    enemies:
+    - {fileID: 1652796270759994, guid: ed3c152aba85638429bf8b50e4c24c64, type: 3}
+    count: 20
+    rate: 1
+  - name: Wave (14)
+    enemies:
+    - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
+    count: 15
+    rate: 1
+  - name: Wave (15)
+    enemies:
+    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
+    count: 5
+    rate: 1
+  - name: Wave (16)
+    enemies:
+    - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
+    count: 15
+    rate: 1
+  - name: Wave (17)
+    enemies:
+    - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
+    count: 15
+    rate: 1
   spawnPoints:
   - {fileID: 721756325}
   - {fileID: 202877390}
@@ -2652,11 +2688,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4532737550002514, guid: f6c20c7b577555a47a6f3d33f07018bb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -541
+      value: -442
       objectReference: {fileID: 0}
     - target: {fileID: 4532737550002514, guid: f6c20c7b577555a47a6f3d33f07018bb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -201
+      value: -186
       objectReference: {fileID: 0}
     - target: {fileID: 4532737550002514, guid: f6c20c7b577555a47a6f3d33f07018bb, type: 3}
       propertyPath: m_LocalPosition.z

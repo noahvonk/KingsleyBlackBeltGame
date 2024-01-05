@@ -14,4 +14,21 @@ public class Heros : Troops
         damage = 50;
         speed = 15;
     }
+
+    public void OnSkillButtonPressed()
+    {
+        damage = 500;
+        SkillTimer();
+    }
+
+    IEnumerator SkillTimer()
+    {
+        yield return new WaitForSeconds(5f);
+        ReturnHrDamage();
+    }
+
+    public void ReturnHrDamage()
+    {
+        damage = 50;
+    }
 }

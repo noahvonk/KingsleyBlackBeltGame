@@ -832,15 +832,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85aefbcdee2fca642915ed29527c7a3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 150
+  HealthBar: {fileID: 0}
   health: 150
   damage: 2
   speed: 5
   goldDrops: 100
-  waitTime: 1
+  waitTime: 0
   canAttack: 1
   isAttacking: 0
   curTarget: {fileID: 0}
-  nearestTroop: []
+  curWall: {fileID: 0}
+  rb: {fileID: 0}
+  inPosition: 0
+  behaviour: 0
 --- !u!1 &1632543007335744
 GameObject:
   m_ObjectHideFlags: 0
