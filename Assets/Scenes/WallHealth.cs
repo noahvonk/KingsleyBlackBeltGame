@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class WallHealth : MonoBehaviour
 {
+    //public static WallHealth Instance;
     public int wallHP;
     public int maxHp;
     public Image health;
@@ -13,8 +14,12 @@ public class WallHealth : MonoBehaviour
 
     private bool dead = false;
     public GameObject hpDisplay;
-    
+
     // Start is called before the first frame update
+   // private void Awake()
+    //{
+       // Instance = this;
+    //}
     void Start()
     {
         wallHP = maxHp;
