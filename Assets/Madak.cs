@@ -10,7 +10,7 @@ public class Madak : Enemy
     {
         base.Start();
         health = 15000;
-        damage = 900;
+        damage = 500;
         speed = 1;
         goldDrops = 1000;
     }
