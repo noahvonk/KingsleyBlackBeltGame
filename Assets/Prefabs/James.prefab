@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7076277568114343322}
   - component: {fileID: 2279258624448611454}
   - component: {fileID: 7081845630734609356}
+  - component: {fileID: 6418603134378328101}
   m_Layer: 9
   m_Name: James
   m_TagString: Enemy
@@ -114,8 +115,34 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10, y: 7.5, z: 1.5819782}
-  m_Center: {x: 0, y: 0, z: -0.6909891}
+  m_Size: {x: 2.3232021, y: 2.879533, z: 1.3374003}
+  m_Center: {x: 0.10480926, y: 0.23190115, z: -0.56870013}
+--- !u!114 &6418603134378328101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4428212372244300410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72a72b7ab01eb304895137f3fa1b47db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 50000
+  HealthBar: {fileID: 7222290418360667781}
+  health: 50000
+  damage: 50
+  speed: 15
+  goldDrops: 2147483647
+  waitTime: 0
+  canAttack: 1
+  isAttacking: 0
+  curTarget: {fileID: 0}
+  curWall: {fileID: 0}
+  rb: {fileID: 0}
+  inPosition: 0
+  behaviour: 1
 --- !u!1 &6217124540937312343
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,8 +178,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -9, y: -2.6}
-  m_SizeDelta: {x: 659.16, y: 987}
+  m_AnchoredPosition: {x: -12, y: -150}
+  m_SizeDelta: {x: 531.28, y: 506.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3408782269221725431
 CanvasRenderer:
@@ -229,8 +256,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.19, y: 1.59}
-  m_SizeDelta: {x: 1099.2428, y: 1274.6395}
+  m_AnchoredPosition: {x: 0.08, y: 1.44}
+  m_SizeDelta: {x: 743.1473, y: 738.5751}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &8998878930276455725
 Canvas:

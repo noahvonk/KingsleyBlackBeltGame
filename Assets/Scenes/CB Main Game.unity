@@ -1842,6 +1842,59 @@ MonoBehaviour:
     - {fileID: 5323136899538170475, guid: eeac6bafc03678847a59071ffdbb8e8a, type: 3}
     count: 1
     rate: 1
+  - name: Wave (21)
+    enemies:
+    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
+    count: 25
+    rate: 0
+  - name: Wave (22)
+    enemies:
+    - {fileID: 1619877827293244, guid: 89cb7e4da7cce4c40bdd4f4531ca6ac8, type: 3}
+    - {fileID: 1652796270759994, guid: ed3c152aba85638429bf8b50e4c24c64, type: 3}
+    - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
+    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
+    count: 15
+    rate: 1
+  - name: Wave (23)
+    enemies:
+    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
+    count: 10
+    rate: 1
+  - name: Wave (24)
+    enemies:
+    - {fileID: 1619877827293244, guid: 89cb7e4da7cce4c40bdd4f4531ca6ac8, type: 3}
+    count: 10
+    rate: 1
+  - name: Wave (25)
+    enemies:
+    - {fileID: 1652796270759994, guid: ed3c152aba85638429bf8b50e4c24c64, type: 3}
+    count: 10
+    rate: 1
+  - name: Wave (26)
+    enemies:
+    - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
+    count: 10
+    rate: 1
+  - name: Wave (27)
+    enemies:
+    - {fileID: 1969890579225098, guid: 581a401355b3afc4b810d4ee8e6e80f9, type: 3}
+    count: 25
+    rate: 1
+  - name: Wave (28)
+    enemies:
+    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
+    count: 25
+    rate: 0
+  - name: Wave (29)
+    enemies:
+    - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
+    count: 40
+    rate: 1
+  - name: Wave (30) BOSS
+    enemies:
+    - {fileID: 4428212372244300410, guid: e2c1df51f71933b4c8e321f9c5bb6ae8, type: 3}
+    count: 1
+    rate: 1
   spawnPoints:
   - {fileID: 721756325}
   - {fileID: 202877390}
@@ -1851,8 +1904,8 @@ MonoBehaviour:
   - {fileID: 919847625}
   - {fileID: 166039351}
   - {fileID: 693006606}
-  timeBetweenWaves: 15
-  waveCountdown: 0
+  timeBetweenWaves: 20
+  waveCountdown: 10
 --- !u!1 &620427800
 GameObject:
   m_ObjectHideFlags: 0
