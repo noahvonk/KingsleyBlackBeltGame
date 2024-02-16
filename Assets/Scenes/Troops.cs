@@ -87,7 +87,7 @@ public class Troops : HumanoidAI
         }
     }
 
-    protected virtual void Start()
+    new protected virtual void Start()
     {
         base.Start();
         GameManager.Instance.Troops.Add(gameObject);

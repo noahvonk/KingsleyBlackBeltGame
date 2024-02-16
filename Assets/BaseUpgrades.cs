@@ -17,6 +17,6 @@ public class BaseUpgrades : MonoBehaviour
     public void UpgradeHeroDMG()
     {
         GameManager.Instance.gold -= 500;
-        Hero1.damage += 5;
+        HumanoidAI.damage += 5;
     }
 }

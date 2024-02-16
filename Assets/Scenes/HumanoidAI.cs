@@ -11,7 +11,7 @@ public class HumanoidAI : MonoBehaviour
 
     public int health;
 
-    public int damage = 50;
+    public int damage;
 
     public int speed;
 
@@ -103,3 +103,5 @@ public class HumanoidAI : MonoBehaviour
     }
 
 }
+
+
