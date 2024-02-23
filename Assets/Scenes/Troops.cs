@@ -62,7 +62,7 @@ public class Troops : HumanoidAI
 
     public override void DoDamage()
     {
-        Debug.Log("Attacking");
+        //Debug.Log("Attacking");
         curTarget.transform.GetComponent<Enemy>().TakeDamage(damage);
         canAttack = false;
         StartCoroutine(WaitOnAttack());
@@ -70,7 +70,7 @@ public class Troops : HumanoidAI
 
     public void OnTriggerEnter(Collider c)
     {
-        Debug.Log("Collided");
+        //Debug.Log("Collided");
         if (c.gameObject.CompareTag("Enemy") && canAttack)
         {
             curTarget = c.gameObject;

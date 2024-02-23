@@ -1895,6 +1895,114 @@ MonoBehaviour:
     - {fileID: 4428212372244300410, guid: e2c1df51f71933b4c8e321f9c5bb6ae8, type: 3}
     count: 1
     rate: 1
+  - name: Wave (31)
+    enemies:
+    - {fileID: 1868111313181612, guid: 35b0947ad8031c044a8d63699d7fe215, type: 3}
+    - {fileID: 1969890579225098, guid: 581a401355b3afc4b810d4ee8e6e80f9, type: 3}
+    count: 5
+    rate: 1
+  - name: Wave (32)
+    enemies:
+    - {fileID: 1868111313181612, guid: 35b0947ad8031c044a8d63699d7fe215, type: 3}
+    count: 6
+    rate: 1
+  - name: Wave (33)
+    enemies:
+    - {fileID: 1868111313181612, guid: 35b0947ad8031c044a8d63699d7fe215, type: 3}
+    count: 9
+    rate: 1
+  - name: Wave (34)
+    enemies:
+    - {fileID: 1868111313181612, guid: 35b0947ad8031c044a8d63699d7fe215, type: 3}
+    - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
+    count: 9
+    rate: 1
+  - name: Wave (35)
+    enemies:
+    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
+    count: 10
+    rate: 1
+  - name: Wave (36)
+    enemies:
+    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
+    count: 10
+    rate: 1
+  - name: Wave (37)
+    enemies:
+    - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
+    count: 20
+    rate: 1
+  - name: Wave (38)
+    enemies:
+    - {fileID: 1652796270759994, guid: ed3c152aba85638429bf8b50e4c24c64, type: 3}
+    count: 20
+    rate: 1
+  - name: Wave (39)
+    enemies:
+    - {fileID: 1868111313181612, guid: 35b0947ad8031c044a8d63699d7fe215, type: 3}
+    count: 20
+    rate: 1
+  - name: Wave (40) BOSS
+    enemies:
+    - {fileID: 5323136899538170475, guid: bc08eb1a01e551d44aadfaf78b47d879, type: 3}
+    count: 1
+    rate: 1
+  - name: Wave (41)
+    enemies:
+    - {fileID: 1619877827293244, guid: 89cb7e4da7cce4c40bdd4f4531ca6ac8, type: 3}
+    count: 12
+    rate: 1
+  - name: Wave (42)
+    enemies:
+    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
+    - {fileID: 1868111313181612, guid: 35b0947ad8031c044a8d63699d7fe215, type: 3}
+    count: 15
+    rate: 1
+  - name: Wave (43)
+    enemies:
+    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
+    count: 15
+    rate: 1
+  - name: Wave (44)
+    enemies:
+    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
+    - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
+    - {fileID: 1652796270759994, guid: ed3c152aba85638429bf8b50e4c24c64, type: 3}
+    count: 15
+    rate: 1
+  - name: Wave (45)
+    enemies:
+    - {fileID: 1619877827293244, guid: 89cb7e4da7cce4c40bdd4f4531ca6ac8, type: 3}
+    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
+    count: 20
+    rate: 1
+  - name: Wave (46)
+    enemies:
+    - {fileID: 1969890579225098, guid: 581a401355b3afc4b810d4ee8e6e80f9, type: 3}
+    - {fileID: 1619877827293244, guid: 89cb7e4da7cce4c40bdd4f4531ca6ac8, type: 3}
+    count: 15
+    rate: 1
+  - name: Wave (47)
+    enemies:
+    - {fileID: 1969890579225098, guid: 581a401355b3afc4b810d4ee8e6e80f9, type: 3}
+    - {fileID: 1619877827293244, guid: 89cb7e4da7cce4c40bdd4f4531ca6ac8, type: 3}
+    count: 15
+    rate: 1
+  - name: Wave (48)
+    enemies:
+    - {fileID: 1868111313181612, guid: 35b0947ad8031c044a8d63699d7fe215, type: 3}
+    count: 10
+    rate: 1
+  - name: Wave (49)
+    enemies:
+    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
+    count: 26
+    rate: 1
+  - name: Wave (50) BOSS
+    enemies:
+    - {fileID: 4428212372244300410, guid: 2379f6999aa8a3945a0542e96e4c0779, type: 3}
+    count: 1
+    rate: 1
   spawnPoints:
   - {fileID: 721756325}
   - {fileID: 202877390}
@@ -2801,7 +2909,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 236710156}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 5
+  m_MaxValue: 10
   m_WholeNumbers: 0
   m_Value: 1
   m_OnValueChanged:
@@ -8727,7 +8835,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 4d0645c44b29f63448dc7022570086b3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 352385915077e3440b4a81260e422fab, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
