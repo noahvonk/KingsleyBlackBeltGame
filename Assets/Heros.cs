@@ -14,8 +14,8 @@ public class Heros : Troops
     protected override void Start()
     {
         base.Start();
-        health = 500;
-        damage = 50;
+        health = 250;
+        damage = 500;
         speed = 15;
     }
 
