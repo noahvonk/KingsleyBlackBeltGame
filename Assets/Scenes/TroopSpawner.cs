@@ -79,12 +79,18 @@ public class TroopSpawner : MonoBehaviour
         TroopBuyModeOn();
     }
 
-    
+    public void OnWizardButtonPressed()
+    {
+        SelectedTroop = Troops.Mage;
+        TroopBuyModeOn();
+    }
 
 
-    public enum Troops { Hero, Warrior, Spearman, Archer, None, etc, misc}
+
+
+    public enum Troops { Hero, Warrior, Spearman, Mage, Archer, None, etc, misc}
     public Troops SelectedTroop = Troops.None;
 
-    [Header("Order is  Hero, Warrior, Spearman, Archer, None,  etc, misc "), SerializeField]
+    [Header("Order is  Hero, Warrior, Spearman, Mage, Archer, None, etc, misc "), SerializeField]
     private List<GameObject> TroopPrefabs = new();
 }

@@ -601,7 +601,7 @@ GameObject:
   - component: {fileID: 1267217590}
   - component: {fileID: 1267217589}
   m_Layer: 9
-  m_Name: Chara_04
+  m_Name: Mace Handler
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -678,6 +678,7 @@ MonoBehaviour:
   curWall: {fileID: 0}
   rb: {fileID: 0}
   inPosition: 0
+  behaviour: 0
 --- !u!1 &1746121585414400
 GameObject:
   m_ObjectHideFlags: 0
