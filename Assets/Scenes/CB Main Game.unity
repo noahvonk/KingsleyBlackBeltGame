@@ -2127,6 +2127,64 @@ MonoBehaviour:
     - {fileID: 5323136899538170475, guid: 1b7679d68edc2e645a2d024061ae07b1, type: 3}
     count: 1
     rate: 1
+  - name: Wave (71)
+    enemies:
+    - {fileID: 1959210465276336, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
+    count: 1
+    rate: 1
+  - name: Wave (72)
+    enemies:
+    - {fileID: 1959210465276336, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
+    count: 5
+    rate: 1
+  - name: Wave (73)
+    enemies:
+    - {fileID: 1959210465276336, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
+    count: 15
+    rate: 1
+  - name: Wave (74)
+    enemies:
+    - {fileID: 1959210465276336, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
+    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
+    count: 20
+    rate: 1
+  - name: Wave (75) MINIBOSSS
+    enemies:
+    - {fileID: 5323136899538170475, guid: f290eda7877c90247b5d0a5cac1ea2ce, type: 3}
+    count: 1
+    rate: 1
+  - name: (Wave 76)
+    enemies:
+    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
+    - {fileID: 1959210465276336, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
+    count: 25
+    rate: 1
+  - name: (Wave 77)
+    enemies:
+    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
+    - {fileID: 1959210465276336, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
+    - {fileID: 1619877827293244, guid: 89cb7e4da7cce4c40bdd4f4531ca6ac8, type: 3}
+    count: 25
+    rate: 1
+  - name: (Wave 78)
+    enemies:
+    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
+    - {fileID: 1959210465276336, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
+    - {fileID: 1271163058963824, guid: 8bf00f738ad5d484fad95a99c54fa44c, type: 3}
+    count: 30
+    rate: 1
+  - name: (Wave 79)
+    enemies:
+    - {fileID: 5323136899538170475, guid: f290eda7877c90247b5d0a5cac1ea2ce, type: 3}
+    - {fileID: 5323136899538170475, guid: 19e610bcf23c5314e99bb02d14118ba9, type: 3}
+    - {fileID: 5323136899538170475, guid: ed3e39c741856824d8a4a4a1fbb58e16, type: 3}
+    count: 1
+    rate: 1
+  - name: (Wave 80) BOSS
+    enemies:
+    - {fileID: 5323136899538170475, guid: bf49991037e50fd428235d110bdd9a72, type: 3}
+    count: 1
+    rate: 1
   spawnPoints:
   - {fileID: 721756325}
   - {fileID: 202877390}
@@ -7572,7 +7630,66 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 212011984565620518, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212011984565620518, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212011984565620518, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212255601030119232, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212255601030119232, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212255601030119232, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212348654479581462, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212348654479581462, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212348654479581462, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212872020306790410, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212872020306790410, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212872020306790410, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 573225550317242263, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2983048129244172959, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1558900762994607420, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
+    - {fileID: 231234950620106877, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
+    - {fileID: 6338624827742830356, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
 --- !u!1 &1733607979
 GameObject:

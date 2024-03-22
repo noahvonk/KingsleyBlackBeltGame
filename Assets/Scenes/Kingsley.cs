@@ -2,17 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Kingsley : MonoBehaviour
+public class Kingsley : Enemy
 {
-    // Start is called before the first frame update
-    void Start()
+    protected override void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        base.Start();
+        health = 100000;
+        damage = 10000;
+        speed = 3;
     }
 }
