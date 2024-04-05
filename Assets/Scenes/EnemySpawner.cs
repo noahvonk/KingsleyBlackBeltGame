@@ -35,12 +35,10 @@ public class EnemySpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // if (spawnPoints.Length == 0)
-        // {
-
-        // }
+        // SpawnWave(waves[1]);
 
         waveCountdown = timeBetweenWaves;
+  
     }
 
     // Update is called once per frame
@@ -58,7 +56,8 @@ public class EnemySpawner : MonoBehaviour
             }
         }
 
-        if (waveCountdown <= 0)
+        
+        else if (waveCountdown <= 0)
         {
             if (state != SpawnState.Spawning)
             {
@@ -67,7 +66,9 @@ public class EnemySpawner : MonoBehaviour
         }
         else
         {
+        
             waveCountdown -= Time.deltaTime;
+           print( waveCountdown); 
         }
     }
 
@@ -75,7 +76,8 @@ public class EnemySpawner : MonoBehaviour
     {
         state = SpawnState.Counting;
         waveCountdown = timeBetweenWaves;
-
+ 
+         print( waveCountdown); 
         if (nextWave + 1 > waves.Length - 1)
         {
             nextWave = 0;
@@ -91,7 +93,7 @@ public class EnemySpawner : MonoBehaviour
         searchCountdown -= Time.deltaTime;
         if (searchCountdown <= 0)
         {
-            searchCountdown = 1f;
+            searchCountdown = 6f;
             if (GameObject.FindGameObjectWithTag("Enemy") == null)
             {
                 return false;
@@ -105,14 +107,14 @@ public class EnemySpawner : MonoBehaviour
     {
         state = SpawnState.Spawning;
 
-        state = SpawnState.Waiting;
+       
 
         for (int i = 0; i < _wave.count; i++)
         {
             SpawnEnemy(_wave.enemies[Random.Range(0, _wave.enemies.Count)]);
             yield return new WaitForSeconds(10f);
         }
-
+         state = SpawnState.Waiting;
         yield break;
     }
 
