@@ -19,7 +19,7 @@ public class GameSpeedSlider : MonoBehaviour
 
     public void OnSliderChange()
     {
-        labelText.text = "Game Speed: " + Mathf.Round(slider.value * 100).ToString() + "%";
+        labelText.text = Mathf.Round(slider.value * 100).ToString() + "%";
         Time.timeScale = slider.value;
     }
 
