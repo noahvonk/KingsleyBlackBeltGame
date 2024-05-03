@@ -35,10 +35,9 @@ public class EnemySpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // SpawnWave(waves[1]);
+        SpawnWave(waves[1]);
 
         waveCountdown = timeBetweenWaves;
-  
     }
 
     // Update is called once per frame
@@ -46,8 +45,10 @@ public class EnemySpawner : MonoBehaviour
     {
         if (state == SpawnState.Waiting)
         {
+            
             if (!EnemyIsAlive())
             {
+                print("No enemies alive");
                 WaveCompleted();
             }
             else
@@ -66,9 +67,8 @@ public class EnemySpawner : MonoBehaviour
         }
         else
         {
-        
-            waveCountdown -= Time.deltaTime;
-           print( waveCountdown); 
+           waveCountdown -= Time.deltaTime;
+      
         }
     }
 
@@ -77,7 +77,7 @@ public class EnemySpawner : MonoBehaviour
         state = SpawnState.Counting;
         waveCountdown = timeBetweenWaves;
  
-         print( waveCountdown); 
+        print( waveCountdown); 
         if (nextWave + 1 > waves.Length - 1)
         {
             nextWave = 0;
@@ -88,6 +88,8 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 
+
+
     bool EnemyIsAlive()
     {
         searchCountdown -= Time.deltaTime;
@@ -96,25 +98,24 @@ public class EnemySpawner : MonoBehaviour
             searchCountdown = 6f;
             if (GameObject.FindGameObjectWithTag("Enemy") == null)
             {
-                return false;
+                return true;
             }
         }
-
-        return true;
+        return false;
     }
+
+
 
     IEnumerator SpawnWave(Wave _wave)
     {
         state = SpawnState.Spawning;
 
-       
-
         for (int i = 0; i < _wave.count; i++)
         {
             SpawnEnemy(_wave.enemies[Random.Range(0, _wave.enemies.Count)]);
-            yield return new WaitForSeconds(10f);
+            yield return new WaitForSeconds(5f);
         }
-         state = SpawnState.Waiting;
+        state = SpawnState.Waiting;
         yield break;
     }
 
