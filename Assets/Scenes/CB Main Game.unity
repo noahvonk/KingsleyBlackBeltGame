@@ -2187,6 +2187,36 @@ MonoBehaviour:
     - {fileID: 5323136899538170475, guid: bf49991037e50fd428235d110bdd9a72, type: 3}
     count: 1
     rate: 1
+  - name: (Wave 81)
+    enemies:
+    - {fileID: 1688452843344484, guid: 7cdb699f28c96ee4b9e64c83a9a02b2b, type: 3}
+    count: 15
+    rate: 1
+  - name: (Wave 82)
+    enemies:
+    - {fileID: 1688452843344484, guid: 7cdb699f28c96ee4b9e64c83a9a02b2b, type: 3}
+    - {fileID: 1158980101858124, guid: 7107c018d7a73af459cb58c37fd6972a, type: 3}
+    count: 15
+    rate: 1
+  - name: (Wave 83)
+    enemies:
+    - {fileID: 1688452843344484, guid: 7cdb699f28c96ee4b9e64c83a9a02b2b, type: 3}
+    - {fileID: 1158980101858124, guid: 7107c018d7a73af459cb58c37fd6972a, type: 3}
+    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
+    count: 15
+    rate: 1
+  - name: (Wave 84)
+    enemies:
+    - {fileID: 1688452843344484, guid: 7cdb699f28c96ee4b9e64c83a9a02b2b, type: 3}
+    - {fileID: 1158980101858124, guid: 7107c018d7a73af459cb58c37fd6972a, type: 3}
+    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
+    count: 30
+    rate: 1
+  - name: (Wave 85) MINIBOSS
+    enemies:
+    - {fileID: 4428212372244300410, guid: c811c12f5259f994ab283136cb39ebd5, type: 3}
+    count: 1
+    rate: 1
   spawnPoints:
   - {fileID: 721756325}
   - {fileID: 202877390}
