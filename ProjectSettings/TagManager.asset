@@ -12,6 +12,7 @@ TagManager:
   - Enemy
   - Ground
   - Troop
+  - Tutorial
   layers:
   - Default
   - TransparentFX
