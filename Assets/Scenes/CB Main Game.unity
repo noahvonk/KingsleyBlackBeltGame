@@ -1346,7 +1346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 395155516}
   - component: {fileID: 395155517}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Speech Bubble
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2303,6 +2303,7 @@ MonoBehaviour:
     rate: 1
   tutorialComplete: 0
   dialogueNumber: 0
+  tutorialText: {fileID: 0}
   spawnPoints:
   - {fileID: 721756325}
   - {fileID: 202877390}
@@ -8060,7 +8061,7 @@ GameObject:
   - component: {fileID: 1732824767}
   - component: {fileID: 1732824766}
   - component: {fileID: 1732824765}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: TutorialText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
