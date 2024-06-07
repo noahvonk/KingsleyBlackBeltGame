@@ -62,7 +62,7 @@ public class EnemySpawner : MonoBehaviour
              //switch (dialogueNumber)
     //     {
     //         case 0:
-            GetComponent<UnityEngine.UI.Text>().text = 
+           // GetComponent<UnityEngine.UI.Text>().text = 
     //             Welcome to Empire of KingZ
     //         case 1:
                     
