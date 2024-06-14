@@ -70,8 +70,20 @@ public class Troops : HumanoidAI
 
     public void OnTriggerEnter(Collider c)
     {
+        if (c.gameObject.CompareTag("Ghost") && canAttack){
+            if(gameObject.name == "Rizzard")
+            {
+                isAttacking = true;
+            }
+            else if(gameObject.name != "Rizzard")
+            {
+                isAttacking = false;
+            }
+            curTarget = c.gameObject;
+             
+        }
         //Debug.Log("Collided");
-        if (c.gameObject.CompareTag("Enemy") && canAttack)
+        else if (c.gameObject.CompareTag("Enemy") && canAttack)
         {
             curTarget = c.gameObject;
             isAttacking = true;

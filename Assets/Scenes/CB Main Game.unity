@@ -2301,6 +2301,37 @@ MonoBehaviour:
     - {fileID: 4428212372244300410, guid: c811c12f5259f994ab283136cb39ebd5, type: 3}
     count: 1
     rate: 1
+  - name: (Wave 86)
+    enemies:
+    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
+    count: 15
+    rate: 1
+  - name: (Wave 87)
+    enemies:
+    - {fileID: 1652796270759994, guid: ed3c152aba85638429bf8b50e4c24c64, type: 3}
+    - {fileID: 1688452843344484, guid: 7cdb699f28c96ee4b9e64c83a9a02b2b, type: 3}
+    - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
+    count: 15
+    rate: 1
+  - name: (Wave 88)
+    enemies:
+    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
+    - {fileID: 1959210465276336, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
+    - {fileID: 1688452843344484, guid: 7cdb699f28c96ee4b9e64c83a9a02b2b, type: 3}
+    count: 15
+    rate: 1
+  - name: (Wave 89)
+    enemies:
+    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
+    - {fileID: 1959210465276336, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
+    - {fileID: 1688452843344484, guid: 7cdb699f28c96ee4b9e64c83a9a02b2b, type: 3}
+    count: 25
+    rate: 1
+  - name: (Wave 90)
+    enemies:
+    - {fileID: 5323136899538170475, guid: c15ba9fec96991742b4d78d7af83f01a, type: 3}
+    count: 1
+    rate: 1
   tutorialComplete: 0
   dialogueNumber: 0
   tutorialText: {fileID: 0}
@@ -3555,7 +3586,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1868111313181612, guid: f6c20c7b577555a47a6f3d33f07018bb, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4532737550002514, guid: f6c20c7b577555a47a6f3d33f07018bb, type: 3}
       propertyPath: m_RootOrder
@@ -8067,7 +8098,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!102 &1732824765
 TextMesh:
   serializedVersion: 3

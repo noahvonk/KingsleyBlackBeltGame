@@ -662,7 +662,7 @@ MonoBehaviour:
   curWall: {fileID: 0}
   rb: {fileID: 1331743107761109242}
   inPosition: 0
-  behaviour: 0
+  behaviour: 1
 --- !u!54 &1331743107761109242
 Rigidbody:
   m_ObjectHideFlags: 0
