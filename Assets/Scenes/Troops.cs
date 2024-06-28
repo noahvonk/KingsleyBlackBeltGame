@@ -68,16 +68,18 @@ public class Troops : HumanoidAI
         StartCoroutine(WaitOnAttack());
     }
 
-    public void OnTriggerEnter(Collider c)
+    public void OnCollisionEnter(Collision c)
     {
         if (c.gameObject.CompareTag("Ghost") && canAttack){
-            if(gameObject.name == "Rizzard")
+            if(gameObject.name == "Rizzard(Clone)")
             {
                 isAttacking = true;
+                //print("Sigma rizz");
             }
-            else if(gameObject.name != "Rizzard")
+            else
             {
                 isAttacking = false;
+                //print("not sigma rizz");
             }
             curTarget = c.gameObject;
              

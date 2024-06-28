@@ -5,6 +5,7 @@ using UnityEngine;
 public class Heros : Troops
 {
     public static Heros Instance;
+    public int upgrade;
 
     // Start is called before the first frame update
     public void Awake()
@@ -15,21 +16,20 @@ public class Heros : Troops
     {
         base.Start();
         health = 250;
-        damage = 500;
+        damage = 500 + upgrade;
         speed = 15;
     }
 
     public void OnSkillButtonPressed()
     {
-        damage = 500;
-        Debug.Log(damage);
-        speed = 100;
+        upgrade = 4500;
+        //Debug.Log(upgrade);
         SkillTimer();
     }
 
     IEnumerator SkillTimer()
     {
-        yield return new WaitForSeconds(9999999999999999f);
+        yield return new WaitForSeconds(10f);
         //ReturnHrDamage();
     }
 

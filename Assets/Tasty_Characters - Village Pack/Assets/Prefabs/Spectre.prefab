@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 5400689515365085119}
   m_Layer: 9
   m_Name: Spectre
-  m_TagString: Enemy
+  m_TagString: Ghost
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -218,10 +218,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!65 &4588849450722775274
 BoxCollider:
