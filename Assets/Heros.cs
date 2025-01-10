@@ -20,6 +20,7 @@ public class Heros : Troops
         speed = 15;
     }
 
+/*
     public void OnSkillButtonPressed()
     {
         upgrade = 4500;
@@ -38,4 +39,5 @@ public class Heros : Troops
         damage = 50;
         speed = 15;
     }
+    */
 }

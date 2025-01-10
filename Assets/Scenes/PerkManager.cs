@@ -55,9 +55,6 @@ public class PerkManager : MonoBehaviour
     
     [SerializeField] private float WallHealthMulti = 1.8f;
 
-
-
-
     // Start is called before the first frame update
     void Start()
     {

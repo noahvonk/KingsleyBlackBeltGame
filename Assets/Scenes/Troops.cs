@@ -62,7 +62,7 @@ public class Troops : HumanoidAI
 
     public override void DoDamage()
     {
-        //Debug.Log("Attacking");
+        Debug.Log("Attacking");
         curTarget.transform.GetComponent<Enemy>().TakeDamage(damage);
         canAttack = false;
         StartCoroutine(WaitOnAttack());
@@ -70,24 +70,25 @@ public class Troops : HumanoidAI
 
     public void OnCollisionEnter(Collision c)
     {
+        /*
         if (c.gameObject.CompareTag("Ghost") && canAttack){
             if(gameObject.name == "Rizzard(Clone)")
             {
                 isAttacking = true;
-                //print("Sigma rizz");
             }
             else
             {
                 isAttacking = false;
-                //print("not sigma rizz");
             }
             curTarget = c.gameObject;
              
         }
+        */
         //Debug.Log("Collided");
-        else if (c.gameObject.CompareTag("Enemy") && canAttack)
+        if (c.gameObject.CompareTag("Enemy") && canAttack)
         {
             curTarget = c.gameObject;
+            DoDamage();
             isAttacking = true;
         }
     }

@@ -1022,7 +1022,7 @@ MonoBehaviour:
   isAttacking: 0
   curTarget: {fileID: 0}
   curWall: {fileID: 0}
-  rb: {fileID: 0}
+  rb: {fileID: 6198347386330124555}
   inPosition: 0
   behaviour: 2
 --- !u!1 &2116330621950815544

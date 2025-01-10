@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4883285232404144}
   - component: {fileID: 212618088193645048}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4266270238519152}
   - component: {fileID: 212222871666874212}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4474365447634600}
   - component: {fileID: 212815803137768666}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Foot L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +262,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4137661322089482}
   - component: {fileID: 212123432045525336}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Foot R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -346,7 +346,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4778492812080484}
   - component: {fileID: 212350582946897454}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Glove L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -430,7 +430,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4313410747377916}
   - component: {fileID: 212331457034373176}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -514,7 +514,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4338357834976718}
   - component: {fileID: 212909043627603166}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Hand R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -598,7 +598,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4772309255685934}
   - component: {fileID: 212346198853199452}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -682,7 +682,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4105193089363868}
   - component: {fileID: 212568077956170654}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Eye L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -766,7 +766,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4045156829763878}
   - component: {fileID: 212480764409369700}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Cape
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -850,7 +850,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4712062635831676}
   - component: {fileID: 212838244703700684}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Eyebrows L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -934,7 +934,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4063019656938622}
   - component: {fileID: 212422890728906048}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Weapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1018,7 +1018,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4273230863482168}
   - component: {fileID: 212942283177708652}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Eyebrows R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1102,7 +1102,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4007670181290038}
   - component: {fileID: 212920250022290312}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Mouth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1188,9 +1188,9 @@ GameObject:
   - component: {fileID: 8363313822029280960}
   - component: {fileID: 7159003968850913163}
   - component: {fileID: 4320463523264517434}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Miyamoto
-  m_TagString: Untagged
+  m_TagString: Troop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1239,8 +1239,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.5461253, y: 1.6382645, z: 1}
-  m_Center: {x: -0.27306277, y: -0.31913263, z: 0}
+  m_Size: {x: 1.7163427, y: 1.6382645, z: 1}
+  m_Center: {x: -0.187955, y: -0.3191327, z: 0}
 --- !u!54 &7159003968850913163
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1279,6 +1279,7 @@ MonoBehaviour:
   canAttack: 1
   isAttacking: 0
   curTarget: {fileID: 0}
+  upgrade: 0
 --- !u!1 &1995486877160038
 GameObject:
   m_ObjectHideFlags: 0
@@ -1289,7 +1290,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4015870471382348}
   - component: {fileID: 212319428778150400}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Eye R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1373,7 +1374,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3229267190875862091}
   - component: {fileID: 8372444772331139956}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1459,7 +1460,7 @@ GameObject:
   - component: {fileID: 1807536249919893684}
   - component: {fileID: 6243577896835851645}
   - component: {fileID: 6378628542947500841}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1559,7 +1560,7 @@ GameObject:
   - component: {fileID: 2386963778891761935}
   - component: {fileID: 7643115778539621625}
   - component: {fileID: 2134221113591967046}
-  m_Layer: 5
+  m_Layer: 11
   m_Name: THealth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1634,7 +1635,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1937932838156303649}
   - component: {fileID: 408039122686655836}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Hat
   m_TagString: Untagged
   m_Icon: {fileID: 0}

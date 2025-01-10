@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
 
     public int gold;
     public Text GoldText;
+    public Text WaveText;
+    public int wave;
 
     public Building gfHouseToPlace;
     public GameObject grid;
@@ -63,6 +65,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         GoldText.text = gold.ToString();
+        WaveText.text = wave.ToString();
         if(targets.Count == 0)
         {
             wallsDead = true;
