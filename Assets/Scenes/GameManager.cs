@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     public Building[] houseTypes;
 
     public int houseCount = 0;
-    public int houseEarnings = 10;
+    public int houseEarnings = 25;
 
     public bool buildMode = false;
     public bool TroopSpawning = false;
@@ -71,11 +71,10 @@ public class GameManager : MonoBehaviour
             wallsDead = true;
             ImagineLosing();
         }
-
         if (Input.GetKeyDown(KeyCode.Q))
-        {
+            {
 
-        }
+            }
     }
 
     public void TileSwitcher(int index)
@@ -108,6 +107,7 @@ public class GameManager : MonoBehaviour
             ChangeCurHouse(b);
             ShowTiles();
             customCursor.BuildMode(b);
+            
     }
 
     public void ChangeCurHouse(int num)
@@ -116,6 +116,7 @@ public class GameManager : MonoBehaviour
         {
             case 0:
                 curHouse = btype.TRHOUSE;
+
                 return;
             case 1:
                 curHouse = btype.GFHOUSE;

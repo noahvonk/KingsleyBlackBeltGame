@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class Building : MonoBehaviour
 {
-
-
-
     public int cost;
     public Texture2D image;
     public Sprite sprite;

@@ -68,7 +68,7 @@ public class Troops : HumanoidAI
         StartCoroutine(WaitOnAttack());
     }
 
-    public void OnCollisionEnter(Collision c)
+    public void OnTriggerEnter(Collider c)
     {
         /*
         if (c.gameObject.CompareTag("Ghost") && canAttack){
@@ -87,6 +87,7 @@ public class Troops : HumanoidAI
         //Debug.Log("Collided");
         if (c.gameObject.CompareTag("Enemy") && canAttack)
         {
+            Debug.Log("Collidied");
             curTarget = c.gameObject;
             DoDamage();
             isAttacking = true;

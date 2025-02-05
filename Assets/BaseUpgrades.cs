@@ -10,13 +10,17 @@ public class BaseUpgrades : MonoBehaviour
     Heros Hero1;
     public void UpgradeBaseHP()
     {
+        if(GameManager.Instance.gold - 150 >= 0){
         Wall.wallHP += 500;
         GameManager.Instance.gold -= 150;
+        };
     }
 
     public void UpgradeHeroDMG()
     {
-        GameManager.Instance.gold -= 500;
+        if(GameManager.Instance.gold - 500 >= 0){
+            GameManager.Instance.gold -= 500;
+        };
         //HumanoidAI.damage += 5;
     }
 }
