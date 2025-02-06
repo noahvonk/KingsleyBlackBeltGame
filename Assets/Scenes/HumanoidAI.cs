@@ -60,7 +60,7 @@ public class HumanoidAI : MonoBehaviour
         if (health <= 0)
         {
             HealthBar.fillAmount = 0;
-
+            
             Destroy(gameObject);
         }
         else

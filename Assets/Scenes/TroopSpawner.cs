@@ -7,6 +7,7 @@ public class TroopSpawner : MonoBehaviour
 {
     public int TroopCost;
     public int TTroops;
+    public static TroopSpawner Instance;
     public GameObject TroopParent;
     GameManager GameManag;
     //Heros Hr;
@@ -66,6 +67,7 @@ public class TroopSpawner : MonoBehaviour
         gameObject.transform.localScale = new Vector3(1, 1, 1);
         troop.transform.SetParent(TroopParent.transform);
         TTroops++;
+        Debug.Log(TTroops);
         };
     }
 

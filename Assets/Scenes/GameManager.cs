@@ -66,6 +66,7 @@ public class GameManager : MonoBehaviour
     {
         GoldText.text = gold.ToString();
         WaveText.text = wave.ToString();
+        TroopSpawner.Instance.TTroops = Troops.Count;
         if(targets.Count == 0)
         {
             wallsDead = true;
@@ -107,7 +108,6 @@ public class GameManager : MonoBehaviour
             ChangeCurHouse(b);
             ShowTiles();
             customCursor.BuildMode(b);
-            
     }
 
     public void ChangeCurHouse(int num)
@@ -116,7 +116,7 @@ public class GameManager : MonoBehaviour
         {
             case 0:
                 curHouse = btype.TRHOUSE;
-
+                maxTroops += 5;
                 return;
             case 1:
                 curHouse = btype.GFHOUSE;

@@ -5,13 +5,10 @@ using UnityEngine.UI;
 
 public class BaseUpgrades : MonoBehaviour
 {
-    WallHealth Wall;
-
-    Heros Hero1;
     public void UpgradeBaseHP()
     {
         if(GameManager.Instance.gold - 150 >= 0){
-        Wall.wallHP += 500;
+        WallHealth.Instance.wallHP += 500;
         GameManager.Instance.gold -= 150;
         };
     }
@@ -20,6 +17,7 @@ public class BaseUpgrades : MonoBehaviour
     {
         if(GameManager.Instance.gold - 500 >= 0){
             GameManager.Instance.gold -= 500;
+            Heros.Instant.upgrade++;
         };
         //HumanoidAI.damage += 5;
     }

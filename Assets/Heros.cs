@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class Heros : Troops
 {
-    public static Heros Instance;
+    public static Heros Instant;
     public int upgrade;
 
     // Start is called before the first frame update
     public void Awake()
     {
-        Instance = this;
+        Instant = this;
     }
     protected override void Start()
     {
         base.Start();
         health = 250;
-        damage = 500 + upgrade;
+        damage = 500;
         speed = 15;
     }
 
