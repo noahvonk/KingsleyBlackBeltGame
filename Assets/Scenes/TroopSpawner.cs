@@ -5,9 +5,8 @@ using UnityEngine.UI;
 
 public class TroopSpawner : MonoBehaviour
 {
-    public int TroopCost;
-    public int TTroops;
     public static TroopSpawner Instance;
+    public int TroopCost;
     public GameObject TroopParent;
     GameManager GameManag;
     //Heros Hr;
@@ -56,7 +55,7 @@ public class TroopSpawner : MonoBehaviour
     public void PlaceTroop(Vector3 pos)
     {
         // Instantiate Troop
-        if(TTroops <= GameManager.Instance.maxTroops){
+        if(GameManager.Instance.TTroops < GameManager.Instance.maxTroops){
         if((GameManag.gold -= TroopCost) >= 0){
             GameManag.gold -= TroopCost;
         } else if ((GameManag.gold -= TroopCost) <= 0){
@@ -66,8 +65,8 @@ public class TroopSpawner : MonoBehaviour
         troop.transform.position = pos;
         gameObject.transform.localScale = new Vector3(1, 1, 1);
         troop.transform.SetParent(TroopParent.transform);
-        TTroops++;
-        Debug.Log(TTroops);
+        GameManager.Instance.TTroops++;
+        //Debug.Log(GameManager.Instance.TTroops);
         };
     }
 

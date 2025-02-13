@@ -77,7 +77,7 @@ public class EnemySpawner : MonoBehaviour
             
             if (!EnemyIsAlive())
             {
-                print("No enemies alive");
+                //print("No enemies alive");
                 WaveCompleted();
             }
             else

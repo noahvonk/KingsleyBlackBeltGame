@@ -88,7 +88,7 @@ public class Enemy : HumanoidAI
                 {
                     foreach (Target t in GameManager.Instance.targets)
                     {
-                        Debug.Log("Checking targets");
+                        //Debug.Log("Checking targets");
                         if (curWall == null)
                         {
 

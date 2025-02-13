@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     public int gold;
     public Text GoldText;
     public Text WaveText;
+    public Text TroopsText;
     public int wave;
 
     public Building gfHouseToPlace;
@@ -40,6 +41,7 @@ public class GameManager : MonoBehaviour
     public btype curHouse = btype.TRHOUSE;
 
     public int maxTroops = 50;
+    public int TTroops;
     //Each troops takes an amount of space( ex. tank = 5tSpace) there is a max cap on how much space you can use and everytime you buy a tHouse, you will gain +5 tSpace
 
     public bool wallsDead = false;
@@ -66,7 +68,8 @@ public class GameManager : MonoBehaviour
     {
         GoldText.text = gold.ToString();
         WaveText.text = wave.ToString();
-        TroopSpawner.Instance.TTroops = Troops.Count;
+        TroopsText.text = TTroops.ToString();
+        //TroopSpawner.Instance.TTroops = Troops.Count;
         if(targets.Count == 0)
         {
             wallsDead = true;
@@ -147,7 +150,7 @@ public class GameManager : MonoBehaviour
 
     void ImagineLosing()
     {
-        if(wallsDead)
+        if(wallsDead = true)
         {
             SceneManager.LoadScene(SceneManager.GetSceneByBuildIndex(2).name);
         }

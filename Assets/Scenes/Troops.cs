@@ -14,6 +14,8 @@ public class Troops : HumanoidAI
             HealthBar.fillAmount = 0;
             GameManager.Instance.Troops.Remove(gameObject);
             Destroy(gameObject);
+            //Debug.Log("Deleted");
+            GameManager.Instance.TTroops--;
         }
         else
         {
@@ -62,7 +64,7 @@ public class Troops : HumanoidAI
 
     public override void DoDamage()
     {
-        Debug.Log("Attacking");
+        //Debug.Log("Attacking");
         curTarget.transform.GetComponent<Enemy>().TakeDamage(damage);
         canAttack = false;
         StartCoroutine(WaitOnAttack());
@@ -87,7 +89,7 @@ public class Troops : HumanoidAI
         //Debug.Log("Collided");
         if (c.gameObject.CompareTag("Enemy") && canAttack)
         {
-            Debug.Log("Collidied");
+            //Debug.Log("Collidied");
             curTarget = c.gameObject;
             DoDamage();
             isAttacking = true;

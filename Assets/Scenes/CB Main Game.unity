@@ -2393,8 +2393,8 @@ MonoBehaviour:
   - {fileID: 919847625}
   - {fileID: 166039351}
   - {fileID: 693006606}
-  timeBetweenWaves: 20
-  waveCountdown: 10
+  timeBetweenWaves: 5
+  waveCountdown: 5
 --- !u!1 &620427800
 GameObject:
   m_ObjectHideFlags: 0
@@ -6548,7 +6548,7 @@ MonoBehaviour:
   buildMode: 0
   TroopSpawning: 0
   curHouse: 0
-  maxTroops: 0
+  maxTroops: 50
   wallsDead: 0
   targets:
   - {fileID: 1029146972}
@@ -9494,6 +9494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TroopCost: 25
+  TTroops: 0
   TroopParent: {fileID: 1956105700}
   SelectedTroop: 1
   TroopPrefabs:
