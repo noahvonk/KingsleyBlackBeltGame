@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class WallHealth : MonoBehaviour
 {
-    //public static WallHealth Instance;
     public static WallHealth Instance;
     public int wallHP;
     public int maxHp;
@@ -29,9 +28,17 @@ public class WallHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        health.fillAmount = (float) wallHP/maxHp;
     }
-
+    /*
+    public void WallUpgradeButtonPressed()
+    {
+        if(GameManager.Instance.gold - 150 >= 0){
+        WallHP += 500;
+        GameManager.Instance.gold -= 150;
+        };
+    }
+*/
     public void TakeDamage(int d)
     {
         if(wallHP - d <= 0 && !dead)
@@ -40,10 +47,9 @@ public class WallHealth : MonoBehaviour
             WallDie();
             dead = true;
         } else {
-            wallHP -= d;
+           wallHP -= d;
         }
         //health.SetActive(true);
-        health.fillAmount = (float) wallHP/maxHp;
         //Debug.Log(health.fillAmount);
     }
 
@@ -57,7 +63,7 @@ public class WallHealth : MonoBehaviour
         string wallName = target.gameObject.name;
 
         string[] splits = wallName.Split("_");
-        Debug.Log(splits[1]);
+       // Debug.Log(splits[1]);
         return int.Parse(splits[1]);
         
     }
@@ -69,5 +75,4 @@ public class WallHealth : MonoBehaviour
         Destroy(this.gameObject);
     }   
 
-    
 }

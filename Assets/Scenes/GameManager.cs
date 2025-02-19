@@ -75,10 +75,14 @@ public class GameManager : MonoBehaviour
             wallsDead = true;
             ImagineLosing();
         }
-        if (Input.GetKeyDown(KeyCode.Q))
-            {
-
-            }
+        if (Input.GetKeyDown(KeyCode.Q)){
+            if(buildMode == true){
+                customCursor.Reset();
+                HideTiles();
+            } else {
+                
+            };
+        }
     }
 
     public void TileSwitcher(int index)

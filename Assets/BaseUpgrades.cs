@@ -7,17 +7,23 @@ public class BaseUpgrades : MonoBehaviour
 {
     public void UpgradeBaseHP()
     {
+        //only upgrades wall 1
         if(GameManager.Instance.gold - 150 >= 0){
-        WallHealth.Instance.wallHP += 500;
+        WallHealth.Instance.wallHP += 1000;
         GameManager.Instance.gold -= 150;
         };
     }
 
     public void UpgradeHeroDMG()
     {
+        //only upgrades the latest placed troop/hero
         if(GameManager.Instance.gold - 500 >= 0){
-            GameManager.Instance.gold -= 500;
-            Heros.Instant.upgrade++;
+            foreach(GameObject x in GameManager.Instance.Troops)
+            {
+                Debug.Log("Upgrade Hero");
+                GameManager.Instance.gold -= 500;
+                Heros.Instant.damage += 100;   
+            }
         };
         //HumanoidAI.damage += 5;
     }
