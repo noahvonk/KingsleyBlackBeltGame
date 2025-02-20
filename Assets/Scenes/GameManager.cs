@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     public Text GoldText;
     public Text WaveText;
     public Text TroopsText;
+    public Text MaxTroopsText;
     public int wave;
 
     public Building gfHouseToPlace;
@@ -52,6 +53,8 @@ public class GameManager : MonoBehaviour
 
     public List<GameObject> Troops = new List<GameObject>();
 
+    public int dmgMulti = 1;
+
     // Start is called before the first frame update
     void Awake()
     {
@@ -69,6 +72,7 @@ public class GameManager : MonoBehaviour
         GoldText.text = gold.ToString();
         WaveText.text = wave.ToString();
         TroopsText.text = TTroops.ToString();
+        MaxTroopsText.text = maxTroops.ToString();
         //TroopSpawner.Instance.TTroops = Troops.Count;
         if(targets.Count == 0)
         {
@@ -123,7 +127,6 @@ public class GameManager : MonoBehaviour
         {
             case 0:
                 curHouse = btype.TRHOUSE;
-                maxTroops += 5;
                 return;
             case 1:
                 curHouse = btype.GFHOUSE;

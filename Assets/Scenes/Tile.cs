@@ -36,11 +36,14 @@ public class Tile : MonoBehaviour
             rend.color = greenColor;
         }
         if(mouseEntered){
-            if(Input.GetMouseButtonDown(0) && !isOccupied && GameManag.gold >= 1 && GameManag.buildMode){
+            if(Input.GetMouseButtonDown(0) && !isOccupied && GameManag.gold >= GameManag.houseTypes[GameManag.GetCurHouseIndex()].cost && GameManag.buildMode){
                 //buildingToPlace = null;
                 isOccupied = true;
                 GameManag.customCursor.Reset();
                 GameManag.gold -= GameManag.houseTypes[GameManag.GetCurHouseIndex()].cost;
+                if(GameManager.Instance.GetCurHouseIndex() == 0){
+                    GameManager.Instance.maxTroops += 5;
+                };
                 gameObject.GetComponent<SpriteRenderer>().sprite = GameManag.houseTypes[GameManag.GetCurHouseIndex()].sprite;
                 //GameManager.Instance.gold
                 GameManag.houseCount += 1;

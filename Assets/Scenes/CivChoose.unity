@@ -183,7 +183,15 @@ PrefabInstance:
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 803715350200401604, guid: bacde0f074a1dcd4f8bad8289ee5f8e2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 803715350200401604, guid: bacde0f074a1dcd4f8bad8289ee5f8e2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 803715350200401604, guid: bacde0f074a1dcd4f8bad8289ee5f8e2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 803715350200401604, guid: bacde0f074a1dcd4f8bad8289ee5f8e2, type: 3}
@@ -191,7 +199,15 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 278033709}
     - target: {fileID: 803715350200401604, guid: bacde0f074a1dcd4f8bad8289ee5f8e2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 278033709}
+    - target: {fileID: 803715350200401604, guid: bacde0f074a1dcd4f8bad8289ee5f8e2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 803715350200401604, guid: bacde0f074a1dcd4f8bad8289ee5f8e2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 803715350200401604, guid: bacde0f074a1dcd4f8bad8289ee5f8e2, type: 3}
@@ -199,8 +215,20 @@ PrefabInstance:
       value: LoadScene2
       objectReference: {fileID: 0}
     - target: {fileID: 803715350200401604, guid: bacde0f074a1dcd4f8bad8289ee5f8e2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 803715350200401604, guid: bacde0f074a1dcd4f8bad8289ee5f8e2, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: SceneSwitcher, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 803715350200401604, guid: bacde0f074a1dcd4f8bad8289ee5f8e2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: SceneSwitcher, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 803715350200401604, guid: bacde0f074a1dcd4f8bad8289ee5f8e2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 803715350475160824, guid: bacde0f074a1dcd4f8bad8289ee5f8e2, type: 3}
       propertyPath: m_Name
@@ -2718,6 +2746,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1629619872}
   m_CullTransparentMesh: 1
+--- !u!1 &1957336148
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1957336150}
+  - component: {fileID: 1957336149}
+  m_Layer: 0
+  m_Name: PerkManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1957336149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957336148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5247d9063b36f5641bfe61ad9c9f2ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  China: 0
+  Germany: 0
+  Japan: 0
+  France: 0
+  Britain: 0
+  MarchSPActive: 0
+  MarchSpeedMulti: 2
+  ArcherDMGActive: 0
+  WarriorDMGActive: 0
+  ArcherDamageMulti: 2
+  WarriorDamageMulti: 2
+  FarmSPActive: 0
+  FarmSpeed: 1
+  FarmSpeedMulti: 2
+  WallHPActive: 0
+  WallHealth: 1
+  WallHealthMulti: 2
+--- !u!4 &1957336150
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1957336148}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 42.93285, y: 23.779352, z: 0.12312886}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2072809621
 GameObject:
   m_ObjectHideFlags: 0

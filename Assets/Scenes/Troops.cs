@@ -5,6 +5,11 @@ using UnityEngine;
 public class Troops : HumanoidAI
 {
     // Update is called once per frame
+    public static Troops Instance;
+
+    public void Awake(){
+        Instance = this;
+    }
 
     public override void TakeDamage(int Tdamage)
     {

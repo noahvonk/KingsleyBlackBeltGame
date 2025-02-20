@@ -16,10 +16,45 @@ public class Heros : Troops
     {
         base.Start();
         health = 250;
-        damage = 500;
+        damage =  500 * upgrade;
         speed = 15;
     }
+    /*
+    protected override void Update(){
+         if (!GameManager.Instance.wallsDead)
+            {
+                if (curTarget != null && canAttack)
+                {
+                    MoveToTarget(curTarget);
+                }
 
+                if (isAttacking && canAttack)
+                {
+                    if (curTarget != null && Vector3.Distance(curTarget.gameObject.transform.position, transform.position) < 3)
+                    {
+                        DoDamage();
+                    }
+                    
+                }
+                if (curTarget == null)
+                {
+                    foreach (GameObject t in GameManager.Instance.enemies)
+                    {
+                        if (curTarget == null)
+                        {
+                            isAttacking = false;
+                            curTarget = t;
+                        }
+                        else if (Vector3.Distance(t.gameObject.transform.position, transform.position) < Vector3.Distance(curTarget.transform.position, transform.position))
+                        {
+                            curTarget = t;
+                        }
+                    }
+                    //Debug.Log(gameObject.name + " is moving");
+                }
+            }
+    }
+*/
 /*
     public void OnSkillButtonPressed()
     {
