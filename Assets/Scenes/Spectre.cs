@@ -8,7 +8,7 @@ public class Spectre : Enemy
     {
         base.Start();
         health = 1000;
-        damage = 99999;
+        damage = 9999;
         speed = 20;
     }
 }

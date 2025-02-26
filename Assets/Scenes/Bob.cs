@@ -8,7 +8,7 @@ public class Bob : Enemy
     protected override void Start()
     {
         base.Start();
-        health = 50000;
+        health = 200000;
         damage = 100;
         speed = 2;
         goldDrops = 10000;

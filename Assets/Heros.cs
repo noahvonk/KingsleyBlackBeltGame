@@ -15,12 +15,13 @@ public class Heros : Troops
     protected override void Start()
     {
         base.Start();
-        health = 250;
+        health = 500;
         damage =  500 * upgrade;
         speed = 15;
     }
-    /*
+    
     protected override void Update(){
+        damage =  500 * upgrade;
          if (!GameManager.Instance.wallsDead)
             {
                 if (curTarget != null && canAttack)
@@ -54,7 +55,7 @@ public class Heros : Troops
                 }
             }
     }
-*/
+
 /*
     public void OnSkillButtonPressed()
     {

@@ -19,9 +19,12 @@ public class BaseUpgrades : MonoBehaviour
         //only upgrades the latest placed troop/hero
         if(GameManager.Instance.gold - 10000 >= 0)
         {
-                Debug.Log("Upgrade Hero");
+                //Debug.Log("Upgrade Hero");
+                foreach (GameObject heros in GameManager.Instance.Troops){
+                    Heros.Instant.upgrade += 1;
+                };
                 GameManager.Instance.gold -= 10000;
-                Heros.Instant.upgrade += 1;
+                
         };
         //HumanoidAI.damage += 5;
     }

@@ -7,8 +7,8 @@ public class KLZ : Enemy
     protected override void Start()
     {
         base.Start();
-        health = 5000000;
-        damage = 1000000;
+        health = 500000;
+        damage = 100000;
         speed = 5;
     }
 }

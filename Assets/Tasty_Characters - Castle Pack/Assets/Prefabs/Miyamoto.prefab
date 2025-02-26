@@ -1269,9 +1269,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e5b5db2bbedc6045b8834d94c23a063, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 250
+  maxHealth: 500
   HealthBar: {fileID: 2134221113591967046}
-  health: 250
+  health: 500
   damage: 500
   speed: 100
   goldDrops: 0
@@ -1279,7 +1279,7 @@ MonoBehaviour:
   canAttack: 1
   isAttacking: 0
   curTarget: {fileID: 0}
-  upgrade: 0
+  upgrade: 1
 --- !u!1 &1995486877160038
 GameObject:
   m_ObjectHideFlags: 0

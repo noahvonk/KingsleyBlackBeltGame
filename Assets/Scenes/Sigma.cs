@@ -8,7 +8,7 @@ public class Sigma : Enemy
     protected override void Start()
     {
         base.Start();
-        health = 12345678;
+        health = 654321;
         damage = 12345;
         speed = 15;
     }

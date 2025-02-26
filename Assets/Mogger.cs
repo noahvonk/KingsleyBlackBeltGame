@@ -10,7 +10,7 @@ public class Mogger : Enemy
     {
         base.Start();
         health = 5000;
-        damage = 99999999;
+        damage = 99999;
         speed = 10;
         goldDrops = 1000;
     }

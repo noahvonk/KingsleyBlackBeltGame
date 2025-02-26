@@ -11,8 +11,8 @@ public class Steve : Enemy
     protected override void Start()
     {
         base.Start();
-        health = rnd.Next(1, 1000001);
-        damage = rnd.Next(100, 1000001);
+        health = rnd.Next(1, 500001);
+        damage = rnd.Next(100, 500001);
         speed = rnd.Next(1, 11);
         goldDrops = 10000;
     }

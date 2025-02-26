@@ -28,7 +28,7 @@ public class Troops : HumanoidAI
         }
     }
 
-    public void Update()
+     new protected virtual void Update()
     {
         {
             if (!GameManager.Instance.wallsDead)
