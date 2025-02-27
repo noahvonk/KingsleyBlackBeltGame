@@ -6,6 +6,7 @@ public class Heros : Troops
 {
     public static Heros Instant;
     public int upgrade;
+    //public int damage;
 
     // Start is called before the first frame update
     public void Awake()
@@ -16,7 +17,7 @@ public class Heros : Troops
     {
         base.Start();
         health = 500;
-        damage =  500 * upgrade;
+        //damage =  500 * upgrade;
         speed = 15;
     }
     

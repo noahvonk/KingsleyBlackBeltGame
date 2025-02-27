@@ -48,12 +48,14 @@ public class GameManager : MonoBehaviour
     public bool wallsDead = false;
 
     public List<Target> targets;
+    
+     [SerializeField] public List<GameObject> Walls = new List<GameObject>();
 
     public List<GameObject> enemies = new List<GameObject>();
 
-    public List<GameObject> Troops = new List<GameObject>();
+    [SerializeField] public List<GameObject> Troops = new List<GameObject>();
 
-    public int dmgMulti = 1;
+    //public int dmgMulti = 1;
 
     // Start is called before the first frame update
     void Awake()
