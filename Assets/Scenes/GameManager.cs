@@ -55,6 +55,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] public List<GameObject> Troops = new List<GameObject>();
 
+    public GameObject background;
+    public bool ManagerModeOn;
+
     //public int dmgMulti = 1;
 
     // Start is called before the first frame update
@@ -66,6 +69,7 @@ public class GameManager : MonoBehaviour
     {
         StartCoroutine(GoldTimer());
         building = new Tile[tiles.Length];
+        ManagerModeOn = true;
     }
 
     // Update is called once per frame
@@ -89,6 +93,21 @@ public class GameManager : MonoBehaviour
                 
             };
         }
+        /*
+        if(Input.GetKeyDown(KeyCode.F))
+        {
+            Debug.Log("F KeyCode");
+            if(ManagerModeOn = false){
+                Debug.Log("MMO False");
+                ManagerModeOn = true;
+                background.SetActive(true);
+            } else{
+                Debug.Log("MMO else");
+                ManagerModeOn = false;
+                background.SetActive(false);
+            }
+        }
+        */
     }
 
     public void TileSwitcher(int index)

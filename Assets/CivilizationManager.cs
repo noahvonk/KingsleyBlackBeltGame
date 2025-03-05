@@ -1,42 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CivilizationManager : MonoBehaviour
 {
+    /*
+    public bool China = false;
+    public bool Germany = false;
+    public bool Japan = false;
+    public bool France = false;
+    public bool Britain = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-/*
     public void ChosenChina()
     {
-        PerkManager.Instance.China == true;
+        China = true;
     }
     public void ChosenGermany()
     {
-        PerkManager.Instance.Germany == true;
+        Germany = true;
     }
     public void ChosenJapan()
     {
-        PerkManager.Instance.Japan == true;
+        Japan = true;
     }
     public void ChosenFrance()
     {
-        PerkManager.Instance.France == true;
+        France = true;
     }
     public void ChosenBritain()
     {
-        PerkManager.Instance.Britain == true;
+        Britain = true;
     }
     */
 }
