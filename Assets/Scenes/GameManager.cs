@@ -16,6 +16,9 @@ public class GameManager : MonoBehaviour
     public Text WaveText;
     public Text TroopsText;
     public Text MaxTroopsText;
+    public Text HeroDMGText;
+    public Text HeroHPText;
+    public Text HeroSPDText;
     public int wave;
 
     public Building gfHouseToPlace;
@@ -79,6 +82,11 @@ public class GameManager : MonoBehaviour
         WaveText.text = wave.ToString();
         TroopsText.text = TTroops.ToString();
         MaxTroopsText.text = maxTroops.ToString();
+        foreach (GameObject heros in Troops){
+        HeroDMGText.text = heros.GetComponent<Heros>().damage.ToString();
+        HeroHPText.text = heros.GetComponent<Heros>().health.ToString();
+        HeroSPDText.text = heros.GetComponent<Heros>().speed.ToString();
+        };
         //TroopSpawner.Instance.TTroops = Troops.Count;
         if(targets.Count == 0)
         {
@@ -93,21 +101,18 @@ public class GameManager : MonoBehaviour
                 
             };
         }
-        /*
+        
         if(Input.GetKeyDown(KeyCode.F))
         {
-            Debug.Log("F KeyCode");
-            if(ManagerModeOn = false){
-                Debug.Log("MMO False");
+            if(ManagerModeOn == false){
                 ManagerModeOn = true;
                 background.SetActive(true);
-            } else{
-                Debug.Log("MMO else");
+            } else if (ManagerModeOn == true){
                 ManagerModeOn = false;
                 background.SetActive(false);
             }
         }
-        */
+
     }
 
     public void TileSwitcher(int index)

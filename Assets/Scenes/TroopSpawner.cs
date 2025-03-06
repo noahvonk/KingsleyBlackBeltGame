@@ -7,6 +7,8 @@ public class TroopSpawner : MonoBehaviour
 {
     public static TroopSpawner Instance;
     public int TroopCost;
+    public bool HeroBuy = false;
+    public bool HeroActive;
     public GameObject TroopParent;
     GameManager GameManag;
     //Heros Hr;
@@ -38,6 +40,11 @@ public class TroopSpawner : MonoBehaviour
             mousePosition = new Vector3(mousePosition.x, mousePosition.y, 5);
             //Debug.Log("Placed Troop");
             PlaceTroop(mousePosition);
+            if(HeroBuy == true){
+                HeroActive = true;
+                HeroBuy = false;
+               // Debug.Log("HeroActiveSetter");
+            }
         }
     }
 
@@ -66,7 +73,7 @@ public class TroopSpawner : MonoBehaviour
         gameObject.transform.localScale = new Vector3(1, 1, 1);
         troop.transform.SetParent(TroopParent.transform);
         GameManager.Instance.TTroops++;
-        //Debug.Log(GameManager.Instance.TTroops);
+        Debug.Log(GameManager.Instance.TTroops);
         };
     }
 
@@ -78,8 +85,16 @@ public class TroopSpawner : MonoBehaviour
 
     public void OnHeroButtonPressed()
     {
+        if(HeroActive == false){
         SelectedTroop = Troops.Hero;
         TroopBuyModeOn();
+        HeroBuy = true;
+       Debug.Log("HeroActiveFalse");
+        } else if (HeroActive == true){
+            TroopBuyModeOff();
+            Debug.Log("HeroActiveTrue");
+        }
+        
     }
 
     public void OnSpearmanButtonPressed()
