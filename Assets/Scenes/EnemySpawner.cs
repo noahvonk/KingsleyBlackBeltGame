@@ -100,12 +100,8 @@ public class EnemySpawner : MonoBehaviour
         }
     }
 /*
-    void Tutorial()
+    void Tutorial()/
         {  
-        If (dialogueNumber != -1 && dialogueNumber != 17);
-        {
-             switch (dialogueNumber)
-        {
             case 0:
                 "Welcome to Empire of KingZ";
             case 1:
@@ -144,10 +140,9 @@ public class EnemySpawner : MonoBehaviour
                     "This marks the end of this tutorial, so make sure to defend your empire with all you got, okay? Watch out because as soon as you click off of this, the enemies will start spawning in 20 seconds. You would want to start with a straw house by the way, Good Luck!" ; 
             default:
                 return;
-        };
          };
-        }
-*/
+         */
+        //}
     void WaveCompleted()
     {
         state = SpawnState.Counting;

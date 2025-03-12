@@ -22,7 +22,7 @@ public class Heros : Troops
     }
     
     protected override void Update(){
-        damage =  500 * upgrade;
+        damage = 500 * upgrade;
          if (!GameManager.Instance.wallsDead)
             {
                 if (curTarget != null && canAttack)
@@ -54,6 +54,8 @@ public class Heros : Troops
                     }
                     //Debug.Log(gameObject.name + " is moving");
                 }
+                //TroopSpawner.Instance.HeroActive = false;
+                //Destroy(gameObject);
             }
     }
 

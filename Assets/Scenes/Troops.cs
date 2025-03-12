@@ -21,10 +21,6 @@ public class Troops : HumanoidAI
             Destroy(gameObject);
             //Debug.Log("Deleted");
             GameManager.Instance.TTroops--;
-            if(TroopSpawner.Instance.HeroActive == true){
-                Debug.Log("HeroActiveDeleter");
-                TroopSpawner.Instance.HeroActive = false;
-            }
         }
         else
         {

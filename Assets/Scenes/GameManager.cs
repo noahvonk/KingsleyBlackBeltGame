@@ -58,6 +58,8 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] public List<GameObject> Troops = new List<GameObject>();
 
+     [SerializeField] public List<GameObject> Hero = new List<GameObject>();
+
     public GameObject background;
     public bool ManagerModeOn;
 
