@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TroopSpawner : MonoBehaviour
 {
-    public static TroopSpawner Instance;
+    public static TroopSpawner Instanc;
     public int TroopCost;
     public bool HeroBuy = false;
     public bool HeroActive = false;
@@ -40,12 +40,7 @@ public class TroopSpawner : MonoBehaviour
             mousePosition = new Vector3(mousePosition.x, mousePosition.y, 5);
             //Debug.Log("Placed Troop");
             PlaceTroop(mousePosition);
-            if(HeroBuy == true){
-                HeroActive = true;
-                HeroBuy = false;
-                TroopBuyModeOff();
-               // Debug.Log("HeroActiveSetter");
-            }
+            
         }
     }
 
@@ -74,6 +69,12 @@ public class TroopSpawner : MonoBehaviour
         gameObject.transform.localScale = new Vector3(1, 1, 1);
         troop.transform.SetParent(TroopParent.transform);
         GameManager.Instance.TTroops++;
+        if(HeroBuy == true){
+                HeroActive = true;
+                HeroBuy = false;
+                TroopBuyModeOff();
+               // Debug.Log("HeroActiveSetter");
+            };
         //Debug.Log(GameManager.Instance.TTroops);
         };
     }

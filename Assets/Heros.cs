@@ -20,6 +20,40 @@ public class Heros : Troops
         //damage =  500 * upgrade;
         speed = 15;
     }
+
+    public override void TakeDamage(int Tdamage){
+         health -= Tdamage;
+        if (health <= 0)
+        {
+            HealthBar.fillAmount = 0;
+            //Debug.Log("Hero ForEach Instance Setter");
+            GameManager.Instance.Troops.Remove(gameObject);
+            TroopSpawner.Instanc.HeroActive = false;
+            Debug.Log("TS Instanc Boolean Change");
+            Destroy(gameObject);
+            GameManager.Instance.TTroops--;
+            /*
+            foreach (GameObject heros in GameManager.Instance.Troops){
+                if(heros.GetComponent<Heros>().health >= 1){
+                    GameManager.Instance.Troops.Remove(gameObject);
+                    Debug.Log("Hero ForEach Instance Setter");
+                TroopSpawner.Instance.HeroActive = false;
+                    Destroy(gameObject);
+                } else {
+                    break;
+                }
+            };
+            
+                //Debug.Log("Hero ForEach Instance Setter");
+                //TroopSpawner.Instance.HeroActive = false;
+            //Debug.Log("Deleted");
+            */
+        }
+        else
+        {
+            HealthBar.fillAmount = (float)health / maxHealth;
+        }
+    }
     
     protected override void Update(){
         damage = 500 * upgrade;

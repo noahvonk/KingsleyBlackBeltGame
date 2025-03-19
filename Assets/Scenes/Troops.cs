@@ -19,8 +19,24 @@ public class Troops : HumanoidAI
             HealthBar.fillAmount = 0;
             GameManager.Instance.Troops.Remove(gameObject);
             Destroy(gameObject);
-            //Debug.Log("Deleted");
+            //TroopSpawner.Instanc.HeroActive = false;
             GameManager.Instance.TTroops--;
+            /*
+            foreach (GameObject heros in GameManager.Instance.Troops){
+                if(heros.GetComponent<Heros>().health >= 1){
+                    GameManager.Instance.Troops.Remove(gameObject);
+                    Debug.Log("Hero ForEach Instance Setter");
+                TroopSpawner.Instance.HeroActive = false;
+                    Destroy(gameObject);
+                } else {
+                    break;
+                }
+            };
+            
+                //Debug.Log("Hero ForEach Instance Setter");
+                //TroopSpawner.Instance.HeroActive = false;
+            //Debug.Log("Deleted");
+            */
         }
         else
         {

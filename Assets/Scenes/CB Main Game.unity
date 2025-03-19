@@ -7577,6 +7577,7 @@ MonoBehaviour:
   - {fileID: 180719494}
   enemies: []
   Troops: []
+  Hero: []
   background: {fileID: 1998174114}
   ManagerModeOn: 0
 --- !u!1 &1478519419 stripped
@@ -10754,6 +10755,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TroopCost: 25
+  HeroBuy: 0
+  HeroActive: 0
   TroopParent: {fileID: 1956105700}
   SelectedTroop: 1
   TroopPrefabs:
