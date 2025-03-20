@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public Text HeroDMGText;
     public Text HeroHPText;
     public Text HeroSPDText;
+    public Text TutorialText;
     public int wave;
 
     public Building gfHouseToPlace;
@@ -63,6 +64,10 @@ public class GameManager : MonoBehaviour
     public GameObject background;
     public bool ManagerModeOn;
 
+    public bool TutorialOn;
+    public int TTS;
+    public GameObject Haon;
+    public GameObject TutText;
     //public int dmgMulti = 1;
 
     // Start is called before the first frame update
@@ -75,11 +80,24 @@ public class GameManager : MonoBehaviour
         StartCoroutine(GoldTimer());
         building = new Tile[tiles.Length];
         ManagerModeOn = true;
+        TutorialOn = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetMouseButtonDown(0) && TutorialOn == true){
+            //Debug.Log("Mouse Down");
+            if(TTS >= 18){
+                TutorialOn = false;
+                Haon.SetActive(false); 
+                TutText.SetActive(false);
+                //TutorialText.SetActive(false);
+            } else {
+                TTS++;
+                ChangeCurText();
+            }
+        }
         GoldText.text = gold.ToString();
         WaveText.text = wave.ToString();
         TroopsText.text = TTroops.ToString();
@@ -104,7 +122,7 @@ public class GameManager : MonoBehaviour
             };
         }
         
-        if(Input.GetKeyDown(KeyCode.F))
+        if(Input.GetKeyDown(KeyCode.Z))
         {
             if(ManagerModeOn == false){
                 ManagerModeOn = true;
@@ -115,6 +133,47 @@ public class GameManager : MonoBehaviour
             }
         }
 
+    }
+
+    public void ChangeCurText()
+    {
+       if(TTS == 1){
+        TutorialText.text = "This game is a wave defense game, the goal is to defend your castle from being conquered by the dark forces";
+       } else if(TTS == 2){
+        TutorialText.text = "My name is Haon and i am here to help you learn how to play this game";
+       } else if (TTS == 3) {
+        TutorialText.text = "If you look at the middle of your screen, you will see a castle, defend that at all costs";
+       } else if(TTS == 4){
+        TutorialText.text = "Take a look at what happens if you press the houses to the top left of your screen";
+       } else if (TTS == 5) {
+        TutorialText.text = "Look! a grid popped up inside the castle, those squares represent where you can put down building, but beware not to put too much, as they all cost gold";
+       } else if(TTS == 6){
+        TutorialText.text = "Speaking of gold, you are going to need it for practically everything within the game, whether that be troops, buildings, upgrades, and more.";
+       } else if (TTS == 7) {
+        TutorialText.text = "Take a look at the houses, they are different in color and shape. The straw house, or the yellowish one is the one that grants you money.";
+       } else if(TTS == 8){
+        TutorialText.text = "If you look at the next house, the blue one, or the military house, this one give you troop spaces, you can buy these houses to increase the maximum amount of troops you can put down. ";
+       } else if (TTS == 9) {
+        TutorialText.text = "With troops, you can find them on the bottom right side of your screen. If you open up the troop menu, you will find a varity of troops.";
+       } else if(TTS == 10){
+        TutorialText.text = "Be careful not to put down too many troops, as they cost both money and troop spaces. You can stop putting down the troops with the Q key.";
+       } else if (TTS == 11) {
+        TutorialText.text = "on the bottom left corner of your screen, you will see the upgrades menu. Here you can upgrade your heroes damage, health, speed and even base health.";
+       } else if(TTS == 12){
+        TutorialText.text = "If you look above the upgrades menu, you will see a slider bar. This here will help you progress faster as it will speed up the game, this can go as slow as 0x speed and as fast as 10x the speed of the game.";
+       } else if (TTS == 13) {
+        TutorialText.text = "After this tutorial has ended, the enemies will spawn soon, make sure to defend them. Enemies appear in waves, each one increasing in difficulty.";
+       } else if(TTS == 14){
+        TutorialText.text =  "one thing to know about enemies is that some only target one specific type of your defense, like the walls or your troops, but most target both. Beware, because after 10 waves as there will be a strong boss.";
+       } else if(TTS == 15){ 
+        TutorialText.text = "In the later waves, there will be mini bosses every 5 waves, and a boss every 10. make sure to be geared up because enemies will get very difficult after a certain wave.";
+       } else if(TTS == 16){
+        TutorialText.text = "The goal is to defend for 100 waves of enemies, and succesfully defend your base from the dark forces, go ahead and have fun trying to win against them.";
+       } else if (TTS == 17) {
+        TutorialText.text = "This marks the end of this tutorial, so make sure to defend your empire with all you got, okay? Watch out because as soon as you click off of this, the enemies will start spawning. Good luck!";
+       } else if (TTS == 18){
+        TutorialText.text = " ";
+       }
     }
 
     public void TileSwitcher(int index)

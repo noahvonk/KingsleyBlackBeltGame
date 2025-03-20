@@ -9,8 +9,7 @@ public class EnemySpawner : MonoBehaviour
     {
         Spawning,
         Waiting,
-        Counting,
-        Tutorial
+        Counting
     }
 
     [System.Serializable]
@@ -28,8 +27,6 @@ public class EnemySpawner : MonoBehaviour
     public int dialogueNumber;
     public Text tutorialText;
 
-
-
     public Transform[] spawnPoints;
 
     public float timeBetweenWaves = 6f;
@@ -42,35 +39,19 @@ public class EnemySpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
         //Tutorial();;
         //starts tutorial, sets the state to tutorial
-
-        waveCountdown = timeBetweenWaves;
+        
     }
 
     // only have code on start tutorial button, and end tutorial button
     void Update()
     {
-        /*
-        if (state == SpawnState.Tutorial)
+        
+        if (GameManager.Instance.TutorialOn == false)
         {
-            if(tutorialComplete == true);
-            {
-                SpawnWave(waves[1]);
-            }    
-            
-            else if (tutorialComplete != true)
-            {
-                Tutorial();
-                return;
-            }  
+                SpawnWave(waves[1]);   
         };
-*/
-         void SkipTutorial(int num)
-        {
-       
-        }
 
         if (state == SpawnState.Waiting)
         {
@@ -89,7 +70,7 @@ public class EnemySpawner : MonoBehaviour
         
         else if (waveCountdown <= 0)
         {
-            if (state != SpawnState.Spawning)
+            if (state != SpawnState.Spawning && GameManager.Instance.TutorialOn == false)
             {
                 StartCoroutine(SpawnWave(waves[nextWave]));
             }
