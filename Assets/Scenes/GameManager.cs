@@ -79,7 +79,7 @@ public class GameManager : MonoBehaviour
     {
         StartCoroutine(GoldTimer());
         building = new Tile[tiles.Length];
-        ManagerModeOn = true;
+        ManagerModeOn = false;
         TutorialOn = true;
     }
 
@@ -102,11 +102,15 @@ public class GameManager : MonoBehaviour
         WaveText.text = wave.ToString();
         TroopsText.text = TTroops.ToString();
         MaxTroopsText.text = maxTroops.ToString();
+        /*
+        if(TroopSpawner.Instanc.HeroActive == true && ManagerModeOn == true){
         foreach (GameObject heros in Troops){
         HeroDMGText.text = heros.GetComponent<Heros>().damage.ToString();
         HeroHPText.text = heros.GetComponent<Heros>().health.ToString();
         HeroSPDText.text = heros.GetComponent<Heros>().speed.ToString();
         };
+        };
+        */
         //TroopSpawner.Instance.TTroops = Troops.Count;
         if(targets.Count == 0)
         {
@@ -121,7 +125,7 @@ public class GameManager : MonoBehaviour
                 
             };
         }
-        
+        /*
         if(Input.GetKeyDown(KeyCode.Z))
         {
             if(ManagerModeOn == false){
@@ -132,7 +136,10 @@ public class GameManager : MonoBehaviour
                 background.SetActive(false);
             }
         }
-
+        */
+        if(wave >= 100){
+            //end the game and congradulate them!!!!
+        }
     }
 
     public void ChangeCurText()

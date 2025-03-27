@@ -24,6 +24,7 @@ public class TroopSpawner : MonoBehaviour
     Camera m_Camera;
     void Awake()
     {
+        Instanc = this;
         m_Camera = Camera.main;
     }
     // Update is called once per frame
@@ -73,9 +74,7 @@ public class TroopSpawner : MonoBehaviour
                 HeroActive = true;
                 HeroBuy = false;
                 TroopBuyModeOff();
-               // Debug.Log("HeroActiveSetter");
             };
-        //Debug.Log(GameManager.Instance.TTroops);
         };
     }
 
@@ -91,10 +90,10 @@ public class TroopSpawner : MonoBehaviour
         SelectedTroop = Troops.Hero;
         TroopBuyModeOn();
         HeroBuy = true;
-        Debug.Log("HeroActiveFalse");
+        //Debug.Log("HeroActiveFalse");
         } else if (HeroActive == true){
             TroopBuyModeOff();
-            Debug.Log("HeroActiveTrue");
+            //Debug.Log("HeroActiveTrue");
         }
     }
 

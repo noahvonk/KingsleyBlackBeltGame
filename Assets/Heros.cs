@@ -20,7 +20,7 @@ public class Heros : Troops
         //damage =  500 * upgrade;
         speed = 15;
     }
-
+/*
     public override void TakeDamage(int Tdamage){
          health -= Tdamage;
         if (health <= 0)
@@ -47,16 +47,18 @@ public class Heros : Troops
                 //Debug.Log("Hero ForEach Instance Setter");
                 //TroopSpawner.Instance.HeroActive = false;
             //Debug.Log("Deleted");
-            */
+            
         }
         else
         {
             HealthBar.fillAmount = (float)health / maxHealth;
         }
     }
+    */
     
     protected override void Update(){
         damage = 500 * upgrade;
+        
          if (!GameManager.Instance.wallsDead)
             {
                 if (curTarget != null && canAttack)
