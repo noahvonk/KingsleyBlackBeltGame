@@ -9,7 +9,7 @@ public class Madak : Enemy
     protected override void Start()
     {
         base.Start();
-        health = 150000;
+        health = 15000;
         damage = 500;
         speed = 1;
         goldDrops = 1000;

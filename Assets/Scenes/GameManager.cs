@@ -138,7 +138,7 @@ public class GameManager : MonoBehaviour
         }
         */
         if(wave >= 100){
-            //end the game and congradulate them!!!!
+            //GameWinner();
         }
     }
 
@@ -163,7 +163,7 @@ public class GameManager : MonoBehaviour
        } else if (TTS == 9) {
         TutorialText.text = "With troops, you can find them on the bottom right side of your screen. If you open up the troop menu, you will find a varity of troops.";
        } else if(TTS == 10){
-        TutorialText.text = "Be careful not to put down too many troops, as they cost both money and troop spaces. You can stop putting down the troops with the Q key.";
+        TutorialText.text = "Be careful not to put down too many troops, as they cost both money and troop spaces. You can stop putting down the troops with the Q key. You can also only place 1 Hero on the map at a time";
        } else if (TTS == 11) {
         TutorialText.text = "on the bottom left corner of your screen, you will see the upgrades menu. Here you can upgrade your heroes damage, health, speed and even base health.";
        } else if(TTS == 12){
@@ -178,9 +178,7 @@ public class GameManager : MonoBehaviour
         TutorialText.text = "The goal is to defend for 100 waves of enemies, and succesfully defend your base from the dark forces, go ahead and have fun trying to win against them.";
        } else if (TTS == 17) {
         TutorialText.text = "This marks the end of this tutorial, so make sure to defend your empire with all you got, okay? Watch out because as soon as you click off of this, the enemies will start spawning. Good luck!";
-       } else if (TTS == 18){
-        TutorialText.text = " ";
-       }
+       } 
     }
 
     public void TileSwitcher(int index)

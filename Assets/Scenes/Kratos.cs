@@ -8,7 +8,7 @@ public class Kratos : Enemy
     protected override void Start()
     {
         base.Start();
-        health = 125000;
+        health = 55000;
         damage = 4500;
         speed = 3;
     }

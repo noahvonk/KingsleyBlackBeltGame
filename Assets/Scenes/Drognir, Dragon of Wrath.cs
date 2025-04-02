@@ -2,15 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CASEOH : Enemy
+public class Drognir : Enemy
 {
-    // Start is called before the first frame update
     protected override void Start()
     {
         base.Start();
-        health = 500000;
-        damage = 1;
+        health = 10000000;
+        damage = 50000;
         speed = 1;
     }
-
 }
