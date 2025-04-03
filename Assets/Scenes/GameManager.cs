@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour
     public Building[] houseTypes;
 
     public int houseCount = 0;
-    public int houseEarnings = 25;
+    public int houseEarnings = 45;
 
     public bool buildMode = false;
     public bool TroopSpawning = false;
@@ -92,6 +92,7 @@ public class GameManager : MonoBehaviour
                 TutorialOn = false;
                 Haon.SetActive(false); 
                 TutText.SetActive(false);
+                TutorialText.text = " ";
                 //TutorialText.SetActive(false);
             } else {
                 TTS++;

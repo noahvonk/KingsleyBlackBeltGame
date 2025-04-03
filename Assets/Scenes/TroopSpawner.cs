@@ -40,8 +40,14 @@ public class TroopSpawner : MonoBehaviour
             Vector3 mousePosition = m_Camera.ScreenToWorldPoint(Input.mousePosition);
             mousePosition = new Vector3(mousePosition.x, mousePosition.y, 5);
             //Debug.Log("Placed Troop");
+            if(GameManager.Instance.TTroops < GameManager.Instance.maxTroops){
+        if((GameManager.Instance.gold -= TroopCost) >= 0){
             PlaceTroop(mousePosition);
-            
+            GameManager.Instance.gold -= TroopCost;
+        } else if ((GameManager.Instance.gold -= TroopCost) <= 0){
+            TroopBuyModeOff();
+        };
+        };  
         }
     }
 
@@ -59,10 +65,8 @@ public class TroopSpawner : MonoBehaviour
     public void PlaceTroop(Vector3 pos)
     {
         // Instantiate Troop
-        if(GameManager.Instance.TTroops < GameManager.Instance.maxTroops){
-        if((GameManag.gold -= TroopCost) >= 0){
-            GameManag.gold -= TroopCost;
-        } else if ((GameManag.gold -= TroopCost) <= 0){
+         if(GameManager.Instance.TTroops < GameManager.Instance.maxTroops){
+            if ((GameManager.Instance.gold -= TroopCost) <= 0){
             TroopBuyModeOff();
         };
         GameObject troop = Instantiate(TroopPrefabs[(int)SelectedTroop]);
@@ -75,7 +79,8 @@ public class TroopSpawner : MonoBehaviour
                 HeroBuy = false;
                 TroopBuyModeOff();
             };
-        };
+         };
+
     }
 
     public void OnWarriorButtonPressed()
