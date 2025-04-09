@@ -68,6 +68,7 @@ public class GameManager : MonoBehaviour
     public int TTS;
     public GameObject Haon;
     public GameObject TutText;
+    public GameObject EndScreen;
     //public int dmgMulti = 1;
 
     // Start is called before the first frame update
@@ -139,7 +140,7 @@ public class GameManager : MonoBehaviour
         }
         */
         if(wave >= 100){
-            //GameWinner();
+            Win();
         }
     }
 
@@ -154,7 +155,7 @@ public class GameManager : MonoBehaviour
        } else if(TTS == 4){
         TutorialText.text = "Take a look at what happens if you press the houses to the top left of your screen";
        } else if (TTS == 5) {
-        TutorialText.text = "Look! a grid popped up inside the castle, those squares represent where you can put down building, but beware not to put too much, as they all cost gold";
+        TutorialText.text = "Look! a grid popped up inside the castle, those squares represent where you can put down building, they all cost gold and provide different benefits";
        } else if(TTS == 6){
         TutorialText.text = "Speaking of gold, you are going to need it for practically everything within the game, whether that be troops, buildings, upgrades, and more.";
        } else if (TTS == 7) {
@@ -254,5 +255,16 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetSceneByBuildIndex(2).name);
         }
+    }
+
+    void Win(){
+        //SceneManager.LoadScene(2);
+        foreach (GameObject heros in Troops){
+            Destroy(heros);
+        };
+        foreach (GameObject enemy in enemies){
+            Destroy(enemy);
+        };
+        EndScreen.SetActive(true);
     }
 }

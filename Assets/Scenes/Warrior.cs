@@ -8,8 +8,8 @@ public class Warrior : Troops
     protected override void Start()
     {
         base.Start();
-        health = 100;
-        damage = 10;
+        health = 500;
+        damage = 50;
         speed = 10;
     }
 }
