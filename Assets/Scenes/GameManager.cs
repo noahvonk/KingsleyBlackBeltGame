@@ -47,6 +47,11 @@ public class GameManager : MonoBehaviour
 
     public int maxTroops = 50;
     public int TTroops;
+    public Text HPText1;
+    public Text HPText2;
+    public Text HPText3;
+    public Text HPText4;
+
     //Each troops takes an amount of space( ex. tank = 5tSpace) there is a max cap on how much space you can use and everytime you buy a tHouse, you will gain +5 tSpace
 
     public bool wallsDead = false;
@@ -142,6 +147,15 @@ public class GameManager : MonoBehaviour
         if(wave >= 100){
             Win();
         }
+
+        foreach (GameObject walls in Walls){
+        //WallHealth.Instance.wallHP += 1000;
+            HPText1.text = walls.GetComponent<WallHealth>().wallHP.ToString();
+            HPText2.text = walls.GetComponent<WallHealth>().wallHP.ToString();
+            HPText3.text = walls.GetComponent<WallHealth>().wallHP.ToString();
+            HPText4.text = walls.GetComponent<WallHealth>().wallHP.ToString();
+            //walls.GetComponent<WallHealth>().maxHp += 1000;
+        };
     }
 
     public void ChangeCurText()
