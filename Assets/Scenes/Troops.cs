@@ -78,20 +78,6 @@ public class Troops : HumanoidAI
 
     public void OnTriggerEnter(Collider c)
     {
-        /*
-        if (c.gameObject.CompareTag("Ghost") && canAttack){
-            if(gameObject.name == "Rizzard(Clone)")
-            {
-                isAttacking = true;
-            }
-            else
-            {
-                isAttacking = false;
-            }
-            curTarget = c.gameObject;
-             
-        }
-        */
         //Debug.Log("Collided");
         if (c.gameObject.CompareTag("Enemy") && canAttack)
         {
@@ -100,7 +86,12 @@ public class Troops : HumanoidAI
             DoDamage();
             isAttacking = true;
         }
+
+        if(c.gameObject.CompareTag("Border")){
+            //make the troop/enemy who touches this wall tp back to the centre of the map and reset their target
+        };
     }
+
 
     public void OnTriggerExit(Collider c)
     {

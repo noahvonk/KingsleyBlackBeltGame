@@ -70,7 +70,7 @@ public class WallHealth : MonoBehaviour
 
     void WallDie()
     {
-        Debug.Log("Wall Dead\n Target: " + target.name + "\nWall: " + name);
+        //Debug.Log("Wall Dead\n Target: " + target.name + "\nWall: " + name);
         GameManager.Instance.targets.Remove(target.GetComponent<Target>());
         Destroy(this.gameObject);
     }   

@@ -114,9 +114,25 @@ public class TroopSpawner : MonoBehaviour
         TroopBuyModeOn();
     }
 
-    public enum Troops { Hero, Warrior, Spearman, Mage, Archer, None, etc, misc}
+    public void OnBuilderButtonPressed()
+    {
+        SelectedTroop = Troops.Builder;
+        TroopBuyModeOn();
+        // move this to the wall builder troop and have it run it. WallBuilder();
+    }
+/*
+    IEnumerator WallBuilder()
+    {
+        yield return new WaitForSeconds(20);
+        foreach (GameObject walls in GameManager.Instance.Walls){
+            walls.GetComponent<WallHealth>().wallHP += 750;
+        };
+        StartCoroutine(WallBuilder());
+    }
+*/
+    public enum Troops { Hero, Warrior, Spearman, Mage, Builder, Archer, None, etc, misc}
     public Troops SelectedTroop = Troops.None;
 
-    [Header("Order is  Hero, Warrior, Spearman, Mage, Archer, None, etc, misc "), SerializeField]
+    [Header("Order is  Hero, Warrior, Spearman, Mage, Builder, Archer, None, etc, misc "), SerializeField]
     private List<GameObject> TroopPrefabs = new();
 }

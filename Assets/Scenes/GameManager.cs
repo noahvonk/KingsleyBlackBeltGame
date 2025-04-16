@@ -4,7 +4,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+//add a unit or upgrade that constantly upgrades the wall
 
+// add a border for units to go to rather than just running off
 public class GameManager : MonoBehaviour
 {   
     public static GameManager Instance;
@@ -281,4 +283,18 @@ public class GameManager : MonoBehaviour
         };
         EndScreen.SetActive(true);
     }
+
+    void Lose(){
+        foreach (GameObject heros in Troops){
+            Destroy(heros);
+        };
+        foreach (GameObject enemy in enemies){
+            Destroy(enemy);
+        };
+        //LoseScreen.SetActive(true);
+        WaitForSeconds(30);
+        
+    };
+
+    
 }
