@@ -68,29 +68,33 @@ public class TroopSpawner : MonoBehaviour
          if(GameManager.Instance.TTroops < GameManager.Instance.maxTroops){
             if ((GameManager.Instance.gold -= TroopCost) <= 0){
             TroopBuyModeOff();
-        };
+        } else {
         GameObject troop = Instantiate(TroopPrefabs[(int)SelectedTroop]);
         troop.transform.position = pos;
         gameObject.transform.localScale = new Vector3(1, 1, 1);
         troop.transform.SetParent(TroopParent.transform);
         GameManager.Instance.TTroops++;
+        };
         if(HeroBuy == true){
                 HeroActive = true;
                 HeroBuy = false;
                 TroopBuyModeOff();
             };
          };
+         
 
     }
 
     public void OnWarriorButtonPressed()
     {
         SelectedTroop = Troops.Warrior;
+        TroopCost = 10;
         TroopBuyModeOn();
     }
 
     public void OnHeroButtonPressed()
     {
+        TroopCost = 50;
         if(HeroActive == false){
         SelectedTroop = Troops.Hero;
         TroopBuyModeOn();
@@ -104,32 +108,28 @@ public class TroopSpawner : MonoBehaviour
 
     public void OnSpearmanButtonPressed()
     {
+        TroopCost = 15;
         SelectedTroop = Troops.Spearman;
         TroopBuyModeOn();
     }
 
     public void OnWizardButtonPressed()
     {
+         TroopCost = 75;
         SelectedTroop = Troops.Mage;
         TroopBuyModeOn();
     }
 
     public void OnBuilderButtonPressed()
     {
+        TroopCost = 1000;
         SelectedTroop = Troops.Builder;
         TroopBuyModeOn();
         // move this to the wall builder troop and have it run it. WallBuilder();
     }
-/*
-    IEnumerator WallBuilder()
-    {
-        yield return new WaitForSeconds(20);
-        foreach (GameObject walls in GameManager.Instance.Walls){
-            walls.GetComponent<WallHealth>().wallHP += 750;
-        };
-        StartCoroutine(WallBuilder());
-    }
-*/
+
+    
+
     public enum Troops { Hero, Warrior, Spearman, Mage, Builder, Archer, None, etc, misc}
     public Troops SelectedTroop = Troops.None;
 

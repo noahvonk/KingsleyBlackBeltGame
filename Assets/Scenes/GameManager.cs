@@ -76,6 +76,8 @@ public class GameManager : MonoBehaviour
     public GameObject Haon;
     public GameObject TutText;
     public GameObject EndScreen;
+    public GameObject LoseScreen;
+    public GameObject Replay;
     //public int dmgMulti = 1;
 
     // Start is called before the first frame update
@@ -124,7 +126,7 @@ public class GameManager : MonoBehaviour
         if(targets.Count == 0)
         {
             wallsDead = true;
-            ImagineLosing();
+            GameLose();
         }
         if (Input.GetKeyDown(KeyCode.Q)){
             if(buildMode == true){
@@ -264,14 +266,8 @@ public class GameManager : MonoBehaviour
         gold += (houseEarnings * houseCount);
         StartCoroutine(GoldTimer());
     }
+    
 
-    void ImagineLosing()
-    {
-        if(wallsDead = true)
-        {
-            SceneManager.LoadScene(SceneManager.GetSceneByBuildIndex(2).name);
-        }
-    }
 
     void Win(){
         //SceneManager.LoadScene(2);
@@ -284,17 +280,19 @@ public class GameManager : MonoBehaviour
         EndScreen.SetActive(true);
     }
 
-    void Lose(){
+    void GameLose(){
+        if(wallsDead = true)
+        {
         foreach (GameObject heros in Troops){
             Destroy(heros);
         };
         foreach (GameObject enemy in enemies){
             Destroy(enemy);
         };
-        //LoseScreen.SetActive(true);
-        WaitForSeconds(30);
-        
-    };
+        LoseScreen.SetActive(true);
+        Replay.SetActive(true);
+        }
+    }
 
     
 }
