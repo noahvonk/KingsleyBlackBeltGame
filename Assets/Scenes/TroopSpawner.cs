@@ -11,6 +11,12 @@ public class TroopSpawner : MonoBehaviour
     public bool HeroActive = false;
     public GameObject TroopParent;
     GameManager GameManag;
+
+    public GameObject WarriorButton;
+    public GameObject SpearButton;
+    public GameObject WizButton;
+    public GameObject BuilderButton;
+    public GameObject HeroButton;
     //Heros Hr;
 
     // Start is called before the first frame update
@@ -30,6 +36,9 @@ public class TroopSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(HeroActive == false){
+            HeroButton.SetActive(true);
+        }
         if (Input.GetKeyDown(KeyCode.Q))
         {
             TroopBuyModeOff();
@@ -41,12 +50,12 @@ public class TroopSpawner : MonoBehaviour
             mousePosition = new Vector3(mousePosition.x, mousePosition.y, 5);
             //Debug.Log("Placed Troop");
             if(GameManager.Instance.TTroops < GameManager.Instance.maxTroops){
-        if((GameManager.Instance.gold -= TroopCost) >= 0){
+        if ((GameManager.Instance.gold -= TroopCost) <= 1){
+            TroopBuyModeOff();
+        } else if((GameManager.Instance.gold -= TroopCost) >= 1){
             PlaceTroop(mousePosition);
             GameManager.Instance.gold -= TroopCost;
-        } else if ((GameManager.Instance.gold -= TroopCost) <= 0){
-            TroopBuyModeOff();
-        };
+        } 
         };  
         }
     }
@@ -65,22 +74,43 @@ public class TroopSpawner : MonoBehaviour
     public void PlaceTroop(Vector3 pos)
     {
         // Instantiate Troop
-         if(GameManager.Instance.TTroops < GameManager.Instance.maxTroops){
-            if ((GameManager.Instance.gold -= TroopCost) <= 0){
-            TroopBuyModeOff();
-        } else {
+         //if(GameManager.Instance.TTroops < GameManager.Instance.maxTroops){
+            //if ((GameManager.Instance.gold -= TroopCost) <= 0){
+            //TroopBuyModeOff();
+        //} else {
+        //Depending on which troop you place down, set a certain cooldown next to the unit : add a CD Number next to the troop button
         GameObject troop = Instantiate(TroopPrefabs[(int)SelectedTroop]);
         troop.transform.position = pos;
         gameObject.transform.localScale = new Vector3(1, 1, 1);
         troop.transform.SetParent(TroopParent.transform);
         GameManager.Instance.TTroops++;
-        };
         if(HeroBuy == true){
                 HeroActive = true;
                 HeroBuy = false;
                 TroopBuyModeOff();
             };
-         };
+
+        if(SelectedTroop == Troops.Warrior){
+            WarCooldown();
+           
+            TroopBuyModeOff();
+        } else if(SelectedTroop == Troops.Spearman){
+            SpearCooldown();
+            SpearButton.SetActive(false);
+            TroopBuyModeOff();
+        } else if (SelectedTroop == Troops.Mage){
+            WizCooldown();
+            WizButton.SetActive(false);
+            TroopBuyModeOff();
+        } else if (SelectedTroop == Troops.Builder){
+            BuilderCooldown();
+            BuilderButton.SetActive(false);
+            TroopBuyModeOff();
+        } else if (SelectedTroop == Troops.Hero){
+            HeroButton.SetActive(false);
+            TroopBuyModeOff();
+        }
+         //};
          
 
     }
@@ -128,7 +158,27 @@ public class TroopSpawner : MonoBehaviour
         // move this to the wall builder troop and have it run it. WallBuilder();
     }
 
-    
+    IEnumerator WarCooldown()
+    {
+        WarriorButton.SetActive(false);
+        yield return new WaitForSeconds(4);
+        WarriorButton.SetActive(true);
+    }
+    IEnumerator SpearCooldown()
+    {
+        yield return new WaitForSeconds(5);
+        SpearButton.SetActive(true);
+    }
+    IEnumerator WizCooldown()
+    {
+        yield return new WaitForSeconds(10);
+        WizButton.SetActive(true);
+    }
+    IEnumerator BuilderCooldown()
+    {
+        yield return new WaitForSeconds(35);
+        BuilderButton.SetActive(true);
+    }
 
     public enum Troops { Hero, Warrior, Spearman, Mage, Builder, Archer, None, etc, misc}
     public Troops SelectedTroop = Troops.None;

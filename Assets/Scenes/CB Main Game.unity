@@ -1032,7 +1032,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -3.46, y: 0.07}
+  m_AnchoredPosition: {x: -4.09, y: 0.07}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &243360984
@@ -1068,7 +1068,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Builder: Constantly Heals Your Base'
+  m_Text: 'Builder: Constantly Heals Your Base | 3000C'
 --- !u!222 &243360985
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1322,7 +1322,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.49, y: 0.08}
+  m_AnchoredPosition: {x: -2.93, y: 0.08}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &311869994
@@ -1358,7 +1358,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Spearman: Tier 2 Troop'
+  m_Text: 'Spearman: Tier 2 Troop | 45C'
 --- !u!222 &311869995
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2011,7 +2011,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.29, y: 0.05}
+  m_AnchoredPosition: {x: -2.7, y: 0.05}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &421926146
@@ -2047,7 +2047,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Warrior: Tier 1 Troop'
+  m_Text: 'Warrior: Tier 1 Troop | 30C'
 --- !u!222 &421926147
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3452,7 +3452,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.22, y: 0.03}
+  m_AnchoredPosition: {x: -2.69, y: 0.03}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &650280666
@@ -3488,7 +3488,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Wizard: Tier 3 Troop'
+  m_Text: 'Wizard: Tier 3 Troop | 225C'
 --- !u!222 &650280667
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10852,7 +10852,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -2.57, y: 0.09}
+  m_AnchoredPosition: {x: -3.06, y: 0.09}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1677514183
@@ -10888,7 +10888,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Hero: Upgradable Troop'
+  m_Text: 'Hero: Upgradable Troop | 150C'
 --- !u!222 &1677514184
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13024,6 +13024,11 @@ MonoBehaviour:
   HeroBuy: 0
   HeroActive: 0
   TroopParent: {fileID: 1956105700}
+  WarriorButton: {fileID: 1816597806}
+  SpearButton: {fileID: 27993510}
+  WizButton: {fileID: 2008719704}
+  BuilderButton: {fileID: 2029944365}
+  HeroButton: {fileID: 1403674032}
   SelectedTroop: 4
   TroopPrefabs:
   - {fileID: 1952700664248154, guid: f4ea8e4ccf1d87a46842a4d970fbc80b, type: 3}

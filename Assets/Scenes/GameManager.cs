@@ -231,6 +231,9 @@ public class GameManager : MonoBehaviour
             ChangeCurHouse(b);
             ShowTiles();
             customCursor.BuildMode(b);
+            if(TroopSpawning == true){
+                TroopSpawning = false;
+            }
     }
 
     public void ChangeCurHouse(int num)
