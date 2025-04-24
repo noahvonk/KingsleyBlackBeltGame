@@ -78,6 +78,9 @@ public class GameManager : MonoBehaviour
     public GameObject EndScreen;
     public GameObject LoseScreen;
     public GameObject Replay;
+
+    public Text NewTroop
+    public Text NewTroopDesc
     //public int dmgMulti = 1;
 
     // Start is called before the first frame update
@@ -171,27 +174,27 @@ public class GameManager : MonoBehaviour
        } else if (TTS == 3) {
         TutorialText.text = "If you look at the middle of your screen, you will see a castle, defend that at all costs";
        } else if(TTS == 4){
-        TutorialText.text = "Take a look at what happens if you press the houses to the top left of your screen";
+        TutorialText.text = "The Houses on the top left, when clicked on and built, will give you money over time. The gold one is the one that gives the most money, and while the blue house provides money, the blue house provides less";
        } else if (TTS == 5) {
-        TutorialText.text = "Look! a grid popped up inside the castle, those squares represent where you can put down building, they all cost gold and provide different benefits";
+        TutorialText.text = "If you clicked on them, a grid with white squares should show up within the castle. Move your mouse over to the grid and simply Click to place it down";
        } else if(TTS == 6){
-        TutorialText.text = "Speaking of gold, you are going to need it for practically everything within the game, whether that be troops, buildings, upgrades, and more.";
+        TutorialText.text = "These houses will provide gold, you can see how much you have on the top right of your screen. You need gold for practically everything in this game";
        } else if (TTS == 7) {
-        TutorialText.text = "Take a look at the houses, they are different in color and shape. The straw house, or the yellowish one is the one that grants you money.";
+        TutorialText.text = "You can see the amount of troops you can place down on the bottom of your screen. The blue house provides 5 more troop spaces per house placed";
        } else if(TTS == 8){
-        TutorialText.text = "If you look at the next house, the blue one, or the military house, this one give you troop spaces, you can buy these houses to increase the maximum amount of troops you can put down. ";
+        TutorialText.text = "The troops are on the bottom right of the screen, press that button and a list of troops and buttons will show up. Each of the troops have a cooldown, so make sure you use them strategically";
        } else if (TTS == 9) {
-        TutorialText.text = "With troops, you can find them on the bottom right side of your screen. If you open up the troop menu, you will find a varity of troops.";
+        TutorialText.text = "Once you press on the Button of a troop, if you click with your Mouse, the troop will be placed where your mouse is currently at";
        } else if(TTS == 10){
-        TutorialText.text = "Be careful not to put down too many troops, as they cost both money and troop spaces. You can stop putting down the troops with the Q key. You can also only place 1 Hero on the map at a time";
+        TutorialText.text = "You can stop putting down the troops with the Q key, and all the troops can be placed until you've reached your max amount, however, you can also only place 1 Hero on the map at a time";
        } else if (TTS == 11) {
-        TutorialText.text = "on the bottom left corner of your screen, you will see the upgrades menu. Here you can upgrade your heroes damage, health, speed and even base health.";
+        TutorialText.text = "on the bottom left corner of your screen, you will see the upgrades menu. If you press the Anvil, you can upgrade your heroes damage, health, speed and even base health. You can also unlock new Troops with research upgrades";
        } else if(TTS == 12){
-        TutorialText.text = "If you look above the upgrades menu, you will see a slider bar. This here will help you progress faster as it will speed up the game, this can go as slow as 0x speed and as fast as 10x the speed of the game.";
+        TutorialText.text = "If you look above the upgrades menu, you will see a slider bar. This here will help you progress faster as it will speed up the game, this can go as slow as 0x speed and as fast as 5x the speed of the game.";
        } else if (TTS == 13) {
         TutorialText.text = "After this tutorial has ended, the enemies will spawn soon, make sure to defend them. Enemies appear in waves, each one increasing in difficulty.";
        } else if(TTS == 14){
-        TutorialText.text =  "one thing to know about enemies is that some only target one specific type of your defense, like the walls or your troops, but most target both. Beware, because after 10 waves as there will be a strong boss.";
+        TutorialText.text = "One thing to know about enemies is that some only target one specific type of your defense, like the walls or your troops, but most target both. Beware, because after 10 waves as there will be a strong boss.";
        } else if(TTS == 15){ 
         TutorialText.text = "In the later waves, there will be mini bosses every 5 waves, and a boss every 10. make sure to be geared up because enemies will get very difficult after a certain wave.";
        } else if(TTS == 16){

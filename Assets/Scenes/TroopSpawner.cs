@@ -91,19 +91,19 @@ public class TroopSpawner : MonoBehaviour
             };
 
         if(SelectedTroop == Troops.Warrior){
-            WarCooldown();
-           
+            StartCoroutine(WarCooldown());
+            WarriorButton.SetActive(false);
             TroopBuyModeOff();
         } else if(SelectedTroop == Troops.Spearman){
-            SpearCooldown();
+            StartCoroutine(SpearCooldown());
             SpearButton.SetActive(false);
             TroopBuyModeOff();
         } else if (SelectedTroop == Troops.Mage){
-            WizCooldown();
+            StartCoroutine(WizCooldown());
             WizButton.SetActive(false);
             TroopBuyModeOff();
         } else if (SelectedTroop == Troops.Builder){
-            BuilderCooldown();
+            StartCoroutine(BuilderCooldown());
             BuilderButton.SetActive(false);
             TroopBuyModeOff();
         } else if (SelectedTroop == Troops.Hero){
@@ -160,23 +160,22 @@ public class TroopSpawner : MonoBehaviour
 
     IEnumerator WarCooldown()
     {
-        WarriorButton.SetActive(false);
-        yield return new WaitForSeconds(4);
+        yield return new WaitForSeconds(8);
         WarriorButton.SetActive(true);
     }
     IEnumerator SpearCooldown()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(10);
         SpearButton.SetActive(true);
     }
     IEnumerator WizCooldown()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(30);
         WizButton.SetActive(true);
     }
     IEnumerator BuilderCooldown()
     {
-        yield return new WaitForSeconds(35);
+        yield return new WaitForSeconds(60);
         BuilderButton.SetActive(true);
     }
 

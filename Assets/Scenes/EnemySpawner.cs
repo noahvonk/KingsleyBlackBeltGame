@@ -122,7 +122,7 @@ public class EnemySpawner : MonoBehaviour
         for (int i = 0; i < _wave.count; i++)
         {
             SpawnEnemy(_wave.enemies[Random.Range(0, _wave.enemies.Count)]);
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(2f);
         }
         state = SpawnState.Waiting;
         GameManager.Instance.wave++;

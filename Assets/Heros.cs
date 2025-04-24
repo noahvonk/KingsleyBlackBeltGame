@@ -16,9 +16,9 @@ public class Heros : Troops
     protected override void Start()
     {
         base.Start();
-        health = 500;
+        health = 1000;
         //damage =  500 * upgrade;
-        speed = 15;
+        speed = 30;
     }
 /*
     public override void TakeDamage(int Tdamage){
@@ -57,7 +57,7 @@ public class Heros : Troops
     */
     
     protected override void Update(){
-        damage = 500 * upgrade;
+        damage = 1000 * upgrade;
         
          if (!GameManager.Instance.wallsDead)
             {

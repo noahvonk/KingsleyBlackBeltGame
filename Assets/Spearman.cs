@@ -8,8 +8,8 @@ public class Spearman : Troops
     protected override void Start()
     {
         base.Start();
-        health = 100;
-        damage = 250;
-        speed = 7;
+        health = 500;
+        damage = 1000;
+        speed = 14;
     }
 }
