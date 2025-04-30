@@ -79,8 +79,12 @@ public class GameManager : MonoBehaviour
     public GameObject LoseScreen;
     public GameObject Replay;
 
-    public Text NewTroop
-    public Text NewTroopDesc
+    public Text NewTroop;
+    public Text NewTroopDesc;
+    public Text NewTroopCost;
+    public int TroopNum = 0;
+
+    public GameObject Arrow;
     //public int dmgMulti = 1;
 
     // Start is called before the first frame update
@@ -203,6 +207,9 @@ public class GameManager : MonoBehaviour
         TutorialText.text = "This marks the end of this tutorial, so make sure to defend your empire with all you got, okay? Watch out because as soon as you click off of this, the enemies will start spawning. Good luck!";
        } 
     }
+
+    
+    
 
     public void TileSwitcher(int index)
     {

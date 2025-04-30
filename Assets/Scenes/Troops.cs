@@ -76,7 +76,7 @@ public class Troops : HumanoidAI
         StartCoroutine(WaitOnAttack());
     }
 
-    public void OnTriggerEnter(Collider c)
+    new protected virtual void OnTriggerEnter(Collider c)
     {
         //Debug.Log("Collided");
         if (c.gameObject.CompareTag("Enemy") && canAttack)
