@@ -15,7 +15,7 @@ public class ArcherTower : Troops
     }
 
     IEnumerator ArrowCooldown(){
-        yield return new WaitForSeconds(15);
+        yield return new WaitForSeconds(10);
         GameObject Arrow = Instantiate(GameManager.Instance.Arrow);
         Arrow.transform.SetParent(TroopSpawner.Instanc.TroopParent.transform);
         StartCoroutine(ArrowCooldown());

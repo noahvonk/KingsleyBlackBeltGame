@@ -85,6 +85,7 @@ public class GameManager : MonoBehaviour
     public int TroopNum = 0;
 
     public GameObject Arrow;
+    public bool DragnirActive;
     //public int dmgMulti = 1;
 
     // Start is called before the first frame update
@@ -155,16 +156,16 @@ public class GameManager : MonoBehaviour
             }
         }
         */
-        if(wave >= 100){
+        if(DragnirActive = false && (wave >= 100)){
             Win();
         }
 
         foreach (GameObject walls in Walls){
         //WallHealth.Instance.wallHP += 1000;
             HPText1.text = walls.GetComponent<WallHealth>().wallHP.ToString();
-            HPText2.text = walls.GetComponent<WallHealth>().wallHP.ToString();
-            HPText3.text = walls.GetComponent<WallHealth>().wallHP.ToString();
-            HPText4.text = walls.GetComponent<WallHealth>().wallHP.ToString();
+            //HPText2.text = walls.GetComponent<WallHealth>().wallHP.ToString();
+            //HPText3.text = walls.GetComponent<WallHealth>().wallHP.ToString();
+            //HPText4.text = walls.GetComponent<WallHealth>().wallHP.ToString();
             //walls.GetComponent<WallHealth>().maxHp += 1000;
         };
     }
