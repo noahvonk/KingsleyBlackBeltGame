@@ -9,7 +9,7 @@ public class Arrow : Troops
         base.Start();
         health = 99999;
         damage = 10000;
-        speed = 45;
+        speed = 50;
     }
 
     protected override void OnTriggerEnter(Collider c)

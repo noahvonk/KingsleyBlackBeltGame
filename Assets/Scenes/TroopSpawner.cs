@@ -175,21 +175,21 @@ public class TroopSpawner : MonoBehaviour
 
     public void OnThiefButtonPressed()
     {
-        TroopCost = 500;
+        TroopCost = 167;
         SelectedTroop = Troops.Thief;
         TroopBuyModeOn();
         // move this to the wall builder troop and have it run it. WallBuilder();
     }
     public void OnHealerButtonPressed()
     {
-        TroopCost = 5000;
+        TroopCost = 1667;
         SelectedTroop = Troops.Healer;
         TroopBuyModeOn();
         // move this to the wall builder troop and have it run it. WallBuilder();
     }
     public void OnArcherTowerButtonPressed()
     {
-        TroopCost = 10000;
+        TroopCost = 3333;
         SelectedTroop = Troops.ArcherTower;
         TroopBuyModeOn();
         // move this to the wall builder troop and have it run it. WallBuilder();
@@ -234,6 +234,6 @@ public class TroopSpawner : MonoBehaviour
     public enum Troops { Hero, Warrior, Spearman, Mage, Builder, Thief, Healer, ArcherTower, None, etc, misc}
     public Troops SelectedTroop = Troops.None;
 
-    [Header("Order is  Hero, Warrior, Spearman, Mage, Builder, Thief, Healer, None, etc, misc "), SerializeField]
+    [Header("Order is  Hero, Warrior, Spearman, Mage, Builder, Thief, Healer, Archer Tower, None "), SerializeField]
     private List<GameObject> TroopPrefabs = new();
 }
