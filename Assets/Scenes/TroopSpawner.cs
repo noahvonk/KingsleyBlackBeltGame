@@ -17,9 +17,6 @@ public class TroopSpawner : MonoBehaviour
     public GameObject WizButton;
     public GameObject BuilderButton;
     public GameObject HeroButton;
-    public GameObject ThiefButton;
-    public GameObject HealerButton;
-    public GameObject ArcherTowerButton;
     //Heros Hr;
 
     // Start is called before the first frame update
@@ -112,19 +109,7 @@ public class TroopSpawner : MonoBehaviour
         } else if (SelectedTroop == Troops.Hero){
             HeroButton.SetActive(false);
             TroopBuyModeOff();
-        } else if (SelectedTroop == Troops.Thief){
-            StartCoroutine(ThiefCooldown());
-            ThiefButton.SetActive(false);
-            TroopBuyModeOff();
-        } else if (SelectedTroop == Troops.Healer){
-            StartCoroutine(HealerCooldown());
-            HealerButton.SetActive(false);
-            TroopBuyModeOff();
-        } else if (SelectedTroop == Troops.ArcherTower){
-            StartCoroutine(ArcherTowerCooldown());
-            ArcherTowerButton.SetActive(false);
-            TroopBuyModeOff();
-        } 
+        }
          //};
          
 
@@ -173,6 +158,8 @@ public class TroopSpawner : MonoBehaviour
         // move this to the wall builder troop and have it run it. WallBuilder();
     }
 
+<<<<<<< HEAD
+=======
     public void OnThiefButtonPressed()
     {
         TroopCost = 500;
@@ -195,6 +182,7 @@ public class TroopSpawner : MonoBehaviour
         // move this to the wall builder troop and have it run it. WallBuilder();
     }
 
+>>>>>>> parent of f67db5b (Added Wall hp)
     IEnumerator WarCooldown()
     {
         yield return new WaitForSeconds(8);
@@ -215,25 +203,14 @@ public class TroopSpawner : MonoBehaviour
         yield return new WaitForSeconds(60);
         BuilderButton.SetActive(true);
     }
-    IEnumerator ThiefCooldown()
-    {
-        yield return new WaitForSeconds(50);
-        ThiefButton.SetActive(true);
-    }
-    IEnumerator HealerCooldown()
-    {
-        yield return new WaitForSeconds(180);
-        HealerButton.SetActive(true);
-    }
-    IEnumerator ArcherTowerCooldown()
-    {
-        yield return new WaitForSeconds(300);
-        ArcherTowerButton.SetActive(true);
-    }
 
-    public enum Troops { Hero, Warrior, Spearman, Mage, Builder, Thief, Healer, ArcherTower, None, etc, misc}
+    public enum Troops { Hero, Warrior, Spearman, Mage, Builder, Archer, None, etc, misc}
     public Troops SelectedTroop = Troops.None;
 
+<<<<<<< HEAD
+    [Header("Order is  Hero, Warrior, Spearman, Mage, Builder, Archer, None, etc, misc "), SerializeField]
+=======
     [Header("Order is  Hero, Warrior, Spearman, Mage, Builder, Thief, Healer, None, etc, misc "), SerializeField]
+>>>>>>> parent of f67db5b (Added Wall hp)
     private List<GameObject> TroopPrefabs = new();
 }

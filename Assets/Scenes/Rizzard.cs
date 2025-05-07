@@ -8,7 +8,7 @@ public class Rizzard : Troops
     {
         base.Start();
         health = 150;
-        damage = 2500;
+        damage = 5000;
         speed = 10;
     }
 }

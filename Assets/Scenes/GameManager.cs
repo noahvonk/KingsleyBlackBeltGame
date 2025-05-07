@@ -81,10 +81,13 @@ public class GameManager : MonoBehaviour
 
     public Text NewTroop;
     public Text NewTroopDesc;
+<<<<<<< HEAD
+=======
     public Text NewTroopCost;
     public int TroopNum = 0;
 
     public GameObject Arrow;
+>>>>>>> parent of f67db5b (Added Wall hp)
     //public int dmgMulti = 1;
 
     // Start is called before the first frame update
@@ -207,9 +210,6 @@ public class GameManager : MonoBehaviour
         TutorialText.text = "This marks the end of this tutorial, so make sure to defend your empire with all you got, okay? Watch out because as soon as you click off of this, the enemies will start spawning. Good luck!";
        } 
     }
-
-    
-    
 
     public void TileSwitcher(int index)
     {

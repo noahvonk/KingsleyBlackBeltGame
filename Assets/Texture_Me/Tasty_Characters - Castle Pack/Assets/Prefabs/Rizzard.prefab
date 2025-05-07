@@ -818,7 +818,7 @@ MonoBehaviour:
   maxHealth: 150
   HealthBar: {fileID: 186613262177650851}
   health: 150
-  damage: 2500
+  damage: 5000
   speed: 5
   goldDrops: 0
   waitTime: 4

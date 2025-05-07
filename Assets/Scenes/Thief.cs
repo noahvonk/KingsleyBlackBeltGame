@@ -5,11 +5,14 @@ using UnityEngine;
 public class Thief : Troops
 {
     // Start is called before the first frame update
-    protected override void Start()
+    void Start()
     {
-        base.Start();
-        health = 600;
-        damage = 1000;
-        speed = 35;
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }
