@@ -224,23 +224,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 90e90000
-      m_LastClickedID: 59792
-      m_ExpandedIDs: ae5effffba60ffffc662ffffe664fffff064ffffde66ffff6c7cfffff07cffffe87dffffe287ffffea91ffff22f2ffff1af4ffff12f6ffff28f8ffff16faffffae5e0000ec5e0000285f00003e5f000042600000966000004c62000044a200006ea500005ea8000030aa0000e2e6000020e7000072e7000076e80000cae8000080ea0000
+      m_SelectedIDs: 80ea0000
+      m_LastClickedID: 60032
+      m_ExpandedIDs: a45effffae5effffb060ffffba60ffffbc62ffffc662ffffe664fffff064ffffde66ffff6c7cfffff07cffffe87dffffe287ffffea91ffff22f2ffff1af4ffff12f6ffff28f8ffff16faffffae5e0000ec5e0000285f00003e5f000042600000966000004c62000044a200006ea500005ea8000030aa00005ce7000072e7000076e80000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Image (1)
+        m_OriginalName: Image (1)
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: -40264
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 5}
       m_SearchString: 
@@ -740,8 +740,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 90e90000
-    m_LastClickedInstanceID: 59792
+    m_SelectedInstanceIDs: 80ea0000
+    m_LastClickedInstanceID: 60032
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c62300006cc30000b69300001670000042680000a4650000a26300002ae70000a6e90000169b00006469000074610000ee6b0000046c0000826300007e630000ae6d0000eed80000400601005e060100586b0000f66d0000704801000000000066260000b23f01000e25000002260000726d0000
     m_RenameOverlay:
