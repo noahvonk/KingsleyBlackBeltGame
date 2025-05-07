@@ -6,24 +6,11 @@ using UnityEngine.UI;
 public class BaseUpgrades : MonoBehaviour
 {
     public void TroopTextSwitcher(){
-        if (GameManager.Instance.TroopNum == 0 && (GameManager.Instance.gold - 15000) >= 0){
+        if(GameManager.Instance.TroopNum == 1 && (GameManager.Instance.gold - 15000) >= 0){
             GameManager.Instance.NewTroop.text = "Healer";
             GameManager.Instance.NewTroopDesc.text = "Health: 500\nHealing: 15   (Heals Troops on Map)\nSpeed: 15\nCost: 5000 || Cooldown: 180s"; 
             GameManager.Instance.gold -= 15000; 
             GameManager.Instance.NewTroopCost.text = "30000C";
-            TroopSpawner.Instanc.ThiefButton.SetActive(true);
-        } else if(GameManager.Instance.TroopNum == 2 && (GameManager.Instance.gold - 30000) >= 0){
-            GameManager.Instance.NewTroop.text = "Archer Tower";
-            GameManager.Instance.NewTroopDesc.text = "Health: 10000\nDamage: 10000   (Shoots Arrows)\nSpeed: 0\nCost: 10000 || Cooldown: 300s"; 
-            GameManager.Instance.gold -= 30000; 
-            GameManager.Instance.NewTroopCost.text = "45000C";
-            TroopSpawner.Instanc.HealerButton.SetActive(true);
-        } else if (GameManager.Instance.TroopNum == 3 && (GameManager.Instance.gold - 45000) >= 0){
-            GameManager.Instance.NewTroop.text = "xx";
-            GameManager.Instance.NewTroopDesc.text = "xx"; 
-            GameManager.Instance.gold -= 45000; 
-            GameManager.Instance.NewTroopCost.text = "xx";
-            TroopSpawner.Instanc.ArcherTowerButton.SetActive(true);
         }
         GameManager.Instance.TroopNum += 1;
     }

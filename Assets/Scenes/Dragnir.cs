@@ -10,6 +10,5 @@ public class Dragnir : Enemy
         health = 10000000;
         damage = 50000;
         speed = 1;
-        GameManager.Instance.DragnirActive = true;
     }
 }
