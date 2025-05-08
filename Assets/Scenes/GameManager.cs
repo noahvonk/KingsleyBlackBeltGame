@@ -62,6 +62,11 @@ public class GameManager : MonoBehaviour
     
      [SerializeField] public List<GameObject> Walls = new List<GameObject>();
 
+    public GameObject TopWall;
+    public GameObject RightWall;
+    public GameObject BottomWall;
+    public GameObject LeftWall;
+
     public List<GameObject> enemies = new List<GameObject>();
 
     [SerializeField] public List<GameObject> Troops = new List<GameObject>();
@@ -159,15 +164,11 @@ public class GameManager : MonoBehaviour
         if(DragnirActive = false && (wave >= 100)){
             Win();
         }
-
-        foreach (GameObject walls in Walls){
-        //WallHealth.Instance.wallHP += 1000;
-            HPText1.text = walls.GetComponent<WallHealth>().wallHP.ToString();
-            //HPText2.text = walls.GetComponent<WallHealth>().wallHP.ToString();
-            //HPText3.text = walls.GetComponent<WallHealth>().wallHP.ToString();
-            //HPText4.text = walls.GetComponent<WallHealth>().wallHP.ToString();
+            HPText1.text = TopWall.GetComponent<WallHealth>().wallHP.ToString();
+            HPText2.text = RightWall.GetComponent<WallHealth>().wallHP.ToString();
+            HPText3.text = LeftWall.GetComponent<WallHealth>().wallHP.ToString();
+            HPText4.text = BottomWall.GetComponent<WallHealth>().wallHP.ToString();
             //walls.GetComponent<WallHealth>().maxHp += 1000;
-        };
     }
 
     public void ChangeCurText()

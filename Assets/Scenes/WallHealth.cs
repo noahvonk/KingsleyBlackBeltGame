@@ -11,6 +11,8 @@ public class WallHealth : MonoBehaviour
     public Image health;
     [SerializeField]
     private GameObject target;
+    public Text WallText;
+
 
     private bool dead = false;
     public GameObject hpDisplay;
@@ -28,7 +30,7 @@ public class WallHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        health.fillAmount = (float) wallHP/maxHp;
+        //health.fillAmount = (float) wallHP/maxHp;
     }
     /*
     public void WallUpgradeButtonPressed()
@@ -59,7 +61,8 @@ public class WallHealth : MonoBehaviour
         {
             Destroy(this.gameObject);
             Destroy(hpDisplay);
-        }
+
+        } 
         string wallName = target.gameObject.name;
 
         string[] splits = wallName.Split("_");
@@ -73,6 +76,9 @@ public class WallHealth : MonoBehaviour
         //Debug.Log("Wall Dead\n Target: " + target.name + "\nWall: " + name);
         GameManager.Instance.targets.Remove(target.GetComponent<Target>());
         Destroy(this.gameObject);
+        //Debug.Log("called to desttoy Text");
+        Destroy(WallText);
+        //Debug.Log("desttoy Text");
     }   
 
 }
