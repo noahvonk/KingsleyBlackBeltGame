@@ -17,7 +17,7 @@ public class Builder : Troops
 
     IEnumerator WallTimer()
         {
-        Debug.Log("Wall Timer");
+        //Debug.Log("Wall Timer");
         yield return new WaitForSeconds(20);
         foreach (GameObject walls in GameManager.Instance.Walls){
             walls.GetComponent<WallHealth>().wallHP += 250;

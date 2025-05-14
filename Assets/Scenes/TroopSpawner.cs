@@ -20,6 +20,7 @@ public class TroopSpawner : MonoBehaviour
     public GameObject ThiefButton;
     public GameObject HealerButton;
     public GameObject ArcherTowerButton;
+    public GameObject FarmerButton;
     //Heros Hr;
 
     // Start is called before the first frame update
@@ -124,6 +125,10 @@ public class TroopSpawner : MonoBehaviour
             StartCoroutine(ArcherTowerCooldown());
             ArcherTowerButton.SetActive(false);
             TroopBuyModeOff();
+        } else if (SelectedTroop == Troops.Farmer){
+            StartCoroutine(FarmerCooldown());
+            FarmerButton.SetActive(false);
+            TroopBuyModeOff();
         } 
          //};
          
@@ -194,6 +199,13 @@ public class TroopSpawner : MonoBehaviour
         TroopBuyModeOn();
         // move this to the wall builder troop and have it run it. WallBuilder();
     }
+    public void OnFarmerButtonPressed()
+    {
+        TroopCost = 500;
+        SelectedTroop = Troops.Farmer;
+        TroopBuyModeOn();
+        // move this to the wall builder troop and have it run it. WallBuilder();
+    }
 
     IEnumerator WarCooldown()
     {
@@ -230,10 +242,15 @@ public class TroopSpawner : MonoBehaviour
         yield return new WaitForSeconds(300);
         ArcherTowerButton.SetActive(true);
     }
+    IEnumerator FarmerCooldown()
+    {
+        yield return new WaitForSeconds(120);
+        FarmerButton.SetActive(true);
+    }
 
-    public enum Troops { Hero, Warrior, Spearman, Mage, Builder, Thief, Healer, ArcherTower, None, etc, misc}
+    public enum Troops { Hero, Warrior, Spearman, Mage, Builder, Thief, Healer, ArcherTower, Farmer, None, etc, misc}
     public Troops SelectedTroop = Troops.None;
 
-    [Header("Order is  Hero, Warrior, Spearman, Mage, Builder, Thief, Healer, Archer Tower, None "), SerializeField]
+    [Header("Order is  Hero, Warrior, Spearman, Mage, Builder, Thief, Healer, Archer Tower, Farmer, None "), SerializeField]
     private List<GameObject> TroopPrefabs = new();
 }

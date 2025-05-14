@@ -281,8 +281,6 @@ public class GameManager : MonoBehaviour
         gold += (houseEarnings * houseCount);
         StartCoroutine(GoldTimer());
     }
-    
-
 
     void Win(){
         //SceneManager.LoadScene(2);
@@ -292,7 +290,7 @@ public class GameManager : MonoBehaviour
         foreach (GameObject enemy in enemies){
             Destroy(enemy);
         };
-        EndScreen.SetActive(true);
+        SceneManager.LoadScene(4);
     }
 
     void GameLose(){
@@ -304,8 +302,7 @@ public class GameManager : MonoBehaviour
         foreach (GameObject enemy in enemies){
             Destroy(enemy);
         };
-        LoseScreen.SetActive(true);
-        Replay.SetActive(true);
+        SceneManager.LoadScene(3);
         }
     }
 

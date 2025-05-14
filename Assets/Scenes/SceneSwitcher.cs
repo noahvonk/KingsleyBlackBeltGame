@@ -27,7 +27,13 @@ public class SceneSwitcher : MonoBehaviour
 
     public void LoadScene2()
     {
+        Debug.Log("Replay Main Game");
         SceneManager.LoadScene(2);
+    }
+
+    public void LoadScene3()
+    {
+        SceneManager.LoadScene(3);
     }
 }
 
