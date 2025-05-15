@@ -9,6 +9,7 @@ public class TroopSpawner : MonoBehaviour
     public int TroopCost;
     public bool HeroBuy = false;
     public bool HeroActive = false;
+    public bool BahamutActive = false;
     public GameObject TroopParent;
     GameManager GameManag;
 
@@ -21,6 +22,7 @@ public class TroopSpawner : MonoBehaviour
     public GameObject HealerButton;
     public GameObject ArcherTowerButton;
     public GameObject FarmerButton;
+    public GameObject BahamutButton;
     //Heros Hr;
 
     // Start is called before the first frame update
@@ -61,6 +63,11 @@ public class TroopSpawner : MonoBehaviour
             GameManager.Instance.gold -= TroopCost;
         } 
         };  
+        }
+        if(BahamutActive == false && GameManager.Instance.TroopNum == 4){
+            BahamutButton.SetActive(true);
+        } else if (BahamutActive == true){
+            BahamutButton.SetActive(false);
         }
     }
 
@@ -128,6 +135,10 @@ public class TroopSpawner : MonoBehaviour
         } else if (SelectedTroop == Troops.Farmer){
             StartCoroutine(FarmerCooldown());
             FarmerButton.SetActive(false);
+            TroopBuyModeOff();
+        }  else if (SelectedTroop == Troops.Bahamut){
+            BahamutButton.SetActive(false);
+            BahamutActive = true;
             TroopBuyModeOff();
         } 
          //};
@@ -207,6 +218,14 @@ public class TroopSpawner : MonoBehaviour
         // move this to the wall builder troop and have it run it. WallBuilder();
     }
 
+    public void OnBahamutButtonPressed()
+    {
+        TroopCost = 33333;
+        SelectedTroop = Troops.Bahamut;
+        TroopBuyModeOn();
+        // move this to the wall builder troop and have it run it. WallBuilder();
+    }
+
     IEnumerator WarCooldown()
     {
         yield return new WaitForSeconds(8);
@@ -248,7 +267,7 @@ public class TroopSpawner : MonoBehaviour
         FarmerButton.SetActive(true);
     }
 
-    public enum Troops { Hero, Warrior, Spearman, Mage, Builder, Thief, Healer, ArcherTower, Farmer, None, etc, misc}
+    public enum Troops { Hero, Warrior, Spearman, Mage, Builder, Thief, Healer, ArcherTower, Farmer, Bahamut, None, etc, misc}
     public Troops SelectedTroop = Troops.None;
 
     [Header("Order is  Hero, Warrior, Spearman, Mage, Builder, Thief, Healer, Archer Tower, Farmer, None "), SerializeField]
