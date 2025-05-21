@@ -10,7 +10,8 @@ public class Kratos : Enemy
         base.Start();
         health = 55000;
         damage = 4500;
-        speed = 3;
+        speed = 10;
+        goldDrops = 500;
     }
 
 }

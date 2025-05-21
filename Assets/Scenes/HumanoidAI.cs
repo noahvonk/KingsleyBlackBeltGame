@@ -15,8 +15,6 @@ public class HumanoidAI : MonoBehaviour
 
     public int speed;
 
-    public int goldDrops;
-
     public int waitTime;
 
     public bool canAttack = true;

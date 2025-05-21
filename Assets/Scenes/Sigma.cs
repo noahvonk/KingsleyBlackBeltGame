@@ -8,8 +8,9 @@ public class Sigma : Enemy
     protected override void Start()
     {
         base.Start();
-        health = 654321;
-        damage = 12345;
-        speed = 15;
+        health = 250000;
+        damage = 5432;
+        speed = 50;
+        goldDrops = 250;
     }
 }

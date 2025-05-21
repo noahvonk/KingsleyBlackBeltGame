@@ -8,11 +8,10 @@ public class DarkKnight : Enemy
     protected override void Start()
     {
         base.Start();
-        health = 100;
-        damage = 15;
-        speed = 10;
-        goldDrops = 100;
-
+        health = 250;
+        damage = 25;
+        speed = 25;
+        goldDrops = 25;
     }
 
 }

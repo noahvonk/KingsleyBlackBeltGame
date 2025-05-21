@@ -7,8 +7,8 @@ public class Rizzard : Troops
     protected override void Start()
     {
         base.Start();
-        health = 150;
-        damage = 2500;
+        health = 100;
+        damage = 150;
         speed = 10;
     }
 }

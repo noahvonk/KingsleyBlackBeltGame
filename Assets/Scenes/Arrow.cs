@@ -7,8 +7,8 @@ public class Arrow : Troops
     protected override void Start()
     {
         base.Start();
-        health = 99999;
-        damage = 10000;
+        health = 999999;
+        damage = 4500;
         speed = 50;
     }
 

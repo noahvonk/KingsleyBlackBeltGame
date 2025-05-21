@@ -9,8 +9,9 @@ public class CASEOH : Enemy
     {
         base.Start();
         health = 500000;
-        damage = 1;
-        speed = 1;
+        damage = 1000;
+        speed = 5;
+        goldDrops = 750;
     }
 
 }

@@ -8,7 +8,7 @@ public class ArcherTower : Troops
     protected override void Start()
     {
         base.Start();
-        health = 10000;
+        health = 7500;
         damage = 0;
         speed = 0;
         StartCoroutine(ArrowCooldown());

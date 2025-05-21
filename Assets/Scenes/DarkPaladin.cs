@@ -9,8 +9,9 @@ public class DarkPaladin : Enemy
     {
         base.Start();
         health = 2000;
-        damage = 15;
-        speed = 4;
+        damage = 50;
+        speed = 10;
+        goldDrops = 20;
     }
 
 }

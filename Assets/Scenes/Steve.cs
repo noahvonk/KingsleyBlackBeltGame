@@ -12,8 +12,8 @@ public class Steve : Enemy
     {
         base.Start();
         health = rnd.Next(1, 500001);
-        damage = rnd.Next(100, 500001);
-        speed = rnd.Next(1, 11);
-        goldDrops = 10000;
+        damage = rnd.Next(1000, 500001);
+        speed = rnd.Next(10, 51);
+        goldDrops = rnd.Next(1, 10001);
     }
 }

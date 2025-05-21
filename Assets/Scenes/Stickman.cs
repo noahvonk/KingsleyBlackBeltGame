@@ -11,6 +11,7 @@ public class Stickman : Enemy
         health = 13209;
         damage = 4832;
         speed = 6;
+        goldDrops = 500;
     }
 
 }

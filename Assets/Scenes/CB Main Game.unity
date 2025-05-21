@@ -3805,10 +3805,6 @@ MonoBehaviour:
     - {fileID: 5323136899538170475, guid: ddee8ad976e5e5b4fa0f04c6afcea617, type: 3}
     count: 1
     rate: 1
-  - name: (Wave 101) ???
-    enemies: []
-    count: 1
-    rate: 1
   tutorialComplete: 0
   dialogueNumber: 0
   tutorialText: {fileID: 0}
@@ -7165,9 +7161,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Health: 600
+  m_Text: 'Health: 500
 
-    Damage: 1000
+    Damage: 500
 
     Speed: 35 (Highest Base Speed Troop)
 

@@ -9,8 +9,8 @@ public class Bob : Enemy
     {
         base.Start();
         health = 100000;
-        damage = 100;
-        speed = 2;
-        goldDrops = 10000;
+        damage = 750;
+        speed = 5;
+        goldDrops = 750;
     }
 }

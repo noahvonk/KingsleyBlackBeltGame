@@ -8,6 +8,7 @@ public class Enemy : HumanoidAI
     public Target curWall;
     public Rigidbody rb;
     public bool inPosition = false;
+    public int goldDrops;
 
     enum Behaviours { WallOnly, TroopOnly, WallWhenNoTroop }
     [SerializeField]
@@ -26,6 +27,7 @@ public class Enemy : HumanoidAI
         if (health <= 0)
         {
             HealthBar.fillAmount = 0;
+            GameManager.Instance.gold += goldDrops;
             GameManager.Instance.enemies.Remove(gameObject);
             Destroy(gameObject);
         }

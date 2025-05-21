@@ -8,9 +8,9 @@ public class MiloDarkKnight : Enemy
     protected override void Start()
     {
         base.Start();
-        health = 50;
-        damage = 15;
-        speed = 10;
-        goldDrops = 50;
+        health = 200;
+        damage = 30;
+        speed = 15;
+        goldDrops = 5;
     }
 }

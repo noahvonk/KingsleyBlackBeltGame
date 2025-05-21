@@ -8,8 +8,8 @@ public class Thief : Troops
     protected override void Start()
     {
         base.Start();
-        health = 600;
-        damage = 1000;
+        health = 500;
+        damage = 500;
         speed = 35;
     }
 }

@@ -8,9 +8,9 @@ public class MaceHandler : Enemy
     protected override void Start()
     {
         base.Start();
-        health = 150;
-        damage = 100;
-        speed = 5;
-        goldDrops = 100;
+        health = 250;
+        damage = 300;
+        speed = 19;
+        goldDrops = 10;
     }
 }

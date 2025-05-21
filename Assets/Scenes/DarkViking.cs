@@ -11,6 +11,7 @@ public class DarkViking : Enemy
         health = 1250;
         damage = 150;
         speed = 7;
+        goldDrops = 15;
     }
 
 }

@@ -20,7 +20,7 @@ public class Builder : Troops
         //Debug.Log("Wall Timer");
         yield return new WaitForSeconds(20);
         foreach (GameObject walls in GameManager.Instance.Walls){
-            walls.GetComponent<WallHealth>().wallHP += 250;
+            walls.GetComponent<WallHealth>().wallHP += 100;
         };
         StartCoroutine(WallTimer());
         }

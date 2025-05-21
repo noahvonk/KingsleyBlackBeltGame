@@ -9,8 +9,9 @@ public class BlackKnight : Enemy
     protected override void Start()
     {
         base.Start();
-        health = 300;
-        damage = 45;
-        speed = 10;
+        health = 1000;
+        damage = 95;
+        speed = 23;
+        goldDrops = 20;
     }
 }

@@ -2,14 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BlackKing : Enemy
+public class DarkRizzard : Enemy
 {
     protected override void Start()
     {
         base.Start();
-        health = 1250;
-        damage = 100;
-        speed = 14;
-        goldDrops = 40;
+        health = 95;
+        damage = 150;
+        speed = 20;
+        goldDrops = 10;
     }
+    
 }

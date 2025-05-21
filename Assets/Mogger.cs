@@ -9,10 +9,10 @@ public class Mogger : Enemy
     protected override void Start()
     {
         base.Start();
-        health = 5000;
-        damage = 99999;
+        health = 50000;
+        damage = 5000;
         speed = 10;
-        goldDrops = 1000;
+        goldDrops = 500;
     }
 
 }

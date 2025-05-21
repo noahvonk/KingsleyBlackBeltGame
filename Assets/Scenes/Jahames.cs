@@ -8,10 +8,10 @@ public class Jahames : Enemy
     protected override void Start()
     {
         base.Start();
-        health = 75000;
-        damage = 300;
-        speed = 15;
-        goldDrops = 1000;
+        health = 25000;
+        damage = 3000;
+        speed = 30;
+        goldDrops = 200;
     }
 
 }

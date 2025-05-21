@@ -7,9 +7,9 @@ public class Bahamut : Troops
     protected override void Start()
     {
         base.Start();
-        health = 1000000;
-        damage = 1000000;
-        speed = 45;
+        health = 100000;
+        damage = 100000;
+        speed = 25;
         TroopSpawner.Instanc.BahamutActive = true;
     }
 }

@@ -161,7 +161,7 @@ public class GameManager : MonoBehaviour
             }
         }
         */
-        if(DragnirActive = false && (wave >= 100)){
+        if(wave >= 100){
             Win();
         }
             HPText1.text = TopWall.GetComponent<WallHealth>().wallHP.ToString();
@@ -281,17 +281,38 @@ public class GameManager : MonoBehaviour
         gold += (houseEarnings * houseCount);
         StartCoroutine(GoldTimer());
     }
-
-    void Win(){
-        //SceneManager.LoadScene(2);
-        foreach (GameObject heros in Troops){
+/*
+    IEnumerator WinTimer()
+    {
+        yield return new WaitForSeconds(5);
+        if(DragnirActive == false){
+            foreach (GameObject heros in Troops){
             Destroy(heros);
-        };
-        foreach (GameObject enemy in enemies){
+            };
+            foreach (GameObject enemy in enemies){
             Destroy(enemy);
-        };
-        SceneManager.LoadScene(4);
+            };
+            SceneManager.LoadScene(4);
+        } else {
+            StartCoroutine(WinTimer());
+        }
     }
+    */
+    void Win(){
+        if (DragnirActive == false && wave >= 100){
+            foreach (GameObject heros in Troops){
+            Destroy(heros);
+            };
+            foreach (GameObject enemy in enemies){
+            Destroy(enemy);
+            };
+            SceneManager.LoadScene(4);
+        } else {
+            
+        };
+        //SceneManager.LoadScene(2);
+    }
+    
 
     void GameLose(){
         if(wallsDead = true)

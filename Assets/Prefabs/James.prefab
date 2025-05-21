@@ -134,14 +134,14 @@ MonoBehaviour:
   health: 50000
   damage: 50
   speed: 15
-  goldDrops: 2147483647
-  waitTime: 0
+  waitTime: 1
   canAttack: 1
   isAttacking: 0
   curTarget: {fileID: 0}
   curWall: {fileID: 0}
   rb: {fileID: 0}
   inPosition: 0
+  goldDrops: 2147483647
   behaviour: 1
 --- !u!1 &6217124540937312343
 GameObject:

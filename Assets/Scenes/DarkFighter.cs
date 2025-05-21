@@ -8,9 +8,9 @@ public class DarkFighter : Enemy
     protected override void Start()
     {
         base.Start();
-        health = 100;
-        damage = 10;
-        speed = 20;
-        goldDrops = 100;
+        health = 200;
+        damage = 75;
+        speed = 25;
+        goldDrops = 5;
     }
 }

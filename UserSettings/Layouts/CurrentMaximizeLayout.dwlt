@@ -224,9 +224,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 94a8ffffd8aaffff0eabffff4eacffff76b2ffff5cb3ffff00b4ffffe0b4ffff9ab7ffff5ab8ffff70beffff96bfffffa8c5ffff46c7ffffeccdffffc0ceffffe0cfffff48d0ffff06d1ffffe4d3ffffc8d4ffff46dcffff46ddffff8eddffffdaddffff28e0ffffa4edffffbcf0ffff66f2ffffe2f2ffff94f3ffff4cf4fffffef4ffff3ef7ffff78f7ffffb2f7ffff70f8ffffaaf8ffff16faffff3c890000ec8900009a8a0000128d000042d9000096e9000056ea000004f60000f2030100d8130100e01e0100742201008e2d0100982d0100ce3001007648010012580100225b01003a66010064660100126801002a730100367501005478010078780100bc7801004e790100
+      m_SelectedIDs: 7ab40000
+      m_LastClickedID: 46202
+      m_ExpandedIDs: 82ebffff0aeeffff88eeffffc4eeffff4af0ffffeaf0ffff2cf1ffff14f3ffff68f3ffffcaf3ffffc0f4ffff4cf8ffff16faffff4c78000044950000c8a3000010a4000020b20000ecb2000040b30000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -672,22 +672,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Texture_Me/Tasty_Characters - Castle Pack/Assets/Prefabs
+    - Assets/Prefabs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 59
   m_LastFolders:
-  - Assets/Texture_Me/Tasty_Characters - Castle Pack/Assets/Prefabs
+  - Assets/Prefabs
   m_LastFoldersGridSize: 59
   m_LastProjectPath: C:\Users\xplre\Documents\GitHub\KingsleyBlackBeltGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 343}
-    m_SelectedIDs: 445f0000
-    m_LastClickedID: 24388
-    m_ExpandedIDs: 00000000f05e0000f25e0000f45e0000f65e0000f85e0000fa5e0000fc5e0000fe5e0000005f0000025f0000045f0000065f0000085f00000a5f00000c5f00000e5f0000105f0000125f0000145f0000165f0000185f00001a5f00001c5f00001e5f000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 7c770000
+    m_LastClickedID: 30588
+    m_ExpandedIDs: 00000000387700003a7700003c7700003e77000040770000427700004477000046770000487700004a7700004c7700004e77000050770000527700005477000056770000587700005a7700005c7700005e7700006077000062770000647700006677000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -715,7 +715,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000f05e0000f25e0000f45e0000f65e0000f85e0000fa5e0000fc5e0000fe5e0000005f0000025f0000045f0000065f0000085f00000a5f00000c5f00000e5f0000105f0000125f0000145f0000165f0000185f00001a5f00001c5f00001e5f000000ca9a3b
+    m_ExpandedIDs: 00000000387700003a7700003c7700003e77000040770000427700004477000046770000487700004a7700004c7700004e77000050770000527700005477000056770000587700005a7700005c7700005e7700006077000062770000647700006677000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -740,8 +740,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 7ab40000
+    m_LastClickedInstanceID: 46202
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300006cc30000b69300001670000042680000a4650000a26300002ae70000a6e90000169b00006469000074610000ee6b0000046c0000826300007e630000ae6d0000eed80000400601005e060100586b0000f66d0000704801000000000066260000b23f01000e25000002260000726d0000846e0000bc750000307c0000
     m_RenameOverlay:
@@ -767,7 +767,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 27}
     m_GridSize: 59
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
@@ -818,8 +818,8 @@ MonoBehaviour:
     y: 0
     width: 436
     height: 939
-  m_MinSize: {x: 276, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}

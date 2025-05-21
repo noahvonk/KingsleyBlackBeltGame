@@ -7,8 +7,9 @@ public class Bandit : Enemy
     protected override void Start()
     {
         base.Start();
-        health = 1000;
-        damage = 17500;
-        speed = 20;
+        health = 950;
+        damage = 150;
+        speed = 45;
+        goldDrops = 100;
     }
 }

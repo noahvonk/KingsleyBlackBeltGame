@@ -93,7 +93,7 @@ public class Heros : Troops
                 //TroopSpawner.Instance.HeroActive = false;
                 //Destroy(gameObject);
             }
-    }
+    } 
 
 /*
     public void OnSkillButtonPressed()

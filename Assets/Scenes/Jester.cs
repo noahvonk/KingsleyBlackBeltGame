@@ -11,9 +11,9 @@ public class Jester : Enemy
     protected override void Start()
     {
         base.Start();
-        health = rnd.Next(10, 1001);
-        damage = rnd.Next(100, 15001);
-        speed = rnd.Next(9, 21);
-        goldDrops = 10000;
+        health = rnd.Next(10, 2501);
+        damage = rnd.Next(10, 1501);
+        speed = rnd.Next(15, 50);
+        goldDrops = rnd.Next(10, 101);
     }
 }

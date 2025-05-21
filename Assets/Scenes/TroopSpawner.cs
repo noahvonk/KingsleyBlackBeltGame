@@ -149,7 +149,7 @@ public class TroopSpawner : MonoBehaviour
     public void OnWarriorButtonPressed()
     {
         SelectedTroop = Troops.Warrior;
-        TroopCost = 10;
+        TroopCost = 25;
         TroopBuyModeOn();
     }
 
@@ -169,7 +169,7 @@ public class TroopSpawner : MonoBehaviour
 
     public void OnSpearmanButtonPressed()
     {
-        TroopCost = 15;
+        TroopCost = 45;
         SelectedTroop = Troops.Spearman;
         TroopBuyModeOn();
     }
