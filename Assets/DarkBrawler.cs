@@ -2,22 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MaceHandler : Enemy
+public class DarkBrawler : Enemy
 {
     // Start is called before the first frame update
     protected override void Start()
     {
         base.Start();
-        if(GameManager.Instance.wave >= 50){
-            health = 2500;
-            damage = 3000;
-            speed = 19;
+        if(GameManager.Instance.wave >= 75){
+            health = 75000;
+            damage = 150;
+            speed = 25;
             goldDrops = 10;
         } else {
-        health = 250;
-        damage = 300;
-        speed = 19;
-        goldDrops = 10;
+        health = 7500;
+        damage = 150;
+        speed = 25;
+        goldDrops = 15;
         }
     }
 }

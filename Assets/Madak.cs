@@ -9,10 +9,17 @@ public class Madak : Enemy
     protected override void Start()
     {
         base.Start();
+        if(GameManager.Instance.wave >= 75){
+            health = 100000;
+            damage = 2500;
+            speed = 5;
+            goldDrops = 750;
+        } else {
         health = 15000;
         damage = 500;
         speed = 5;
         goldDrops = 750;
+        }
     }
 
 }

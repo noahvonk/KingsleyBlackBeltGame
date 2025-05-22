@@ -10,12 +10,12 @@ public class BaseUpgrades : MonoBehaviour
             GameManager.Instance.NewTroop.text = "Farmer";
             GameManager.Instance.NewTroopDesc.text = "Health: 1500\nMoney: 50 (Makes Money for You)\nSpeed:0\nCost: 1500 || Cooldown: 120s"; 
             GameManager.Instance.gold -= 10000; 
-            GameManager.Instance.NewTroopCost.text = "20000C";
+            GameManager.Instance.NewTroopCost.text = "12500C";
             TroopSpawner.Instanc.ThiefButton.SetActive(true);
         } else if(GameManager.Instance.TroopNum == 1 && (GameManager.Instance.gold - 20000) >= 0){
             GameManager.Instance.NewTroop.text = "Archer Tower";
             GameManager.Instance.NewTroopDesc.text = "Health: 10000\nDamage: 4500   (Shoots Arrows)\nSpeed: 0\nCost: 10000 || Cooldown: 300s"; 
-            GameManager.Instance.gold -= 20000; 
+            GameManager.Instance.gold -= 12500; 
             GameManager.Instance.NewTroopCost.text = "30000C";
             TroopSpawner.Instanc.FarmerButton.SetActive(true);
         } else if (GameManager.Instance.TroopNum == 2 && (GameManager.Instance.gold - 30000) >= 0){
@@ -50,9 +50,9 @@ public class BaseUpgrades : MonoBehaviour
     public void UpgradeHeroDMG()
     {
         //only upgrades the latest placed troop/hero
-        if((GameManager.Instance.gold - 1000) >= 0)
+        if((GameManager.Instance.gold - 500) >= 0)
         {
-                GameManager.Instance.gold -= 1000;
+                GameManager.Instance.gold -= 500;
                 //Debug.Log("Upgrade Hero");
                 foreach (GameObject heros in GameManager.Instance.Troops){
                     //heros.Heros.Instant.upgrade += 1;
@@ -67,9 +67,9 @@ public class BaseUpgrades : MonoBehaviour
      public void UpgradeHeroHP()
     {
         //only upgrades the latest placed troop/hero
-        if((GameManager.Instance.gold - 1500) >= 0)
+        if((GameManager.Instance.gold - 750) >= 0)
         {
-                GameManager.Instance.gold -= 1500;
+                GameManager.Instance.gold -= 750;
                 //Debug.Log("Upgrade Hero");
                 foreach (GameObject heros in GameManager.Instance.Troops){
                     //heros.Heros.Instant.upgrade += 1;
@@ -84,9 +84,9 @@ public class BaseUpgrades : MonoBehaviour
     public void UpgradeHeroSpeed()
     {
         //only upgrades the latest placed troop/hero
-        if((GameManager.Instance.gold - 3000) >= 0)
+        if((GameManager.Instance.gold - 1000) >= 0)
         {
-                GameManager.Instance.gold -= 3000;
+                GameManager.Instance.gold -= 1000;
                 //Debug.Log("Upgrade Hero");
                 foreach (GameObject heros in GameManager.Instance.Troops){
                     //heros.Heros.Instant.upgrade += 1;

@@ -7,10 +7,18 @@ public class DarkRizzard : Enemy
     protected override void Start()
     {
         base.Start();
-        health = 95;
-        damage = 150;
-        speed = 20;
-        goldDrops = 10;
+        if(GameManager.Instance.wave >= 50){
+            health = 5000;
+            damage = 350;
+            speed = 20;
+            goldDrops = 10;
+        } else {
+            health = 95;
+            damage = 150;
+            speed = 20;
+            goldDrops = 10;
+        }
+        
     }
     
 }

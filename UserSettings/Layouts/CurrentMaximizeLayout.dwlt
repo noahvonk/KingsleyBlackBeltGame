@@ -86,7 +86,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -224,23 +224,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 7ab40000
-      m_LastClickedID: 46202
-      m_ExpandedIDs: 82ebffff0aeeffff88eeffffc4eeffff4af0ffffeaf0ffff2cf1ffff14f3ffff68f3ffffcaf3ffffc0f4ffff4cf8ffff16faffff4c78000044950000c8a3000010a4000020b20000ecb2000040b30000
+      m_SelectedIDs: e45f0000
+      m_LastClickedID: 24548
+      m_ExpandedIDs: 16faffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: Increase Hero DMG
+        m_OriginalName: Increase Hero DMG
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 25226
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 5}
       m_SearchString: 
@@ -524,9 +524,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 41.544083, y: 36.538902, z: -130.50925}
+    m_Target: {x: 37.435528, y: 37.685894, z: -130.5346}
     speed: 2
-    m_Value: {x: 41.544083, y: 36.538902, z: -130.50925}
+    m_Value: {x: 37.435528, y: 37.685894, z: -130.5346}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -577,9 +577,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 56.35381
+    m_Target: 58.889732
     speed: 2
-    m_Value: 56.35381
+    m_Value: 58.889732
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -672,22 +672,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 59
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Scenes
   m_LastFoldersGridSize: 59
   m_LastProjectPath: C:\Users\xplre\Documents\GitHub\KingsleyBlackBeltGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 7c770000
-    m_LastClickedID: 30588
-    m_ExpandedIDs: 00000000387700003a7700003c7700003e77000040770000427700004477000046770000487700004a7700004c7700004e77000050770000527700005477000056770000587700005a7700005c7700005e7700006077000062770000647700006677000000ca9a3b
+    scrollPos: {x: 0, y: 207}
+    m_SelectedIDs: 80770000
+    m_LastClickedID: 30592
+    m_ExpandedIDs: 000000003c7700003e77000040770000427700004477000046770000487700004a7700004c7700004e77000050770000527700005477000056770000587700005a7700005c7700005e77000060770000627700006477000066770000687700006a77000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -715,7 +715,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000387700003a7700003c7700003e77000040770000427700004477000046770000487700004a7700004c7700004e77000050770000527700005477000056770000587700005a7700005c7700005e7700006077000062770000647700006677000000ca9a3b
+    m_ExpandedIDs: 000000003c7700003e77000040770000427700004477000046770000487700004a7700004c7700004e77000050770000527700005477000056770000587700005a7700005c7700005e77000060770000627700006477000066770000687700006a77000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -740,10 +740,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 7ab40000
-    m_LastClickedInstanceID: 46202
-    m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c62300006cc30000b69300001670000042680000a4650000a26300002ae70000a6e90000169b00006469000074610000ee6b0000046c0000826300007e630000ae6d0000eed80000400601005e060100586b0000f66d0000704801000000000066260000b23f01000e25000002260000726d0000846e0000bc750000307c0000
+    m_SelectedInstanceIDs: e45f0000
+    m_LastClickedInstanceID: 24548
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c62300006cc30000b69300001670000042680000a4650000a26300002ae70000a6e90000169b00006469000074610000ee6b0000046c0000826300007e630000ae6d0000eed80000400601005e060100586b0000f66d0000704801000000000066260000b23f01000e25000002260000726d0000846e0000bc750000307c0000d2760000d6760000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -818,8 +818,8 @@ MonoBehaviour:
     y: 0
     width: 436
     height: 939
-  m_MinSize: {x: 275, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}

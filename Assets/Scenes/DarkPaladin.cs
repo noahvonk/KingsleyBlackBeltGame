@@ -8,10 +8,17 @@ public class DarkPaladin : Enemy
     protected override void Start()
     {
         base.Start();
+        if(GameManager.Instance.wave >= 50){
+            health = 50000;
+            damage = 200;
+            speed = 10;
+            goldDrops = 10;
+        } else {
         health = 2000;
         damage = 50;
         speed = 10;
         goldDrops = 20;
+        }
     }
 
 }

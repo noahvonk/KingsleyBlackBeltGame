@@ -8,9 +8,16 @@ public class MiloDarkKnight : Enemy
     protected override void Start()
     {
         base.Start();
-        health = 200;
-        damage = 30;
+        if(GameManager.Instance.wave >= 50){
+            health = 20000;
+            damage = 300;
+            speed = 15;
+            goldDrops = 5;
+        } else {
+        health = 100;
+        damage = 25;
         speed = 15;
         goldDrops = 5;
+        }
     }
 }

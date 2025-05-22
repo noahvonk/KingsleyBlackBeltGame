@@ -9,6 +9,7 @@ public class Spectre : Enemy
         base.Start();
         health = 1000;
         damage = 9999;
-        speed = 20;
+        speed = 35;
+        goldDrops = 15;
     }
 }

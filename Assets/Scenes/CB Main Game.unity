@@ -3218,7 +3218,7 @@ MonoBehaviour:
   - name: (Wave 3)
     enemies:
     - {fileID: 1969890579225098, guid: 581a401355b3afc4b810d4ee8e6e80f9, type: 3}
-    count: 15
+    count: 10
     rate: 1
   - name: (Wave 4)
     enemies:
@@ -3235,7 +3235,8 @@ MonoBehaviour:
   - name: (Wave 6)
     enemies:
     - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
-    count: 5
+    - {fileID: 1652796270759994, guid: ed3c152aba85638429bf8b50e4c24c64, type: 3}
+    count: 3
     rate: 1
   - name: (Wave 7)
     enemies:
@@ -3247,13 +3248,15 @@ MonoBehaviour:
     enemies:
     - {fileID: 1652796270759994, guid: ed3c152aba85638429bf8b50e4c24c64, type: 3}
     - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
-    count: 10
+    - {fileID: 1969890579225098, guid: 581a401355b3afc4b810d4ee8e6e80f9, type: 3}
+    count: 4
     rate: 1
   - name: (Wave 9)
     enemies:
     - {fileID: 1652796270759994, guid: ed3c152aba85638429bf8b50e4c24c64, type: 3}
     - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
-    count: 20
+    - {fileID: 1959210465276336, guid: f39d1119a1c44204b90823d51e6eda0c, type: 3}
+    count: 3
     rate: 1
   - name: (Wave 10) BOSS
     enemies:
@@ -3262,24 +3265,24 @@ MonoBehaviour:
     rate: 1
   - name: Wave (11)
     enemies:
-    - {fileID: 1652796270759994, guid: ed3c152aba85638429bf8b50e4c24c64, type: 3}
+    - {fileID: 1959210465276336, guid: f39d1119a1c44204b90823d51e6eda0c, type: 3}
     - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
-    count: 10
+    count: 7
     rate: 1
   - name: Wave (12)
     enemies:
-    - {fileID: 1969890579225098, guid: 581a401355b3afc4b810d4ee8e6e80f9, type: 3}
-    count: 50
+    - {fileID: 1959210465276336, guid: f39d1119a1c44204b90823d51e6eda0c, type: 3}
+    count: 5
     rate: 0.5
   - name: Wave (13)
     enemies:
     - {fileID: 1652796270759994, guid: ed3c152aba85638429bf8b50e4c24c64, type: 3}
-    count: 20
+    count: 5
     rate: 1
   - name: Wave (14)
     enemies:
     - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
-    count: 15
+    count: 8
     rate: 1
   - name: Wave (15)
     enemies:
@@ -3289,25 +3292,26 @@ MonoBehaviour:
   - name: Wave (16)
     enemies:
     - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
-    - {fileID: 1652796270759994, guid: ed3c152aba85638429bf8b50e4c24c64, type: 3}
-    count: 15
+    - {fileID: 1959210465276336, guid: f39d1119a1c44204b90823d51e6eda0c, type: 3}
+    count: 8
     rate: 1
   - name: Wave (17)
     enemies:
-    - {fileID: 1969890579225098, guid: 581a401355b3afc4b810d4ee8e6e80f9, type: 3}
+    - {fileID: 1959210465276336, guid: f39d1119a1c44204b90823d51e6eda0c, type: 3}
     - {fileID: 1619877827293244, guid: 89cb7e4da7cce4c40bdd4f4531ca6ac8, type: 3}
     - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
-    count: 20
+    count: 9
     rate: 0.1
   - name: Wave (18)
     enemies:
     - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
-    count: 15
+    count: 10
     rate: 0.5
   - name: Wave (19)
     enemies:
     - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
-    count: 50
+    - {fileID: 1959210465276336, guid: f39d1119a1c44204b90823d51e6eda0c, type: 3}
+    count: 10
     rate: 0
   - name: Wave (20) BOSS
     enemies:
@@ -3317,7 +3321,8 @@ MonoBehaviour:
   - name: Wave (21)
     enemies:
     - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
-    count: 25
+    - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
+    count: 12
     rate: 0
   - name: Wave (22)
     enemies:
@@ -3325,11 +3330,11 @@ MonoBehaviour:
     - {fileID: 1652796270759994, guid: ed3c152aba85638429bf8b50e4c24c64, type: 3}
     - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
     - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
-    count: 15
+    count: 9
     rate: 1
   - name: Wave (23)
     enemies:
-    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
+    - {fileID: 1959210465276336, guid: f39d1119a1c44204b90823d51e6eda0c, type: 3}
     count: 10
     rate: 1
   - name: Wave (24)
@@ -3340,27 +3345,32 @@ MonoBehaviour:
   - name: Wave (25)
     enemies:
     - {fileID: 1652796270759994, guid: ed3c152aba85638429bf8b50e4c24c64, type: 3}
+    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
     count: 10
     rate: 1
   - name: Wave (26)
     enemies:
-    - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
+    - {fileID: 1959210465276336, guid: f39d1119a1c44204b90823d51e6eda0c, type: 3}
     count: 10
     rate: 1
   - name: Wave (27)
     enemies:
-    - {fileID: 1969890579225098, guid: 581a401355b3afc4b810d4ee8e6e80f9, type: 3}
-    count: 25
+    - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
+    - {fileID: 1271163058963824, guid: 8bf00f738ad5d484fad95a99c54fa44c, type: 3}
+    - {fileID: 1959210465276336, guid: f39d1119a1c44204b90823d51e6eda0c, type: 3}
+    count: 7
     rate: 1
   - name: Wave (28)
     enemies:
-    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
-    count: 25
+    - {fileID: 1271163058963824, guid: 8bf00f738ad5d484fad95a99c54fa44c, type: 3}
+    - {fileID: 1959210465276336, guid: f39d1119a1c44204b90823d51e6eda0c, type: 3}
+    count: 9
     rate: 0
   - name: Wave (29)
     enemies:
-    - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
-    count: 40
+    - {fileID: 1158980101858124, guid: 7107c018d7a73af459cb58c37fd6972a, type: 3}
+    - {fileID: 1619877827293244, guid: 89cb7e4da7cce4c40bdd4f4531ca6ac8, type: 3}
+    count: 7
     rate: 1
   - name: Wave (30) BOSS
     enemies:
@@ -3370,49 +3380,59 @@ MonoBehaviour:
   - name: Wave (31)
     enemies:
     - {fileID: 1868111313181612, guid: 35b0947ad8031c044a8d63699d7fe215, type: 3}
-    - {fileID: 1969890579225098, guid: 581a401355b3afc4b810d4ee8e6e80f9, type: 3}
+    - {fileID: 1619877827293244, guid: 89cb7e4da7cce4c40bdd4f4531ca6ac8, type: 3}
     count: 5
     rate: 1
   - name: Wave (32)
     enemies:
     - {fileID: 1868111313181612, guid: 35b0947ad8031c044a8d63699d7fe215, type: 3}
+    - {fileID: 1271163058963824, guid: 8bf00f738ad5d484fad95a99c54fa44c, type: 3}
+    - {fileID: 1158980101858124, guid: 7107c018d7a73af459cb58c37fd6972a, type: 3}
     count: 6
     rate: 1
   - name: Wave (33)
     enemies:
     - {fileID: 1868111313181612, guid: 35b0947ad8031c044a8d63699d7fe215, type: 3}
+    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
     count: 9
     rate: 1
   - name: Wave (34)
     enemies:
-    - {fileID: 1868111313181612, guid: 35b0947ad8031c044a8d63699d7fe215, type: 3}
+    - {fileID: 1619877827293244, guid: 89cb7e4da7cce4c40bdd4f4531ca6ac8, type: 3}
     - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
-    count: 9
+    - {fileID: 1158980101858124, guid: 7107c018d7a73af459cb58c37fd6972a, type: 3}
+    count: 6
     rate: 1
   - name: Wave (35)
     enemies:
     - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
-    count: 10
+    - {fileID: 1271163058963824, guid: 8bf00f738ad5d484fad95a99c54fa44c, type: 3}
+    - {fileID: 1959210465276336, guid: f39d1119a1c44204b90823d51e6eda0c, type: 3}
+    - {fileID: 1158980101858124, guid: 7107c018d7a73af459cb58c37fd6972a, type: 3}
+    count: 5
     rate: 1
   - name: Wave (36)
     enemies:
-    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
-    count: 10
+    - {fileID: 1652796270759994, guid: ed3c152aba85638429bf8b50e4c24c64, type: 3}
+    - {fileID: 1619877827293244, guid: 89cb7e4da7cce4c40bdd4f4531ca6ac8, type: 3}
+    count: 7
     rate: 1
   - name: Wave (37)
     enemies:
-    - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
-    count: 20
+    - {fileID: 1158980101858124, guid: 7107c018d7a73af459cb58c37fd6972a, type: 3}
+    - {fileID: 1466169791162244, guid: 80e790fe9da18bb4ab8db0ec3348225b, type: 3}
+    count: 7
     rate: 1
   - name: Wave (38)
     enemies:
-    - {fileID: 1652796270759994, guid: ed3c152aba85638429bf8b50e4c24c64, type: 3}
-    count: 20
+    - {fileID: 1466169791162244, guid: 80e790fe9da18bb4ab8db0ec3348225b, type: 3}
+    - {fileID: 1959210465276336, guid: f39d1119a1c44204b90823d51e6eda0c, type: 3}
+    count: 8
     rate: 1
   - name: Wave (39)
     enemies:
     - {fileID: 1868111313181612, guid: 35b0947ad8031c044a8d63699d7fe215, type: 3}
-    count: 20
+    count: 10
     rate: 1
   - name: Wave (40) BOSS
     enemies:
@@ -3421,19 +3441,24 @@ MonoBehaviour:
     rate: 1
   - name: Wave (41)
     enemies:
-    - {fileID: 1619877827293244, guid: 89cb7e4da7cce4c40bdd4f4531ca6ac8, type: 3}
-    count: 12
+    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
+    - {fileID: 1959210465276336, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
+    count: 9
     rate: 1
   - name: Wave (42)
     enemies:
-    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
+    - {fileID: 1959210465276336, guid: f39d1119a1c44204b90823d51e6eda0c, type: 3}
     - {fileID: 1868111313181612, guid: 35b0947ad8031c044a8d63699d7fe215, type: 3}
-    count: 15
+    - {fileID: 1466169791162244, guid: 80e790fe9da18bb4ab8db0ec3348225b, type: 3}
+    - {fileID: 1158980101858124, guid: 7107c018d7a73af459cb58c37fd6972a, type: 3}
+    count: 7
     rate: 1
   - name: Wave (43)
     enemies:
-    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
-    count: 15
+    - {fileID: 1619877827293244, guid: 89cb7e4da7cce4c40bdd4f4531ca6ac8, type: 3}
+    - {fileID: 1652796270759994, guid: ed3c152aba85638429bf8b50e4c24c64, type: 3}
+    - {fileID: 1158980101858124, guid: 7107c018d7a73af459cb58c37fd6972a, type: 3}
+    count: 6
     rate: 1
   - name: Wave (44)
     enemies:
@@ -3444,21 +3469,21 @@ MonoBehaviour:
     rate: 1
   - name: Wave (45)
     enemies:
-    - {fileID: 1619877827293244, guid: 89cb7e4da7cce4c40bdd4f4531ca6ac8, type: 3}
-    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
-    count: 20
+    - {fileID: 1466169791162244, guid: e7eaf269d44749d44a885b2eeb7ab5cd, type: 3}
+    - {fileID: 1466169791162244, guid: 80e790fe9da18bb4ab8db0ec3348225b, type: 3}
+    count: 8
     rate: 1
   - name: Wave (46)
     enemies:
-    - {fileID: 1969890579225098, guid: 581a401355b3afc4b810d4ee8e6e80f9, type: 3}
-    - {fileID: 1619877827293244, guid: 89cb7e4da7cce4c40bdd4f4531ca6ac8, type: 3}
-    count: 15
+    - {fileID: 1466169791162244, guid: e7eaf269d44749d44a885b2eeb7ab5cd, type: 3}
+    - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
+    count: 9
     rate: 1
   - name: Wave (47)
     enemies:
-    - {fileID: 1969890579225098, guid: 581a401355b3afc4b810d4ee8e6e80f9, type: 3}
-    - {fileID: 1619877827293244, guid: 89cb7e4da7cce4c40bdd4f4531ca6ac8, type: 3}
-    count: 15
+    - {fileID: 1959210465276336, guid: f39d1119a1c44204b90823d51e6eda0c, type: 3}
+    - {fileID: 1466169791162244, guid: e7eaf269d44749d44a885b2eeb7ab5cd, type: 3}
+    count: 10
     rate: 1
   - name: Wave (48)
     enemies:
@@ -3468,7 +3493,11 @@ MonoBehaviour:
   - name: Wave (49)
     enemies:
     - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
-    count: 26
+    - {fileID: 1959210465276336, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
+    - {fileID: 1466169791162244, guid: e7eaf269d44749d44a885b2eeb7ab5cd, type: 3}
+    - {fileID: 1466169791162244, guid: 80e790fe9da18bb4ab8db0ec3348225b, type: 3}
+    - {fileID: 1959210465276336, guid: f39d1119a1c44204b90823d51e6eda0c, type: 3}
+    count: 6
     rate: 1
   - name: Wave (50) BOSS
     enemies:
@@ -3478,24 +3507,25 @@ MonoBehaviour:
   - name: Wave (51)
     enemies:
     - {fileID: 1158980101858124, guid: 7107c018d7a73af459cb58c37fd6972a, type: 3}
-    count: 5
+    count: 2
     rate: 1
   - name: Wave (52)
     enemies:
     - {fileID: 1158980101858124, guid: 7107c018d7a73af459cb58c37fd6972a, type: 3}
-    count: 15
+    - {fileID: 1466169791162244, guid: e7eaf269d44749d44a885b2eeb7ab5cd, type: 3}
+    count: 5
     rate: 1
   - name: Wave (53)
     enemies:
     - {fileID: 1158980101858124, guid: 7107c018d7a73af459cb58c37fd6972a, type: 3}
-    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
-    count: 15
+    - {fileID: 1959210465276336, guid: f39d1119a1c44204b90823d51e6eda0c, type: 3}
+    count: 6
     rate: 1
   - name: Wave (54)
     enemies:
-    - {fileID: 1158980101858124, guid: 7107c018d7a73af459cb58c37fd6972a, type: 3}
-    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
-    count: 25
+    - {fileID: 1466169791162244, guid: e7eaf269d44749d44a885b2eeb7ab5cd, type: 3}
+    - {fileID: 1466169791162244, guid: 80e790fe9da18bb4ab8db0ec3348225b, type: 3}
+    count: 9
     rate: 1
   - name: Wave (55) Mini Boss
     enemies:
@@ -3504,30 +3534,32 @@ MonoBehaviour:
     rate: 1
   - name: Wave (56)
     enemies:
-    - {fileID: 1158980101858124, guid: 7107c018d7a73af459cb58c37fd6972a, type: 3}
-    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
-    count: 30
+    - {fileID: 1619877827293244, guid: 89cb7e4da7cce4c40bdd4f4531ca6ac8, type: 3}
+    - {fileID: 1466169791162244, guid: 80e790fe9da18bb4ab8db0ec3348225b, type: 3}
+    - {fileID: 1466169791162244, guid: e7eaf269d44749d44a885b2eeb7ab5cd, type: 3}
+    - {fileID: 1959210465276336, guid: f39d1119a1c44204b90823d51e6eda0c, type: 3}
+    count: 5
     rate: 1
   - name: Wave (57)
     enemies:
     - {fileID: 1158980101858124, guid: 7107c018d7a73af459cb58c37fd6972a, type: 3}
-    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
+    - {fileID: 1959210465276336, guid: f39d1119a1c44204b90823d51e6eda0c, type: 3}
     - {fileID: 1868111313181612, guid: 35b0947ad8031c044a8d63699d7fe215, type: 3}
-    count: 30
+    count: 8
     rate: 1
   - name: Wave (58)
     enemies:
     - {fileID: 1158980101858124, guid: 7107c018d7a73af459cb58c37fd6972a, type: 3}
     - {fileID: 1652796270759994, guid: ed3c152aba85638429bf8b50e4c24c64, type: 3}
-    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
-    count: 15
+    - {fileID: 1959210465276336, guid: f39d1119a1c44204b90823d51e6eda0c, type: 3}
+    count: 7
     rate: 1
   - name: Wave (59)
     enemies:
-    - {fileID: 1158980101858124, guid: 7107c018d7a73af459cb58c37fd6972a, type: 3}
-    - {fileID: 1619877827293244, guid: 89cb7e4da7cce4c40bdd4f4531ca6ac8, type: 3}
     - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
-    count: 25
+    - {fileID: 1959210465276336, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
+    - {fileID: 1466169791162244, guid: e7eaf269d44749d44a885b2eeb7ab5cd, type: 3}
+    count: 5
     rate: 1
   - name: Wave (60) BOSSES
     enemies:
@@ -3538,29 +3570,30 @@ MonoBehaviour:
     rate: 1
   - name: "Wave (61) \U0001F611\U0001F611"
     enemies:
-    - {fileID: 1158980101858124, guid: 7107c018d7a73af459cb58c37fd6972a, type: 3}
+    - {fileID: 1959210465276336, guid: f39d1119a1c44204b90823d51e6eda0c, type: 3}
     - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
-    - {fileID: 1619877827293244, guid: 89cb7e4da7cce4c40bdd4f4531ca6ac8, type: 3}
-    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
-    - {fileID: 1652796270759994, guid: ed3c152aba85638429bf8b50e4c24c64, type: 3}
-    - {fileID: 1969890579225098, guid: 581a401355b3afc4b810d4ee8e6e80f9, type: 3}
-    count: 10
+    - {fileID: 1466169791162244, guid: e7eaf269d44749d44a885b2eeb7ab5cd, type: 3}
+    - {fileID: 1158980101858124, guid: 7107c018d7a73af459cb58c37fd6972a, type: 3}
+    count: 5
     rate: 1
   - name: "Wave (62) \U0001F611\U0001F611"
     enemies:
-    - {fileID: 1158980101858124, guid: 7107c018d7a73af459cb58c37fd6972a, type: 3}
-    - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
-    count: 10
+    - {fileID: 1959210465276336, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
+    - {fileID: 1466169791162244, guid: 80e790fe9da18bb4ab8db0ec3348225b, type: 3}
+    count: 7
     rate: 1
   - name: "Wave (63) \U0001F611\U0001F611"
     enemies:
     - {fileID: 1271163058963824, guid: 8bf00f738ad5d484fad95a99c54fa44c, type: 3}
-    count: 15
+    - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
+    count: 6
     rate: 1
   - name: "Wave (64) \U0001F611\U0001F611"
     enemies:
     - {fileID: 1271163058963824, guid: 8bf00f738ad5d484fad95a99c54fa44c, type: 3}
-    count: 25
+    - {fileID: 1959210465276336, guid: f39d1119a1c44204b90823d51e6eda0c, type: 3}
+    - {fileID: 1466169791162244, guid: e7eaf269d44749d44a885b2eeb7ab5cd, type: 3}
+    count: 8
     rate: 1
   - name: "Wave (65) \U0001F611\U0001F611Mini Boss"
     enemies:
@@ -3569,30 +3602,29 @@ MonoBehaviour:
     rate: 1
   - name: Wave (66)
     enemies:
-    - {fileID: 1271163058963824, guid: 8bf00f738ad5d484fad95a99c54fa44c, type: 3}
-    - {fileID: 1158980101858124, guid: 7107c018d7a73af459cb58c37fd6972a, type: 3}
     - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
-    count: 15
+    - {fileID: 1969890579225098, guid: 581a401355b3afc4b810d4ee8e6e80f9, type: 3}
+    - {fileID: 1959210465276336, guid: f39d1119a1c44204b90823d51e6eda0c, type: 3}
+    count: 7
     rate: 1
   - name: 'Wave (67) '
     enemies:
-    - {fileID: 1271163058963824, guid: 8bf00f738ad5d484fad95a99c54fa44c, type: 3}
-    - {fileID: 1158980101858124, guid: 7107c018d7a73af459cb58c37fd6972a, type: 3}
-    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
-    count: 25
+    - {fileID: 1466169791162244, guid: e7eaf269d44749d44a885b2eeb7ab5cd, type: 3}
+    - {fileID: 1619877827293244, guid: 89cb7e4da7cce4c40bdd4f4531ca6ac8, type: 3}
+    count: 6
     rate: 1
   - name: 'Wave (68) '
     enemies:
     - {fileID: 1868111313181612, guid: 35b0947ad8031c044a8d63699d7fe215, type: 3}
-    count: 25
+    count: 3
     rate: 1
   - name: Wave (69)
     enemies:
-    - {fileID: 1271163058963824, guid: 8bf00f738ad5d484fad95a99c54fa44c, type: 3}
-    - {fileID: 1868111313181612, guid: 35b0947ad8031c044a8d63699d7fe215, type: 3}
-    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
     - {fileID: 1158980101858124, guid: 7107c018d7a73af459cb58c37fd6972a, type: 3}
-    count: 30
+    - {fileID: 1959210465276336, guid: f39d1119a1c44204b90823d51e6eda0c, type: 3}
+    - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
+    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
+    count: 3
     rate: 1
   - name: Wave (70) BOSS
     enemies:
@@ -3602,23 +3634,26 @@ MonoBehaviour:
   - name: Wave (71)
     enemies:
     - {fileID: 1959210465276336, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
-    count: 1
+    - {fileID: 1466169791162244, guid: e7eaf269d44749d44a885b2eeb7ab5cd, type: 3}
+    count: 4
     rate: 1
   - name: Wave (72)
     enemies:
-    - {fileID: 1959210465276336, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
+    - {fileID: 1158980101858124, guid: 7107c018d7a73af459cb58c37fd6972a, type: 3}
+    - {fileID: 1959210465276336, guid: f39d1119a1c44204b90823d51e6eda0c, type: 3}
     count: 5
     rate: 1
   - name: Wave (73)
     enemies:
-    - {fileID: 1959210465276336, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
-    count: 15
+    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
+    - {fileID: 1959210465276336, guid: f39d1119a1c44204b90823d51e6eda0c, type: 3}
+    count: 2
     rate: 1
   - name: Wave (74)
     enemies:
-    - {fileID: 1959210465276336, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
-    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
-    count: 20
+    - {fileID: 1969890579225098, guid: 581a401355b3afc4b810d4ee8e6e80f9, type: 3}
+    - {fileID: 1619877827293244, guid: 89cb7e4da7cce4c40bdd4f4531ca6ac8, type: 3}
+    count: 5
     rate: 1
   - name: Wave (75) MINIBOSSS
     enemies:
@@ -3627,29 +3662,29 @@ MonoBehaviour:
     rate: 1
   - name: (Wave 76)
     enemies:
-    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
-    - {fileID: 1959210465276336, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
-    count: 25
+    - {fileID: 1466169791162244, guid: e7eaf269d44749d44a885b2eeb7ab5cd, type: 3}
+    count: 5
     rate: 1
   - name: (Wave 77)
     enemies:
-    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
+    - {fileID: 1158980101858124, guid: 7107c018d7a73af459cb58c37fd6972a, type: 3}
     - {fileID: 1959210465276336, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
-    - {fileID: 1619877827293244, guid: 89cb7e4da7cce4c40bdd4f4531ca6ac8, type: 3}
-    count: 25
+    - {fileID: 1959210465276336, guid: f39d1119a1c44204b90823d51e6eda0c, type: 3}
+    count: 4
     rate: 1
   - name: (Wave 78)
     enemies:
     - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
-    - {fileID: 1959210465276336, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
-    - {fileID: 1271163058963824, guid: 8bf00f738ad5d484fad95a99c54fa44c, type: 3}
-    count: 30
+    - {fileID: 1969890579225098, guid: 581a401355b3afc4b810d4ee8e6e80f9, type: 3}
+    - {fileID: 1652796270759994, guid: ed3c152aba85638429bf8b50e4c24c64, type: 3}
+    count: 5
     rate: 1
   - name: (Wave 79)
     enemies:
     - {fileID: 5323136899538170475, guid: f290eda7877c90247b5d0a5cac1ea2ce, type: 3}
     - {fileID: 5323136899538170475, guid: 19e610bcf23c5314e99bb02d14118ba9, type: 3}
     - {fileID: 5323136899538170475, guid: ed3e39c741856824d8a4a4a1fbb58e16, type: 3}
+    - {fileID: 1466169791162244, guid: e7eaf269d44749d44a885b2eeb7ab5cd, type: 3}
     count: 1
     rate: 1
   - name: (Wave 80) BOSS
@@ -3660,27 +3695,28 @@ MonoBehaviour:
   - name: (Wave 81)
     enemies:
     - {fileID: 1688452843344484, guid: 7cdb699f28c96ee4b9e64c83a9a02b2b, type: 3}
-    count: 15
+    - {fileID: 1466169791162244, guid: e7eaf269d44749d44a885b2eeb7ab5cd, type: 3}
+    count: 7
     rate: 1
   - name: (Wave 82)
     enemies:
     - {fileID: 1688452843344484, guid: 7cdb699f28c96ee4b9e64c83a9a02b2b, type: 3}
     - {fileID: 1158980101858124, guid: 7107c018d7a73af459cb58c37fd6972a, type: 3}
-    count: 15
+    count: 5
     rate: 1
   - name: (Wave 83)
     enemies:
     - {fileID: 1688452843344484, guid: 7cdb699f28c96ee4b9e64c83a9a02b2b, type: 3}
     - {fileID: 1158980101858124, guid: 7107c018d7a73af459cb58c37fd6972a, type: 3}
-    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
-    count: 15
+    - {fileID: 1466169791162244, guid: e7eaf269d44749d44a885b2eeb7ab5cd, type: 3}
+    count: 6
     rate: 1
   - name: (Wave 84)
     enemies:
-    - {fileID: 1688452843344484, guid: 7cdb699f28c96ee4b9e64c83a9a02b2b, type: 3}
+    - {fileID: 1969890579225098, guid: 581a401355b3afc4b810d4ee8e6e80f9, type: 3}
     - {fileID: 1158980101858124, guid: 7107c018d7a73af459cb58c37fd6972a, type: 3}
-    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
-    count: 30
+    - {fileID: 1466169791162244, guid: e7eaf269d44749d44a885b2eeb7ab5cd, type: 3}
+    count: 3
     rate: 1
   - name: (Wave 85) MINIBOSS
     enemies:
@@ -3689,29 +3725,34 @@ MonoBehaviour:
     rate: 1
   - name: (Wave 86)
     enemies:
-    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
-    count: 15
+    - {fileID: 1652796270759994, guid: ed3c152aba85638429bf8b50e4c24c64, type: 3}
+    - {fileID: 1271163058963824, guid: 8bf00f738ad5d484fad95a99c54fa44c, type: 3}
+    - {fileID: 1466169791162244, guid: 80e790fe9da18bb4ab8db0ec3348225b, type: 3}
+    count: 5
     rate: 1
   - name: (Wave 87)
     enemies:
     - {fileID: 1450553439559674, guid: d102c483fad5a1f48b9b947b6be387ea, type: 3}
     - {fileID: 1688452843344484, guid: 7cdb699f28c96ee4b9e64c83a9a02b2b, type: 3}
-    - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
-    count: 15
+    - {fileID: 1466169791162244, guid: e7eaf269d44749d44a885b2eeb7ab5cd, type: 3}
+    count: 6
     rate: 1
   - name: (Wave 88)
     enemies:
-    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
+    - {fileID: 1466169791162244, guid: 80e790fe9da18bb4ab8db0ec3348225b, type: 3}
     - {fileID: 1450553439559674, guid: d102c483fad5a1f48b9b947b6be387ea, type: 3}
     - {fileID: 1688452843344484, guid: 7cdb699f28c96ee4b9e64c83a9a02b2b, type: 3}
-    count: 15
+    - {fileID: 1466169791162244, guid: e7eaf269d44749d44a885b2eeb7ab5cd, type: 3}
+    - {fileID: 1959210465276336, guid: f39d1119a1c44204b90823d51e6eda0c, type: 3}
+    count: 3
     rate: 1
   - name: (Wave 89)
     enemies:
     - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
-    - {fileID: 1450553439559674, guid: d102c483fad5a1f48b9b947b6be387ea, type: 3}
+    - {fileID: 1466169791162244, guid: e7eaf269d44749d44a885b2eeb7ab5cd, type: 3}
     - {fileID: 1688452843344484, guid: 7cdb699f28c96ee4b9e64c83a9a02b2b, type: 3}
-    count: 25
+    - {fileID: 1959210465276336, guid: f39d1119a1c44204b90823d51e6eda0c, type: 3}
+    count: 8
     rate: 1
   - name: (Wave 90) BOSS
     enemies:
@@ -3723,27 +3764,28 @@ MonoBehaviour:
     - {fileID: 1688452843344484, guid: 7cdb699f28c96ee4b9e64c83a9a02b2b, type: 3}
     - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
     - {fileID: 1652796270759994, guid: ed3c152aba85638429bf8b50e4c24c64, type: 3}
-    count: 10
+    count: 5
     rate: 1
   - name: '(Wave 92) '
     enemies:
     - {fileID: 1688452843344484, guid: 7cdb699f28c96ee4b9e64c83a9a02b2b, type: 3}
     - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
     - {fileID: 1959210465276336, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
-    count: 10
+    - {fileID: 1959210465276336, guid: f39d1119a1c44204b90823d51e6eda0c, type: 3}
+    count: 8
     rate: 1
   - name: '(Wave 93) '
     enemies:
-    - {fileID: 1619877827293244, guid: 89cb7e4da7cce4c40bdd4f4531ca6ac8, type: 3}
-    - {fileID: 1619877827293244, guid: 89cb7e4da7cce4c40bdd4f4531ca6ac8, type: 3}
-    - {fileID: 1619877827293244, guid: 89cb7e4da7cce4c40bdd4f4531ca6ac8, type: 3}
-    count: 20
+    - {fileID: 1466169791162244, guid: e7eaf269d44749d44a885b2eeb7ab5cd, type: 3}
+    - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
+    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
+    count: 9
     rate: 1
   - name: '(Wave 94) '
     enemies:
     - {fileID: 1969890579225098, guid: 581a401355b3afc4b810d4ee8e6e80f9, type: 3}
-    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
-    - {fileID: 1619877827293244, guid: 89cb7e4da7cce4c40bdd4f4531ca6ac8, type: 3}
+    - {fileID: 1652796270759994, guid: ed3c152aba85638429bf8b50e4c24c64, type: 3}
+    - {fileID: 1466169791162244, guid: e7eaf269d44749d44a885b2eeb7ab5cd, type: 3}
     count: 10
     rate: 1
   - name: (Wave 95) MINIBOSS
@@ -3755,53 +3797,42 @@ MonoBehaviour:
     rate: 1
   - name: (Wave 96) DF Wave
     enemies:
-    - {fileID: 1619877827293244, guid: 89cb7e4da7cce4c40bdd4f4531ca6ac8, type: 3}
-    - {fileID: 1619877827293244, guid: 89cb7e4da7cce4c40bdd4f4531ca6ac8, type: 3}
-    - {fileID: 1619877827293244, guid: 89cb7e4da7cce4c40bdd4f4531ca6ac8, type: 3}
-    - {fileID: 1619877827293244, guid: 89cb7e4da7cce4c40bdd4f4531ca6ac8, type: 3}
-    - {fileID: 1619877827293244, guid: 89cb7e4da7cce4c40bdd4f4531ca6ac8, type: 3}
-    count: 20
+    - {fileID: 1959210465276336, guid: f39d1119a1c44204b90823d51e6eda0c, type: 3}
+    - {fileID: 1466169791162244, guid: e7eaf269d44749d44a885b2eeb7ab5cd, type: 3}
+    - {fileID: 1466169791162244, guid: 80e790fe9da18bb4ab8db0ec3348225b, type: 3}
+    - {fileID: 1959210465276336, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
+    - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
+    count: 15
     rate: 1
   - name: (Wave 97) Mixture Wave
     enemies:
-    - {fileID: 1619877827293244, guid: 89cb7e4da7cce4c40bdd4f4531ca6ac8, type: 3}
+    - {fileID: 1466169791162244, guid: e7eaf269d44749d44a885b2eeb7ab5cd, type: 3}
     - {fileID: 1959210465276336, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
     - {fileID: 1969890579225098, guid: a43414e7a355b304db774a169cfa04bb, type: 3}
     - {fileID: 1652796270759994, guid: ed3c152aba85638429bf8b50e4c24c64, type: 3}
-    - {fileID: 1969890579225098, guid: 581a401355b3afc4b810d4ee8e6e80f9, type: 3}
+    - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
     count: 9
-    rate: 1
-  - name: (Wave 98) SB Wave
-    enemies:
-    - {fileID: 1688452843344484, guid: 7cdb699f28c96ee4b9e64c83a9a02b2b, type: 3}
-    - {fileID: 1450553439559674, guid: d102c483fad5a1f48b9b947b6be387ea, type: 3}
-    - {fileID: 1688452843344484, guid: 7cdb699f28c96ee4b9e64c83a9a02b2b, type: 3}
-    - {fileID: 1450553439559674, guid: d102c483fad5a1f48b9b947b6be387ea, type: 3}
-    count: 20
     rate: 1
   - name: (Wave 98) Run Ender
     enemies:
     - {fileID: 4428212372244300410, guid: 2379f6999aa8a3945a0542e96e4c0779, type: 3}
-    count: 2
+    count: 1
     rate: 1
   - name: '(Wave 99) '
     enemies:
+    - {fileID: 1959210465276336, guid: f39d1119a1c44204b90823d51e6eda0c, type: 3}
+    - {fileID: 1466169791162244, guid: e7eaf269d44749d44a885b2eeb7ab5cd, type: 3}
+    - {fileID: 1466169791162244, guid: 80e790fe9da18bb4ab8db0ec3348225b, type: 3}
+    - {fileID: 1959210465276336, guid: e0627ac7941b511479d40b02ceb672f8, type: 3}
+    - {fileID: 1158980101858124, guid: 7107c018d7a73af459cb58c37fd6972a, type: 3}
+    - {fileID: 1619877827293244, guid: 89cb7e4da7cce4c40bdd4f4531ca6ac8, type: 3}
+    - {fileID: 1675330397698960, guid: b01f945f2a3e0df42b7a82d7e1506d47, type: 3}
+    - {fileID: 1652796270759994, guid: ed3c152aba85638429bf8b50e4c24c64, type: 3}
     - {fileID: 1969890579225098, guid: 581a401355b3afc4b810d4ee8e6e80f9, type: 3}
-    count: 1
+    count: 2
     rate: 1
   - name: (Wave 100) Final Assault
     enemies:
-    - {fileID: 5323136899538170475, guid: eeac6bafc03678847a59071ffdbb8e8a, type: 3}
-    - {fileID: 5323136899538170475, guid: 1b7679d68edc2e645a2d024061ae07b1, type: 3}
-    - {fileID: 4428212372244300410, guid: c811c12f5259f994ab283136cb39ebd5, type: 3}
-    - {fileID: 4428212372244300410, guid: e2c1df51f71933b4c8e321f9c5bb6ae8, type: 3}
-    - {fileID: 5323136899538170475, guid: f290eda7877c90247b5d0a5cac1ea2ce, type: 3}
-    - {fileID: 5323136899538170475, guid: 19e610bcf23c5314e99bb02d14118ba9, type: 3}
-    - {fileID: 4428212372244300410, guid: 8511887dbb03b2440a08d7d5f84746a8, type: 3}
-    - {fileID: 5323136899538170475, guid: bc08eb1a01e551d44aadfaf78b47d879, type: 3}
-    - {fileID: 4428212372244300410, guid: 2379f6999aa8a3945a0542e96e4c0779, type: 3}
-    - {fileID: 5323136899538170475, guid: c15ba9fec96991742b4d78d7af83f01a, type: 3}
-    - {fileID: 5323136899538170475, guid: ed3e39c741856824d8a4a4a1fbb58e16, type: 3}
     - {fileID: 5323136899538170475, guid: ddee8ad976e5e5b4fa0f04c6afcea617, type: 3}
     count: 1
     rate: 1
@@ -6046,7 +6077,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Upgrade Your Heroes Health! | 1500C
+  m_Text: Upgrade Your Heroes Health! | 750C
 --- !u!222 &887075403
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10245,7 +10276,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Upgrade Your Heroes Speed! | 3000C
+  m_Text: Upgrade Your Heroes Speed! | 1000C
 --- !u!222 &1660322090
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12005,7 +12036,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Upgrade Your Heroes Damage! | 1000C
+  m_Text: Upgrade Your Heroes Damage! | 500C
 --- !u!222 &1887217757
 CanvasRenderer:
   m_ObjectHideFlags: 0
