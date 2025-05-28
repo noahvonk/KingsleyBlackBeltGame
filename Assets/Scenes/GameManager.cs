@@ -90,7 +90,8 @@ public class GameManager : MonoBehaviour
     public int TroopNum = 0;
 
     public GameObject Arrow;
-    public bool DragnirActive;
+    //public bool DragnirActive;
+    //public bool GameEnd = false;
     //public int dmgMulti = 1;
 
     // Start is called before the first frame update
@@ -161,7 +162,7 @@ public class GameManager : MonoBehaviour
             }
         }
         */
-        if(wave >= 100){
+        if(enemies.Count <= 0 && wave >= 100){
             Win();
         }
             HPText1.text = TopWall.GetComponent<WallHealth>().wallHP.ToString();
@@ -299,7 +300,6 @@ public class GameManager : MonoBehaviour
     }
     */
     void Win(){
-        if (DragnirActive == false && wave >= 100){
             foreach (GameObject heros in Troops){
             Destroy(heros);
             };
@@ -307,10 +307,6 @@ public class GameManager : MonoBehaviour
             Destroy(enemy);
             };
             SceneManager.LoadScene(4);
-        } else {
-            
-        };
-        //SceneManager.LoadScene(2);
     }
     
 

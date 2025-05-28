@@ -23,6 +23,7 @@ public class TroopSpawner : MonoBehaviour
     public GameObject ArcherTowerButton;
     public GameObject FarmerButton;
     public GameObject BahamutButton;
+    public GameObject BrawlerButton;
     //Heros Hr;
 
     // Start is called before the first frame update
@@ -140,6 +141,10 @@ public class TroopSpawner : MonoBehaviour
             BahamutButton.SetActive(false);
             BahamutActive = true;
             TroopBuyModeOff();
+        } else if (SelectedTroop == Troops.Brawler){
+            BrawlerButton.SetActive(false);
+            StartCoroutine(BrawlerCooldown());
+            TroopBuyModeOff();
         } 
          //};
          
@@ -226,6 +231,14 @@ public class TroopSpawner : MonoBehaviour
         // move this to the wall builder troop and have it run it. WallBuilder();
     }
 
+    public void OnBrawlerButtonPressed()
+    {
+        TroopCost = 150;
+        SelectedTroop = Troops.Brawler;
+        TroopBuyModeOn();
+        // move this to the wall builder troop and have it run it. WallBuilder();
+    }
+
     IEnumerator WarCooldown()
     {
         yield return new WaitForSeconds(8);
@@ -266,10 +279,16 @@ public class TroopSpawner : MonoBehaviour
         yield return new WaitForSeconds(120);
         FarmerButton.SetActive(true);
     }
+    IEnumerator BrawlerCooldown()
+    {
+        yield return new WaitForSeconds(35);
+        BrawlerButton.SetActive(true);
+    }
 
-    public enum Troops { Hero, Warrior, Spearman, Mage, Builder, Thief, Healer, ArcherTower, Farmer, Bahamut, None, etc, misc}
+
+    public enum Troops { Hero, Warrior, Spearman, Mage, Builder, Thief, Healer, ArcherTower, Farmer, Bahamut, Brawler, None, etc, misc}
     public Troops SelectedTroop = Troops.None;
 
-    [Header("Order is  Hero, Warrior, Spearman, Mage, Builder, Thief, Healer, Archer Tower, Farmer, None "), SerializeField]
+    [Header("Order is  Hero, Warrior, Spearman, Mage, Builder, Thief, Healer, Archer Tower, Farmer, Bahamut, Brawler, None "), SerializeField]
     private List<GameObject> TroopPrefabs = new();
 }

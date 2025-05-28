@@ -14,7 +14,7 @@ public class MiloDarkKnight : Enemy
             speed = 15;
             goldDrops = 5;
         } else {
-        health = 100;
+        health = 60;
         damage = 25;
         speed = 15;
         goldDrops = 5;

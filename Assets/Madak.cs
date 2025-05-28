@@ -15,7 +15,7 @@ public class Madak : Enemy
             speed = 5;
             goldDrops = 750;
         } else {
-        health = 15000;
+        health = 7500;
         damage = 500;
         speed = 5;
         goldDrops = 750;

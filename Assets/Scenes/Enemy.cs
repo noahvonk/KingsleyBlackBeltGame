@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Enemy : HumanoidAI
 {
+    public static Enemy Insta;
     public Target curWall;
     public Rigidbody rb;
     public bool inPosition = false;
@@ -13,6 +14,11 @@ public class Enemy : HumanoidAI
     enum Behaviours { WallOnly, TroopOnly, WallWhenNoTroop }
     [SerializeField]
     private Behaviours behaviour = Behaviours.WallOnly;
+
+    void awake(){
+        Insta = this;
+    }
+
     protected override void Start()
     {
         base.Start();
@@ -29,6 +35,7 @@ public class Enemy : HumanoidAI
             HealthBar.fillAmount = 0;
             GameManager.Instance.gold += goldDrops;
             GameManager.Instance.enemies.Remove(gameObject);
+            //Dragnir.Instan.Update();
             Destroy(gameObject);
         }
         else
@@ -67,7 +74,7 @@ public class Enemy : HumanoidAI
 
    
 
-    public void Update()
+    new protected virtual void Update()
     {
         //Debug.Log("Update running");
         if (behaviour == Behaviours.WallOnly || (behaviour == Behaviours.WallWhenNoTroop && GameManager.Instance.Troops.Count <= 0))
