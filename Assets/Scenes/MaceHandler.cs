@@ -14,7 +14,7 @@ public class MaceHandler : Enemy
             speed = 19;
             goldDrops = 10;
         } else {
-        health = 250;
+        health = 150;
         damage = 300;
         speed = 19;
         goldDrops = 10;

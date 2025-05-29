@@ -14,7 +14,7 @@ public class Bob : Enemy
             speed = 5;
             goldDrops = 750;
         } else {
-        health = 25000;
+        health = 20000;
         damage = 750;
         speed = 5;
         goldDrops = 750;

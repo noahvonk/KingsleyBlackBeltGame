@@ -8,7 +8,7 @@ public class Brawler : Troops
     {
         base.Start();
         health = 750;
-        damage = 10;
+        damage = 15;
         speed = 15;
     }    
 }

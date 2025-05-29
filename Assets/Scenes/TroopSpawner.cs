@@ -10,9 +10,12 @@ public class TroopSpawner : MonoBehaviour
     public bool HeroBuy = false;
     public bool HeroActive = false;
     public bool BahamutActive = false;
+    public int ProductionUpgrade;
+    public int TroopUpgrade;
     public GameObject TroopParent;
     GameManager GameManag;
 
+    public GameObject ProductionUpgradeButton;
     public GameObject WarriorButton;
     public GameObject SpearButton;
     public GameObject WizButton;
@@ -50,7 +53,7 @@ public class TroopSpawner : MonoBehaviour
         {
             TroopBuyModeOff();
         }
-        if (Input.GetMouseButtonDown(0) && GameManager.Instance.TroopSpawning)
+        if (Input.GetMouseButtonDown(0) && GameManager.Instance.TroopSpawning && GameManager.Instance.TutorialOn == false)
         {
             //Debug.Log(m_Camera.ScreenToWorldPoint(Input.mousePosition));
             Vector3 mousePosition = m_Camera.ScreenToWorldPoint(Input.mousePosition);
@@ -64,7 +67,9 @@ public class TroopSpawner : MonoBehaviour
             GameManager.Instance.gold -= TroopCost;
         } 
         };  
-        }
+        } else {
+
+        };
         if(BahamutActive == false && GameManager.Instance.TroopNum == 4){
             BahamutButton.SetActive(true);
         } else if (BahamutActive == true){
@@ -239,50 +244,97 @@ public class TroopSpawner : MonoBehaviour
         // move this to the wall builder troop and have it run it. WallBuilder();
     }
 
+
     IEnumerator WarCooldown()
     {
+        if(ProductionUpgrade >= 1){
+            yield return new WaitForSeconds(4);
+            WarriorButton.SetActive(true);
+        } else {
         yield return new WaitForSeconds(8);
         WarriorButton.SetActive(true);
+        };
     }
     IEnumerator SpearCooldown()
     {
+        if(ProductionUpgrade >= 1){
+            yield return new WaitForSeconds(5);
+            SpearButton.SetActive(true);
+        } else {
         yield return new WaitForSeconds(10);
         SpearButton.SetActive(true);
+        }
     }
     IEnumerator WizCooldown()
     {
-        yield return new WaitForSeconds(30);
+        if(ProductionUpgrade >= 1){
+            yield return new WaitForSeconds(12);
+            WizButton.SetActive(true);
+        } else {
+        yield return new WaitForSeconds(20);
         WizButton.SetActive(true);
+        }
     }
     IEnumerator BuilderCooldown()
     {
-        yield return new WaitForSeconds(60);
-        BuilderButton.SetActive(true);
+        if(ProductionUpgrade >= 1){
+            yield return new WaitForSeconds(30);
+            BuilderButton.SetActive(true);
+        } else{
+            yield return new WaitForSeconds(45);
+            BuilderButton.SetActive(true);
+        }
+        
     }
     IEnumerator ThiefCooldown()
     {
-        yield return new WaitForSeconds(50);
-        ThiefButton.SetActive(true);
+        if(ProductionUpgrade >= 1){
+            yield return new WaitForSeconds(20);
+            ThiefButton.SetActive(true);
+        } else{
+            yield return new WaitForSeconds(30);
+            ThiefButton.SetActive(true);
+        }
+        
     }
     IEnumerator HealerCooldown()
     {
+        
         yield return new WaitForSeconds(180);
         HealerButton.SetActive(true);
     }
     IEnumerator ArcherTowerCooldown()
     {
-        yield return new WaitForSeconds(300);
-        ArcherTowerButton.SetActive(true);
+        if(ProductionUpgrade >= 1){
+            yield return new WaitForSeconds(60);
+            ArcherTowerButton.SetActive(true);
+        } else{
+            yield return new WaitForSeconds(120);
+            ArcherTowerButton.SetActive(true);
+        }
+        
     }
     IEnumerator FarmerCooldown()
     {
-        yield return new WaitForSeconds(120);
-        FarmerButton.SetActive(true);
+        if(ProductionUpgrade >= 1){
+            yield return new WaitForSeconds(45);
+            FarmerButton.SetActive(true);
+        } else{
+            yield return new WaitForSeconds(75);
+            FarmerButton.SetActive(true);
+        }
+        
     }
     IEnumerator BrawlerCooldown()
     {
-        yield return new WaitForSeconds(35);
-        BrawlerButton.SetActive(true);
+        if(ProductionUpgrade >= 1){
+            yield return new WaitForSeconds(15);
+            BrawlerButton.SetActive(true);
+        } else{
+            yield return new WaitForSeconds(25);
+            BrawlerButton.SetActive(true);
+        }
+        
     }
 
 

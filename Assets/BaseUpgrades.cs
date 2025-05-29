@@ -13,29 +13,41 @@ public class BaseUpgrades : MonoBehaviour
             GameManager.Instance.NewTroopCost.text = "12500C";
             TroopSpawner.Instanc.ThiefButton.SetActive(true);
             GameManager.Instance.TroopNum += 1;
-        } else if(GameManager.Instance.TroopNum == 1 && (GameManager.Instance.gold - 20000) >= 0){
+        } else if(GameManager.Instance.TroopNum == 1 && (GameManager.Instance.gold - 12500) >= 0){
             GameManager.Instance.NewTroop.text = "Archer Tower";
             GameManager.Instance.NewTroopDesc.text = "Health: 10000\nDamage: 4500   (Shoots Arrows)\nSpeed: 0\nCost: 10000 || Cooldown: 300s"; 
             GameManager.Instance.gold -= 12500; 
-            GameManager.Instance.NewTroopCost.text = "30000C";
+            GameManager.Instance.NewTroopCost.text = "20000C";
             TroopSpawner.Instanc.FarmerButton.SetActive(true);
             GameManager.Instance.TroopNum += 1;
-        } else if (GameManager.Instance.TroopNum == 2 && (GameManager.Instance.gold - 30000) >= 0){
+        } else if (GameManager.Instance.TroopNum == 2 && (GameManager.Instance.gold - 20000) >= 0){
             GameManager.Instance.NewTroop.text = "Bahamut, The One";
             GameManager.Instance.NewTroopDesc.text = "Health: 100000\nDamage: 100000\nSpeed: 25\nCost: 99999 || Cooldown: Can Only Spawn One"; 
-            GameManager.Instance.gold -= 30000; 
-            GameManager.Instance.NewTroopCost.text = "50000";
+            GameManager.Instance.gold -= 20000; 
+            GameManager.Instance.NewTroopCost.text = "40000";
             TroopSpawner.Instanc.ArcherTowerButton.SetActive(true);
             GameManager.Instance.TroopNum += 1;
-        } else if (GameManager.Instance.TroopNum == 3 && (GameManager.Instance.gold - 50000) >= 0){
+        } else if (GameManager.Instance.TroopNum == 3 && (GameManager.Instance.gold - 40000) >= 0){
             GameManager.Instance.NewTroop.text = "Max Level";
             GameManager.Instance.NewTroopDesc.text = ""; 
-            GameManager.Instance.gold -= 50000; 
+            GameManager.Instance.gold -= 40000; 
             GameManager.Instance.NewTroopCost.text = "";
             TroopSpawner.Instanc.BahamutButton.SetActive(true);
             GameManager.Instance.TroopNum += 1;
         }
         
+    }
+
+    public void ProductionUpgrade()
+    {
+        if(TroopSpawner.Instanc.ProductionUpgrade == 0 && (GameManager.Instance.gold - 10000) >= 0){
+            Debug.Log("Upg Start");
+            TroopSpawner.Instanc.ProductionUpgrade += 1;
+            GameManager.Instance.gold -= 10000;
+            Debug.Log("Upg Finished");
+        } else {
+
+        }
     }
 
     public void UpgradeBaseHP()

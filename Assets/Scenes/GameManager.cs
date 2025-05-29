@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     public Text HeroHPText;
     public Text HeroSPDText;
     public Text TutorialText;
+    public GameObject NextButton;
     public int wave;
 
     public Building gfHouseToPlace;
@@ -101,7 +102,6 @@ public class GameManager : MonoBehaviour
     }
     void Start()
     {
-        StartCoroutine(GoldTimer());
         building = new Tile[tiles.Length];
         ManagerModeOn = false;
         TutorialOn = true;
@@ -110,6 +110,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if (Input.GetMouseButtonDown(0) && TutorialOn == true){
             //Debug.Log("Mouse Down");
             if(TTS >= 18){
@@ -123,6 +124,7 @@ public class GameManager : MonoBehaviour
                 ChangeCurText();
             }
         }
+        */
         GoldText.text = gold.ToString();
         WaveText.text = wave.ToString();
         TroopsText.text = TTroops.ToString();
@@ -208,7 +210,15 @@ public class GameManager : MonoBehaviour
         TutorialText.text = "The goal is to defend for 100 waves of enemies, and succesfully defend your base from the dark forces, go ahead and have fun trying to win against them.";
        } else if (TTS == 17) {
         TutorialText.text = "This marks the end of this tutorial, so make sure to defend your empire with all you got, okay? Watch out because as soon as you click off of this, the enemies will start spawning. Good luck!";
-       } 
+       } else if (TTS == 18) {
+            StartCoroutine(GoldTimer());
+            TutorialOn = false;
+            Haon.SetActive(false); 
+            TutText.SetActive(false);
+            NextButton.SetActive(false);
+            TutorialText.text = " ";
+       }
+       TTS++;
     }
 
     
@@ -241,12 +251,16 @@ public class GameManager : MonoBehaviour
 
     public void BuyBuilding(int b)
     {
+        if(TTS <= 18){
+            
+        } else {
             ChangeCurHouse(b);
             ShowTiles();
             customCursor.BuildMode(b);
             if(TroopSpawning == true){
                 TroopSpawning = false;
             }
+        };
     }
 
     public void ChangeCurHouse(int num)

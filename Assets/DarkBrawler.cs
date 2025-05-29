@@ -14,8 +14,8 @@ public class DarkBrawler : Enemy
             speed = 25;
             goldDrops = 10;
         } else {
-        health = 7500;
-        damage = 150;
+        health = 3500;
+        damage = 750;
         speed = 25;
         goldDrops = 15;
         }
