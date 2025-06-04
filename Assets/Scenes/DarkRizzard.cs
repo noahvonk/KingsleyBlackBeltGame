@@ -8,7 +8,7 @@ public class DarkRizzard : Enemy
     {
         base.Start();
         if(GameManager.Instance.wave >= 50){
-            health = 5000;
+            health = 2500;
             damage = 350;
             speed = 20;
             goldDrops = 10;

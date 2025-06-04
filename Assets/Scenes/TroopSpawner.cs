@@ -248,7 +248,10 @@ public class TroopSpawner : MonoBehaviour
     IEnumerator WarCooldown()
     {
         if(ProductionUpgrade >= 1){
-            yield return new WaitForSeconds(4);
+            yield return new WaitForSeconds(6);
+            WarriorButton.SetActive(true);
+        } else if (ProductionUpgrade >= 2){
+            yield return new WaitForSeconds(3);
             WarriorButton.SetActive(true);
         } else {
         yield return new WaitForSeconds(8);
@@ -258,9 +261,12 @@ public class TroopSpawner : MonoBehaviour
     IEnumerator SpearCooldown()
     {
         if(ProductionUpgrade >= 1){
-            yield return new WaitForSeconds(5);
+            yield return new WaitForSeconds(7);
             SpearButton.SetActive(true);
-        } else {
+        } else if (ProductionUpgrade >= 2){
+            yield return new WaitForSeconds(4);
+            SpearButton.SetActive(true);
+        } else{
         yield return new WaitForSeconds(10);
         SpearButton.SetActive(true);
         }
@@ -268,9 +274,12 @@ public class TroopSpawner : MonoBehaviour
     IEnumerator WizCooldown()
     {
         if(ProductionUpgrade >= 1){
+            yield return new WaitForSeconds(15);
+            WizButton.SetActive(true);
+        } else if (ProductionUpgrade >= 2){
             yield return new WaitForSeconds(12);
             WizButton.SetActive(true);
-        } else {
+        } else{
         yield return new WaitForSeconds(20);
         WizButton.SetActive(true);
         }
@@ -279,6 +288,9 @@ public class TroopSpawner : MonoBehaviour
     {
         if(ProductionUpgrade >= 1){
             yield return new WaitForSeconds(30);
+            BuilderButton.SetActive(true);
+        } else if (ProductionUpgrade >= 2){
+            yield return new WaitForSeconds(20);
             BuilderButton.SetActive(true);
         } else{
             yield return new WaitForSeconds(45);
@@ -289,7 +301,10 @@ public class TroopSpawner : MonoBehaviour
     IEnumerator ThiefCooldown()
     {
         if(ProductionUpgrade >= 1){
-            yield return new WaitForSeconds(20);
+            yield return new WaitForSeconds(25);
+            ThiefButton.SetActive(true);
+        } else if (ProductionUpgrade >= 2){
+            yield return new WaitForSeconds(15);
             ThiefButton.SetActive(true);
         } else{
             yield return new WaitForSeconds(30);
@@ -306,7 +321,10 @@ public class TroopSpawner : MonoBehaviour
     IEnumerator ArcherTowerCooldown()
     {
         if(ProductionUpgrade >= 1){
-            yield return new WaitForSeconds(60);
+            yield return new WaitForSeconds(80);
+            ArcherTowerButton.SetActive(true);
+        } else if (ProductionUpgrade >= 2){
+            yield return new WaitForSeconds(45);
             ArcherTowerButton.SetActive(true);
         } else{
             yield return new WaitForSeconds(120);
@@ -319,6 +337,9 @@ public class TroopSpawner : MonoBehaviour
         if(ProductionUpgrade >= 1){
             yield return new WaitForSeconds(45);
             FarmerButton.SetActive(true);
+        } else if (ProductionUpgrade >= 2){
+            yield return new WaitForSeconds(30);
+            FarmerButton.SetActive(true);
         } else{
             yield return new WaitForSeconds(75);
             FarmerButton.SetActive(true);
@@ -328,9 +349,12 @@ public class TroopSpawner : MonoBehaviour
     IEnumerator BrawlerCooldown()
     {
         if(ProductionUpgrade >= 1){
-            yield return new WaitForSeconds(15);
+            yield return new WaitForSeconds(18);
             BrawlerButton.SetActive(true);
-        } else{
+        } else if (ProductionUpgrade >= 2){
+            yield return new WaitForSeconds(12);
+            BrawlerButton.SetActive(true);
+        } else {
             yield return new WaitForSeconds(25);
             BrawlerButton.SetActive(true);
         }

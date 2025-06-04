@@ -853,7 +853,7 @@ MonoBehaviour:
   health: 7500
   damage: 150
   speed: 25
-  waitTime: 1
+  waitTime: 2
   canAttack: 1
   isAttacking: 0
   curTarget: {fileID: 0}

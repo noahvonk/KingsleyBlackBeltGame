@@ -9,7 +9,7 @@ public class DarkViking : Enemy
     {
         base.Start();
         if(GameManager.Instance.wave >= 50){
-            health = 45000;
+            health = 4500;
             damage = 300;
             speed = 10;
             goldDrops = 10;

@@ -9,7 +9,7 @@ public class MaceHandler : Enemy
     {
         base.Start();
         if(GameManager.Instance.wave >= 50){
-            health = 2500;
+            health = 750;
             damage = 3000;
             speed = 19;
             goldDrops = 10;

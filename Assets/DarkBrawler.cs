@@ -9,7 +9,7 @@ public class DarkBrawler : Enemy
     {
         base.Start();
         if(GameManager.Instance.wave >= 75){
-            health = 75000;
+            health = 35000;
             damage = 150;
             speed = 25;
             goldDrops = 10;

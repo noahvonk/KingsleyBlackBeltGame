@@ -9,7 +9,7 @@ public class MiloDarkKnight : Enemy
     {
         base.Start();
         if(GameManager.Instance.wave >= 50){
-            health = 20000;
+            health = 1000;
             damage = 300;
             speed = 15;
             goldDrops = 5;

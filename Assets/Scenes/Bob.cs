@@ -9,7 +9,7 @@ public class Bob : Enemy
     {
         base.Start();
         if(GameManager.Instance.wave >= 50){
-            health = 250000;
+            health = 200000;
             damage = 2500;
             speed = 5;
             goldDrops = 750;

@@ -12,12 +12,12 @@ public class Jester : Enemy
     {
         base.Start();
         if(GameManager.Instance.wave >= 50){
-            health = rnd.Next(1000, 25001);
-        damage = rnd.Next(100, 15001);
-        speed = rnd.Next(15, 50);
+            health = rnd.Next(1000, 5001);
+        damage = rnd.Next(100, 5001);
+        speed = rnd.Next(15, 20);
         goldDrops = rnd.Next(10, 101);
         } else {
-        health = rnd.Next(10, 2501);
+        health = rnd.Next(10, 1501);
         damage = rnd.Next(10, 1501);
         speed = rnd.Next(15, 50);
         goldDrops = rnd.Next(10, 101);

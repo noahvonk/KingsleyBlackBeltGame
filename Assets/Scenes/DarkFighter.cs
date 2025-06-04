@@ -9,7 +9,7 @@ public class DarkFighter : Enemy
     {
         base.Start();
         if(GameManager.Instance.wave >= 50){
-            health = 2500;
+            health = 600;
             damage = 1000;
             speed = 30;
             goldDrops = 10;

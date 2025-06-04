@@ -6,19 +6,19 @@ using UnityEngine.UI;
 public class BaseUpgrades : MonoBehaviour
 {
     public void TroopTextSwitcher(){
-        if (GameManager.Instance.TroopNum == 0 && (GameManager.Instance.gold - 10000) >= 0){
-            GameManager.Instance.NewTroop.text = "Farmer";
-            GameManager.Instance.NewTroopDesc.text = "Health: 1500\nMoney: 50 (Makes Money for You)\nSpeed:0\nCost: 1500 || Cooldown: 120s"; 
-            GameManager.Instance.gold -= 10000; 
-            GameManager.Instance.NewTroopCost.text = "12500C";
-            TroopSpawner.Instanc.ThiefButton.SetActive(true);
+        if (GameManager.Instance.TroopNum == 0 && (GameManager.Instance.gold - 5000) >= 0){
+            GameManager.Instance.NewTroop.text = "Thief";
+            GameManager.Instance.NewTroopDesc.text = "Health: 500\nDamage: 500 \nSpeed: 35 (Fastest Troop) \nCost: 500 || Cooldown: 50s"; 
+            GameManager.Instance.gold -= 5000; 
+            GameManager.Instance.NewTroopCost.text = "10000C";
+            TroopSpawner.Instanc.FarmerButton.SetActive(true);
             GameManager.Instance.TroopNum += 1;
-        } else if(GameManager.Instance.TroopNum == 1 && (GameManager.Instance.gold - 12500) >= 0){
+        } else if(GameManager.Instance.TroopNum == 1 && (GameManager.Instance.gold - 10000) >= 0){
             GameManager.Instance.NewTroop.text = "Archer Tower";
             GameManager.Instance.NewTroopDesc.text = "Health: 10000\nDamage: 4500   (Shoots Arrows)\nSpeed: 0\nCost: 10000 || Cooldown: 300s"; 
-            GameManager.Instance.gold -= 12500; 
+            GameManager.Instance.gold -= 10000; 
             GameManager.Instance.NewTroopCost.text = "20000C";
-            TroopSpawner.Instanc.FarmerButton.SetActive(true);
+            TroopSpawner.Instanc.ThiefButton.SetActive(true);
             GameManager.Instance.TroopNum += 1;
         } else if (GameManager.Instance.TroopNum == 2 && (GameManager.Instance.gold - 20000) >= 0){
             GameManager.Instance.NewTroop.text = "Bahamut, The One";
@@ -40,13 +40,18 @@ public class BaseUpgrades : MonoBehaviour
 
     public void ProductionUpgrade()
     {
-        if(TroopSpawner.Instanc.ProductionUpgrade == 0 && (GameManager.Instance.gold - 10000) >= 0){
-            Debug.Log("Upg Start");
+        if(TroopSpawner.Instanc.ProductionUpgrade == 0 && (GameManager.Instance.gold - 7500) >= 0){
+            //Debug.Log("Upg Start");
+            TroopSpawner.Instanc.ProductionUpgrade += 1;
+            GameManager.Instance.gold -= 7500;
+            GameManager.Instance.ProductionUpgradeCost.text = "10000C";
+            //Debug.Log("Upg Finished");
+            GameManager.Instance.ProductionUpgradeText.text = "1";
+        } else if (TroopSpawner.Instanc.ProductionUpgrade == 1 && (GameManager.Instance.gold - 10000) >= 0){
             TroopSpawner.Instanc.ProductionUpgrade += 1;
             GameManager.Instance.gold -= 10000;
-            Debug.Log("Upg Finished");
-        } else {
-
+            GameManager.Instance.ProductionUpgradeCost.text = "MAX";
+            GameManager.Instance.ProductionUpgradeText.text = "2";
         }
     }
 

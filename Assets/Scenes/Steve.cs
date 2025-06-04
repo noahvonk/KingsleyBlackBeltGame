@@ -13,14 +13,14 @@ public class Steve : Enemy
     base.Start();
         if(GameManager.Instance.wave >= 50){
 
-            health = rnd.Next(100000, 1000001);
-        damage = rnd.Next(1000, 1000001);
-        speed = rnd.Next(1, 51);
+            health = rnd.Next(10000, 75001);
+        damage = rnd.Next(1000, 10001);
+        speed = rnd.Next(1, 11);
         goldDrops = rnd.Next(1, 10001);
         } else {
-        health = rnd.Next(1, 500001);
-        damage = rnd.Next(1000, 500001);
-        speed = rnd.Next(10, 51);
+        health = rnd.Next(1, 50001);
+        damage = rnd.Next(1000, 10001);
+        speed = rnd.Next(1, 11);
         goldDrops = rnd.Next(1, 10001);
         }
     }

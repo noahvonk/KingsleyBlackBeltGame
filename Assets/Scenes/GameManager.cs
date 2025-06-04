@@ -81,6 +81,7 @@ public class GameManager : MonoBehaviour
     public int TTS;
     public GameObject Haon;
     public GameObject TutText;
+    public GameObject SkipButton;
     public GameObject EndScreen;
     public GameObject LoseScreen;
     public GameObject Replay;
@@ -91,6 +92,9 @@ public class GameManager : MonoBehaviour
     public int TroopNum = 0;
 
     public GameObject Arrow;
+    public Text ProductionUpgradeText;
+    public Text ProductionUpgradeCost;
+
     //public bool DragnirActive;
     //public bool GameEnd = false;
     //public int dmgMulti = 1;
@@ -185,7 +189,7 @@ public class GameManager : MonoBehaviour
        } else if(TTS == 4){
         TutorialText.text = "The Houses on the top left, when clicked on and built, will give you money over time. The gold one is the one that gives the most money, and while the blue house provides money, the blue house provides less";
        } else if (TTS == 5) {
-        TutorialText.text = "If you clicked on them, a grid with white squares should show up within the castle. Move your mouse over to the grid and simply Click to place it down";
+        TutorialText.text = "If you clicked on them, a grid with white squares should show up within the castle. Move your mouse over to the grid after clicking on the house and simply click on one of the grids to place it down";
        } else if(TTS == 6){
         TutorialText.text = "These houses will provide gold, you can see how much you have on the top right of your screen. You need gold for practically everything in this game";
        } else if (TTS == 7) {
@@ -195,13 +199,13 @@ public class GameManager : MonoBehaviour
        } else if (TTS == 9) {
         TutorialText.text = "Once you press on the Button of a troop, if you click with your Mouse, the troop will be placed where your mouse is currently at";
        } else if(TTS == 10){
-        TutorialText.text = "You can stop putting down the troops with the Q key, and all the troops can be placed until you've reached your max amount, however, you can also only place 1 Hero on the map at a time";
+        TutorialText.text = "You can stop putting down the troops with the Q key, and all the troops can be placed until you've reached your max amount.";
        } else if (TTS == 11) {
-        TutorialText.text = "on the bottom left corner of your screen, you will see the upgrades menu. If you press the Anvil, you can upgrade your heroes damage, health, speed and even base health. You can also unlock new Troops with research upgrades";
+        TutorialText.text = "on the bottom left corner of your screen, you will see the upgrades menu. If you press the Anvil, you can upgrade your heroes damage, health, speed and even base health. You can also unlock new Troops with research upgrades and reduce cooldown times";
        } else if(TTS == 12){
-        TutorialText.text = "If you look above the upgrades menu, you will see a slider bar. This here will help you progress faster as it will speed up the game, this can go as slow as 0x speed and as fast as 5x the speed of the game.";
+        TutorialText.text = "Keep in mind that if just one wall breaks, you will no longer be able to increase your base health. Now, if you look above the upgrades menu, you will see a slider bar. This here will help you progress faster as it will speed up the game, this can go as slow as 0x speed and as fast as 5x the speed of the game.";
        } else if (TTS == 13) {
-        TutorialText.text = "After this tutorial has ended, the enemies will spawn soon, make sure to defend them. Enemies appear in waves, each one increasing in difficulty.";
+        TutorialText.text = "After this tutorial has ended, the enemies will spawn soon, make sure to defend them. Enemies appear in waves, each one increasing in difficulty. These enemies will drop some gold to aid in your kingdom.";
        } else if(TTS == 14){
         TutorialText.text = "One thing to know about enemies is that some only target one specific type of your defense, like the walls or your troops, but most target both. Beware, because after 10 waves as there will be a strong boss.";
        } else if(TTS == 15){ 
@@ -216,9 +220,21 @@ public class GameManager : MonoBehaviour
             Haon.SetActive(false); 
             TutText.SetActive(false);
             NextButton.SetActive(false);
+            SkipButton.SetActive(false);
             TutorialText.text = " ";
        }
        TTS++;
+    }
+
+    public void SkipText(){
+        StartCoroutine(GoldTimer());
+        TutorialOn = false;
+        Haon.SetActive(false); 
+        TutText.SetActive(false);
+        NextButton.SetActive(false);
+        SkipButton.SetActive(false);
+        TutorialText.text = " ";
+        TTS = 19;
     }
 
     
@@ -251,7 +267,7 @@ public class GameManager : MonoBehaviour
 
     public void BuyBuilding(int b)
     {
-        if(TTS <= 18){
+        if(TTS <= 18 ){
             
         } else {
             ChangeCurHouse(b);

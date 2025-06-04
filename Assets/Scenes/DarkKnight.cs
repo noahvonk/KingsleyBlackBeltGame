@@ -9,7 +9,7 @@ public class DarkKnight : Enemy
     {
         base.Start();
         if(GameManager.Instance.wave >= 50){
-            health = 25000;
+            health = 4500;
             damage = 250;
             speed = 25;
             goldDrops = 10;

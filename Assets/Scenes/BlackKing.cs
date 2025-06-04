@@ -8,7 +8,7 @@ public class BlackKing : Enemy
     {
         base.Start();
         if(GameManager.Instance.wave >= 50){
-            health = 20000;
+            health = 5000;
             damage = 500;
             speed = 15;
             goldDrops = 10;

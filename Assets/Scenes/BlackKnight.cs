@@ -10,7 +10,7 @@ public class BlackKnight : Enemy
     {
         base.Start();
         if(GameManager.Instance.wave >= 50){
-            health = 10000;
+            health = 2000;
             damage = 350;
             speed = 23;
             goldDrops = 20;

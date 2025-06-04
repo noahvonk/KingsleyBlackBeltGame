@@ -9,7 +9,7 @@ public class DarkPaladin : Enemy
     {
         base.Start();
         if(GameManager.Instance.wave >= 50){
-            health = 50000;
+            health = 10000;
             damage = 200;
             speed = 10;
             goldDrops = 10;
