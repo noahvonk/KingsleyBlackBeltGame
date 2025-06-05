@@ -834,7 +834,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallHP: 0
-  maxHp: 1000
+  maxHp: 2500
   health: {fileID: 0}
   target: {fileID: 3451915513457630076}
   WallText: {fileID: 936281164}
@@ -1502,7 +1502,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallHP: 0
-  maxHp: 1000
+  maxHp: 2500
   health: {fileID: 0}
   target: {fileID: 3451915512558392945}
   WallText: {fileID: 1529368931}
@@ -4010,8 +4010,8 @@ MonoBehaviour:
   - {fileID: 919847625}
   - {fileID: 166039351}
   - {fileID: 693006606}
-  timeBetweenWaves: 0
-  waveCountdown: 0
+  timeBetweenWaves: 1
+  waveCountdown: 1
 --- !u!1 &620427800
 GameObject:
   m_ObjectHideFlags: 0
@@ -5373,9 +5373,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 236710156}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 5
+  m_MaxValue: 10
   m_WholeNumbers: 0
-  m_Value: 1
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -7239,7 +7239,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallHP: 0
-  maxHp: 1000
+  maxHp: 2500
   health: {fileID: 0}
   target: {fileID: 3451915513080897698}
   WallText: {fileID: 825266187}
@@ -12916,7 +12916,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wallHP: 0
-  maxHp: 1000
+  maxHp: 2500
   health: {fileID: 0}
   target: {fileID: 3451915512956418747}
   WallText: {fileID: 564832579}

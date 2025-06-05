@@ -15,8 +15,8 @@ public class Farmer : Troops
 
     IEnumerator FarmerGoldTimer()
     {
-        yield return new WaitForSeconds(12);
-        GameManager.Instance.gold += (100);
+        yield return new WaitForSeconds(10);
+        GameManager.Instance.gold += (500);
         StartCoroutine(FarmerGoldTimer());
     }
 }
