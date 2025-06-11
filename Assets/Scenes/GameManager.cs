@@ -219,6 +219,7 @@ public class GameManager : MonoBehaviour
         TutorialText.text = "This marks the end of this tutorial, so make sure to defend your empire with all you got, okay? Watch out because as soon as you click off of this, the enemies will start spawning. Good luck! (I suggest using the slider to stop the game first if you're still confused)";
        } else if (TTS == 18) {
             StartCoroutine(GoldTimer());
+            //AudioManager.Instan.musicSource.clip = BackgroundMusic;
             TutorialOn = false;
             Haon.SetActive(false); 
             TutText.SetActive(false);
@@ -230,6 +231,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void SkipText(){
+        //AudioManager.Instan.musicSource.clip = BackgroundMusic;
         StartCoroutine(GoldTimer());
         TutorialOn = false;
         Haon.SetActive(false); 
