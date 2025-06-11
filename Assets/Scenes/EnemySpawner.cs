@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class EnemySpawner : MonoBehaviour
 {
+    public static EnemySpawner Instane;
+
     public enum SpawnState
     {
         Spawning,
@@ -37,6 +39,9 @@ public class EnemySpawner : MonoBehaviour
     private SpawnState state = SpawnState.Counting;
 
     // Start is called before the first frame update
+    void Awake(){
+        Instane = this;
+    }
     void Start()
     {
         //Tutorial();;

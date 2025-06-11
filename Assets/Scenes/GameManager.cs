@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
     public Building[] houseTypes;
 
     public int houseCount = 0;
-    public int houseEarnings = 45;
+    public int houseEarnings = 40;
 
     public bool buildMode = false;
     public bool TroopSpawning = false;
@@ -168,6 +168,9 @@ public class GameManager : MonoBehaviour
             }
         }
         */
+        if(wave >= 100){
+            EnemySpawner.Instane.waveCountdown = 999f;
+        }
         if(enemies.Count <= 0 && wave >= 100){
             Win();
         }
@@ -181,29 +184,29 @@ public class GameManager : MonoBehaviour
     public void ChangeCurText()
     {
        if(TTS == 1){
-        TutorialText.text = "This game is a wave defense game, the goal is to defend your castle from being conquered by the dark forces";
+        TutorialText.text = "This game is a wave defense game, the goal is to defend your castle from being conquered by the dark forces, My name is Haon and i am here to help you learn how to play this game";
        } else if(TTS == 2){
-        TutorialText.text = "My name is Haon and i am here to help you learn how to play this game";
-       } else if (TTS == 3) {
         TutorialText.text = "If you look at the middle of your screen, you will see a castle, defend that at all costs";
-       } else if(TTS == 4){
+       } else if (TTS == 3) {
         TutorialText.text = "The Houses on the top left, when clicked on and built, will give you money over time. The gold one is the one that gives the most money, and while the blue house provides money, the blue house provides less";
+       } else if(TTS == 4){
+        TutorialText.text = "If you clicked on one of the houses, a grid with white squares should show up within the castle. Move your mouse over to the grid after clicking on the house and simply click on one of the grids to place it down";
        } else if (TTS == 5) {
-        TutorialText.text = "If you clicked on them, a grid with white squares should show up within the castle. Move your mouse over to the grid after clicking on the house and simply click on one of the grids to place it down";
+        TutorialText.text = "These houses will provide gold, you can see how much you have on the top right of your screen. You need gold for practically everything in this game, be careful because you can go into debt, and once you do, there is a 2 second money restriction placed on you.";
        } else if(TTS == 6){
-        TutorialText.text = "These houses will provide gold, you can see how much you have on the top right of your screen. You need gold for practically everything in this game";
-       } else if (TTS == 7) {
         TutorialText.text = "You can see the amount of troops you can place down on the bottom of your screen. The blue house provides 5 more troop spaces per house placed";
-       } else if(TTS == 8){
+       } else if (TTS == 7) {
         TutorialText.text = "The troops are on the bottom right of the screen, press that button and a list of troops and buttons will show up. Each of the troops have a cooldown, so make sure you use them strategically";
-       } else if (TTS == 9) {
+       } else if(TTS == 8){
         TutorialText.text = "Once you press on the Button of a troop, if you click with your Mouse, the troop will be placed where your mouse is currently at";
-       } else if(TTS == 10){
+       } else if (TTS == 9) {
         TutorialText.text = "You can stop putting down the troops with the Q key, and all the troops can be placed until you've reached your max amount.";
-       } else if (TTS == 11) {
+       } else if(TTS == 10){
         TutorialText.text = "on the bottom left corner of your screen, you will see the upgrades menu. If you press the Anvil, you can upgrade your heroes damage, health, speed and even base health. You can also unlock new Troops with research upgrades and reduce cooldown times";
+       } else if (TTS == 11) {
+        TutorialText.text = "In that menu, every research cooldown upgrade decreases the cooldown of your troops by roughly 25%, adding up to a total of 50% across all troops.";
        } else if(TTS == 12){
-        TutorialText.text = "Keep in mind that if just one wall breaks, you will no longer be able to increase your base health. Now, if you look above the upgrades menu, you will see a slider bar. This here will help you progress faster as it will speed up the game, this can go as slow as 0x speed and as fast as 5x the speed of the game.";
+        TutorialText.text = "Now, if you look above the upgrades menu, you will see a slider bar. This here will help you progress faster as it will speed up the game, this can go as slow as 0x speed and as fast as 10x the speed of the game.";
        } else if (TTS == 13) {
         TutorialText.text = "After this tutorial has ended, the enemies will spawn soon, make sure to defend them. Enemies appear in waves, each one increasing in difficulty. These enemies will drop some gold to aid in your kingdom.";
        } else if(TTS == 14){
@@ -213,7 +216,7 @@ public class GameManager : MonoBehaviour
        } else if(TTS == 16){
         TutorialText.text = "The goal is to defend for 100 waves of enemies, and succesfully defend your base from the dark forces, go ahead and have fun trying to win against them.";
        } else if (TTS == 17) {
-        TutorialText.text = "This marks the end of this tutorial, so make sure to defend your empire with all you got, okay? Watch out because as soon as you click off of this, the enemies will start spawning. Good luck!";
+        TutorialText.text = "This marks the end of this tutorial, so make sure to defend your empire with all you got, okay? Watch out because as soon as you click off of this, the enemies will start spawning. Good luck! (I suggest using the slider to stop the game first if you're still confused)";
        } else if (TTS == 18) {
             StartCoroutine(GoldTimer());
             TutorialOn = false;
@@ -234,7 +237,7 @@ public class GameManager : MonoBehaviour
         NextButton.SetActive(false);
         SkipButton.SetActive(false);
         TutorialText.text = " ";
-        TTS = 19;
+        TTS = 99;
     }
 
     

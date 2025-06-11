@@ -10,7 +10,7 @@ public class Builder : Troops
     {
         base.Start();
         health = 1000;
-        speed = 1;
+        speed = 0;
         damage = 1;
         StartCoroutine(WallTimer());
     }
@@ -19,9 +19,12 @@ public class Builder : Troops
         {
         //Debug.Log("Wall Timer");
         yield return new WaitForSeconds(20);
-        foreach (GameObject walls in GameManager.Instance.Walls){
-            walls.GetComponent<WallHealth>().wallHP += 250;
-        };
+        //foreach (GameObject walls in GameManager.Instance.Walls){
+            GameManager.Instance.TopWall.GetComponent<WallHealth>().wallHP += 250;
+            GameManager.Instance.RightWall.GetComponent<WallHealth>().wallHP += 250;
+            GameManager.Instance.LeftWall.GetComponent<WallHealth>().wallHP += 250;
+            GameManager.Instance.BottomWall.GetComponent<WallHealth>().wallHP += 250;
+        //};
         StartCoroutine(WallTimer());
         }
 }

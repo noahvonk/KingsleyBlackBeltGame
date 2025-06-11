@@ -60,9 +60,12 @@ public class BaseUpgrades : MonoBehaviour
         //only upgrades wall 1
         if(GameManager.Instance.gold - 1500 >= 0){
             GameManager.Instance.gold -= 1500;
-            foreach (GameObject walls in GameManager.Instance.Walls)
+            //foreach (GameObject walls in GameManager.Instance.Walls)
         //WallHealth.Instance.wallHP += 1000;
-            walls.GetComponent<WallHealth>().wallHP += 1000;
+            GameManager.Instance.TopWall.GetComponent<WallHealth>().wallHP += 2500;
+            GameManager.Instance.RightWall.GetComponent<WallHealth>().wallHP += 2500;
+            GameManager.Instance.LeftWall.GetComponent<WallHealth>().wallHP += 2500;
+            GameManager.Instance.BottomWall.GetComponent<WallHealth>().wallHP += 2500;
             //walls.GetComponent<WallHealth>().maxHp += 1000;
         };
         

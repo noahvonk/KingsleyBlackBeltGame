@@ -8,7 +8,7 @@ public class CASEOH : Enemy
     protected override void Start()
     {
         base.Start();
-        health = 500000;
+        health = 125000;
         damage = 1000;
         speed = 5;
         goldDrops = 750;

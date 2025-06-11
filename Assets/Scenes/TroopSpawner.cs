@@ -62,7 +62,7 @@ public class TroopSpawner : MonoBehaviour
             if(GameManager.Instance.TTroops < GameManager.Instance.maxTroops){
         if ((GameManager.Instance.gold -= TroopCost) <= 1){
             TroopBuyModeOff();
-        } else if((GameManager.Instance.gold -= TroopCost) >= 1){
+        } else if((GameManager.Instance.gold -= TroopCost ) >= 1){
             PlaceTroop(mousePosition);
             GameManager.Instance.gold -= TroopCost;
         } 
