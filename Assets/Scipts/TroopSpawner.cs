@@ -27,6 +27,8 @@ public class TroopSpawner : MonoBehaviour
     public GameObject FarmerButton;
     public GameObject BahamutButton;
     public GameObject BrawlerButton;
+    public GameObject ShielderButton;
+    public GameObject PrinceButton;
     //Heros Hr;
 
     // Start is called before the first frame update
@@ -59,6 +61,7 @@ public class TroopSpawner : MonoBehaviour
             Vector3 mousePosition = m_Camera.ScreenToWorldPoint(Input.mousePosition);
             mousePosition = new Vector3(mousePosition.x, mousePosition.y, 5);
             //Debug.Log("Placed Troop");
+        //Troops are currently 3x the price their set at (Something to do with this if statement)
             if(GameManager.Instance.TTroops < GameManager.Instance.maxTroops){
         if ((GameManager.Instance.gold -= TroopCost) <= 1){
             TroopBuyModeOff();
@@ -70,7 +73,7 @@ public class TroopSpawner : MonoBehaviour
         } else {
 
         };
-        if(BahamutActive == false && GameManager.Instance.TroopNum == 4){
+        if(BahamutActive == false && GameManager.Instance.TroopNum == 5){
             BahamutButton.SetActive(true);
         } else if (BahamutActive == true){
             BahamutButton.SetActive(false);
@@ -149,6 +152,14 @@ public class TroopSpawner : MonoBehaviour
         } else if (SelectedTroop == Troops.Brawler){
             BrawlerButton.SetActive(false);
             StartCoroutine(BrawlerCooldown());
+            TroopBuyModeOff();
+        } else if (SelectedTroop == Troops.Shielder){
+            ShielderButton.SetActive(false);
+            StartCoroutine(ShielderCooldown());
+            TroopBuyModeOff();
+        } else if (SelectedTroop == Troops.Prince){
+            PrinceButton.SetActive(false);
+            StartCoroutine(PrinceCooldown());
             TroopBuyModeOff();
         } 
          //};
@@ -240,6 +251,22 @@ public class TroopSpawner : MonoBehaviour
     {
         TroopCost = 150;
         SelectedTroop = Troops.Brawler;
+        TroopBuyModeOn();
+        // move this to the wall builder troop and have it run it. WallBuilder();
+    }
+
+    public void OnShielderButtonPressed()
+    {
+        TroopCost = 25;
+        SelectedTroop = Troops.Shielder;
+        TroopBuyModeOn();
+        // move this to the wall builder troop and have it run it. WallBuilder();
+    }
+
+    public void OnPrinceButtonPressed()
+    {
+        TroopCost = 250;
+        SelectedTroop = Troops.Prince;
         TroopBuyModeOn();
         // move this to the wall builder troop and have it run it. WallBuilder();
     }
@@ -361,10 +388,40 @@ public class TroopSpawner : MonoBehaviour
         
     }
 
+    IEnumerator ShielderCooldown()
+    {
+        if(ProductionUpgrade >= 1){
+            yield return new WaitForSeconds(7);
+            ShielderButton.SetActive(true);
+        } else if (ProductionUpgrade >= 2){
+            yield return new WaitForSeconds(11);
+            ShielderButton.SetActive(true);
+        } else {
+            yield return new WaitForSeconds(15);
+            ShielderButton.SetActive(true);
+        }
+        
+    }
 
-    public enum Troops { Hero, Warrior, Spearman, Mage, Builder, Thief, Healer, ArcherTower, Farmer, Bahamut, Brawler, None, etc, misc}
+    IEnumerator PrinceCooldown()
+    {
+        if(ProductionUpgrade >= 1){
+            yield return new WaitForSeconds(30);
+            PrinceButton.SetActive(true);
+        } else if (ProductionUpgrade >= 2){
+            yield return new WaitForSeconds(45);
+            PrinceButton.SetActive(true);
+        } else {
+            yield return new WaitForSeconds(60);
+            PrinceButton.SetActive(true);
+        }
+        
+    }
+
+
+    public enum Troops { Hero, Warrior, Spearman, Shielder, Mage, Builder, Thief, Prince, Healer, ArcherTower, Farmer, Bahamut, Brawler, None, etc, misc}
     public Troops SelectedTroop = Troops.None;
 
-    [Header("Order is  Hero, Warrior, Spearman, Mage, Builder, Thief, Healer, Archer Tower, Farmer, Bahamut, Brawler, None "), SerializeField]
+    [Header("Order is  Hero, Warrior, Spearman, Shielder, Mage, Builder, Thief, Prince, Healer, Archer Tower, Farmer, Bahamut, Brawler, None "), SerializeField]
     private List<GameObject> TroopPrefabs = new();
 }
