@@ -86,7 +86,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -224,9 +224,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: 1ea40000
       m_LastClickedID: 0
-      m_ExpandedIDs: baf4ffff62f5ffff16faffff06610000
+      m_ExpandedIDs: 4043feff7843feffb643feff0046feff3446feff6446feffa648fefffe48feff6a4bfeff724efeffda5cfeff285dfeffe85dfeff185efeff165ffeff465ffeff765ffeff16faffff366000000e61000018610000e8610100d072010058730100d6740100688b0100a8aa0100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -524,9 +524,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -8.954623, y: 35.63458, z: -232.5676}
+    m_Target: {x: 528.21674, y: 145.82562, z: -1.47656}
     speed: 2
-    m_Value: {x: -8.954623, y: 35.63458, z: -232.5676}
+    m_Value: {x: 528.21674, y: 145.82562, z: -1.47656}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -577,9 +577,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 47.989223
+    m_Target: 338.5776
     speed: 2
-    m_Value: 47.989223
+    m_Value: 338.5776
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -614,7 +614,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -623,14 +623,14 @@ MonoBehaviour:
     y: 613
     width: 1484
     height: 326
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 11}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 10}
   m_Panes:
   - {fileID: 10}
   - {fileID: 11}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -672,22 +672,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Asset Prefabs
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 66
   m_LastFolders:
-  - Assets/Asset Prefabs
+  - Assets/Scenes
   m_LastFoldersGridSize: 66
   m_LastProjectPath: C:\Users\xplre\Documents\GitHub\KingsleyBlackBeltGame
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 63}
-    m_SelectedIDs: ac7a0000
-    m_LastClickedID: 31404
-    m_ExpandedIDs: 00000000787a00007a7a00007c7a00007e7a0000807a0000827a0000847a0000867a0000887a00008a7a00008c7a00008e7a0000907a0000927a0000947a0000967a0000987a00009a7a00009c7a00009e7a0000a07a000000ca9a3b
+    m_SelectedIDs: c67a0000
+    m_LastClickedID: 31430
+    m_ExpandedIDs: 00000000807a0000827a0000847a0000867a0000887a00008a7a00008c7a00008e7a0000907a0000927a0000947a0000967a0000987a00009a7a00009c7a00009e7a0000a07a0000a27a0000a47a0000a67a0000a87a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -715,7 +715,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000787a00007a7a00007c7a00007e7a0000807a0000827a0000847a0000867a0000887a00008a7a00008c7a00008e7a0000907a0000927a0000947a0000967a0000987a00009a7a00009c7a00009e7a0000a07a000000ca9a3b
+    m_ExpandedIDs: 00000000807a0000827a0000847a0000867a0000887a00008a7a00008c7a00008e7a0000907a0000927a0000947a0000967a0000987a00009a7a00009c7a00009e7a0000a07a0000a27a0000a47a0000a67a0000a87a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -740,9 +740,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 9c5f0000
-    m_LastClickedInstanceID: 24476
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 1ea40000
+    m_LastClickedInstanceID: 42014
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300006cc30000b69300001670000042680000a4650000a26300002ae70000a6e90000169b00006469000074610000ee6b0000046c0000826300007e630000ae6d0000eed80000400601005e060100586b0000f66d00007048010066260000b23f01000e25000002260000726d0000846e0000bc750000307c0000d2760000d676000040780000000000003c790000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -767,7 +767,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 83}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 66
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 209

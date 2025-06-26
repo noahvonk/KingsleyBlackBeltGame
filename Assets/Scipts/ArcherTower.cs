@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ArcherTower : Troops
 {
+     public GameObject ATower;
     // Start is called before the first frame update
     protected override void Start()
     {
@@ -16,7 +17,7 @@ public class ArcherTower : Troops
 
     IEnumerator ArrowCooldown(){
         yield return new WaitForSeconds(10);
-        GameObject Arrow = Instantiate(GameManager.Instance.Arrow);
+        GameObject Arrow = Instantiate(GameManager.Instance.Arrow, ATower.transform.position, ATower.transform.rotation);
         Arrow.transform.SetParent(TroopSpawner.Instanc.TroopParent.transform);
         StartCoroutine(ArrowCooldown());
     }

@@ -95,6 +95,8 @@ public class GameManager : MonoBehaviour
     public Text ProductionUpgradeText;
     public Text ProductionUpgradeCost;
 
+    public bool PauseScreenOn = false;
+
     //public bool DragnirActive;
     //public bool GameEnd = false;
     //public int dmgMulti = 1;
@@ -179,6 +181,17 @@ public class GameManager : MonoBehaviour
             HPText3.text = LeftWall.GetComponent<WallHealth>().wallHP.ToString();
             HPText4.text = BottomWall.GetComponent<WallHealth>().wallHP.ToString();
             //walls.GetComponent<WallHealth>().maxHp += 1000;
+
+        if(Input.GetKeyDown("escape")){
+            if(PauseScreenOn == false){
+                PauseScreenOn = true;
+                Time.timeScale = 0;
+            } else {
+                PauseScreenOn = false;
+                //Time.timeScale = slider.value;
+            }
+            
+        }
     }
 
     public void ChangeCurText()
@@ -272,15 +285,11 @@ public class GameManager : MonoBehaviour
 
     public void BuyBuilding(int b)
     {
-        if(TTS <= 18 ){
-            
-        } else {
             ChangeCurHouse(b);
             ShowTiles();
             customCursor.BuildMode(b);
             if(TroopSpawning == true){
                 TroopSpawning = false;
-            }
         };
     }
 

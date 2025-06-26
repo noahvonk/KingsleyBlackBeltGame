@@ -1020,11 +1020,11 @@ MonoBehaviour:
   health: 10000
   damage: 0
   speed: 0
-  goldDrops: 0
   waitTime: 2147483647
   canAttack: 1
   isAttacking: 0
   curTarget: {fileID: 0}
+  ATower: {fileID: 1824416424260298}
 --- !u!1 &1849251020213892
 GameObject:
   m_ObjectHideFlags: 0

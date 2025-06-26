@@ -65,7 +65,7 @@ public class TroopSpawner : MonoBehaviour
             if(GameManager.Instance.TTroops < GameManager.Instance.maxTroops){
         if ((GameManager.Instance.gold -= TroopCost) <= 1){
             TroopBuyModeOff();
-        } else if((GameManager.Instance.gold -= TroopCost ) >= 1){
+        } else {
             PlaceTroop(mousePosition);
             GameManager.Instance.gold -= TroopCost;
         } 
@@ -170,7 +170,7 @@ public class TroopSpawner : MonoBehaviour
     public void OnWarriorButtonPressed()
     {
         SelectedTroop = Troops.Warrior;
-        TroopCost = 10;
+        TroopCost = 15;
         TroopBuyModeOn();
     }
 
@@ -190,21 +190,21 @@ public class TroopSpawner : MonoBehaviour
 
     public void OnSpearmanButtonPressed()
     {
-        TroopCost = 15;
+        TroopCost = 25;
         SelectedTroop = Troops.Spearman;
         TroopBuyModeOn();
     }
 
     public void OnWizardButtonPressed()
     {
-         TroopCost = 75;
+         TroopCost = 125;
         SelectedTroop = Troops.Mage;
         TroopBuyModeOn();
     }
 
     public void OnBuilderButtonPressed()
     {
-        TroopCost = 1000;
+        TroopCost = 1500;
         SelectedTroop = Troops.Builder;
         TroopBuyModeOn();
         // move this to the wall builder troop and have it run it. WallBuilder();
@@ -212,7 +212,7 @@ public class TroopSpawner : MonoBehaviour
 
     public void OnThiefButtonPressed()
     {
-        TroopCost = 167;
+        TroopCost = 250;
         SelectedTroop = Troops.Thief;
         TroopBuyModeOn();
         // move this to the wall builder troop and have it run it. WallBuilder();
@@ -226,14 +226,14 @@ public class TroopSpawner : MonoBehaviour
     }
     public void OnArcherTowerButtonPressed()
     {
-        TroopCost = 3333;
+        TroopCost = 5000;
         SelectedTroop = Troops.ArcherTower;
         TroopBuyModeOn();
         // move this to the wall builder troop and have it run it. WallBuilder();
     }
     public void OnFarmerButtonPressed()
     {
-        TroopCost = 500;
+        TroopCost = 750;
         SelectedTroop = Troops.Farmer;
         TroopBuyModeOn();
         // move this to the wall builder troop and have it run it. WallBuilder();
@@ -241,7 +241,7 @@ public class TroopSpawner : MonoBehaviour
 
     public void OnBahamutButtonPressed()
     {
-        TroopCost = 33333;
+        TroopCost = 50000;
         SelectedTroop = Troops.Bahamut;
         TroopBuyModeOn();
         // move this to the wall builder troop and have it run it. WallBuilder();
@@ -249,7 +249,7 @@ public class TroopSpawner : MonoBehaviour
 
     public void OnBrawlerButtonPressed()
     {
-        TroopCost = 150;
+        TroopCost = 225;
         SelectedTroop = Troops.Brawler;
         TroopBuyModeOn();
         // move this to the wall builder troop and have it run it. WallBuilder();
@@ -257,7 +257,7 @@ public class TroopSpawner : MonoBehaviour
 
     public void OnShielderButtonPressed()
     {
-        TroopCost = 25;
+        TroopCost = 50;
         SelectedTroop = Troops.Shielder;
         TroopBuyModeOn();
         // move this to the wall builder troop and have it run it. WallBuilder();
@@ -265,7 +265,7 @@ public class TroopSpawner : MonoBehaviour
 
     public void OnPrinceButtonPressed()
     {
-        TroopCost = 250;
+        TroopCost = 375;
         SelectedTroop = Troops.Prince;
         TroopBuyModeOn();
         // move this to the wall builder troop and have it run it. WallBuilder();
@@ -423,5 +423,5 @@ public class TroopSpawner : MonoBehaviour
     public Troops SelectedTroop = Troops.None;
 
     [Header("Order is  Hero, Warrior, Spearman, Shielder, Mage, Builder, Thief, Prince, Healer, Archer Tower, Farmer, Bahamut, Brawler, None "), SerializeField]
-    private List<GameObject> TroopPrefabs = new();
+    public List<GameObject> TroopPrefabs = new();
 }

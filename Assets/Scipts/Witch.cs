@@ -9,6 +9,7 @@ public class Witch : Enemy
 
    protected override void Start()
     {
+        StartCoroutine(GoblinSpawn());
         base.Start();
         if(GameManager.Instance.wave >= 50){
             health = 5000;
@@ -21,11 +22,10 @@ public class Witch : Enemy
         speed = 1;
         goldDrops = 25;
         }
-        StartCoroutine(GoblinSpawn());
     }
 
     IEnumerator GoblinSpawn(){
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(3);
         //Debug.Log("Pos Found");
         GameObject SpawnedGoblin = Instantiate(Goblin, DWitch.transform.position, DWitch.transform.rotation);
         //Debug.Log("Goblin Spawned");
