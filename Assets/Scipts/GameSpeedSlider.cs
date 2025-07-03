@@ -5,7 +5,11 @@ using UnityEngine.UI;
 
 public class GameSpeedSlider : MonoBehaviour
 {
+    public static GameSpeedSlider Inst;
     // Start is called before the first frame update
+    void Awake(){
+        Inst = this;
+    }
     void Start()
     {
         labelText = GetComponent<Text>();
@@ -24,7 +28,7 @@ public class GameSpeedSlider : MonoBehaviour
     }
 
     [SerializeField]
-    Slider slider;
+    public Slider slider;
 
     private Text labelText;
     

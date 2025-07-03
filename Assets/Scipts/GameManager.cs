@@ -95,7 +95,8 @@ public class GameManager : MonoBehaviour
     public Text ProductionUpgradeText;
     public Text ProductionUpgradeCost;
 
-    public bool PauseScreenOn = false;
+    public GameObject PauseScreen;
+    public bool PauseScreenOn;
 
     //public bool DragnirActive;
     //public bool GameEnd = false;
@@ -184,11 +185,15 @@ public class GameManager : MonoBehaviour
 
         if(Input.GetKeyDown("escape")){
             if(PauseScreenOn == false){
+                PauseScreen.SetActive(true);
                 PauseScreenOn = true;
+                grid.SetActive(false);
                 Time.timeScale = 0;
             } else {
+                PauseScreen.SetActive(false);
                 PauseScreenOn = false;
-                //Time.timeScale = slider.value;
+                grid.SetActive(true);
+                Time.timeScale = GameSpeedSlider.Inst.slider.value;
             }
             
         }

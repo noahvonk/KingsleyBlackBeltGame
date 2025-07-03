@@ -71,6 +71,7 @@ public class Troops : HumanoidAI
     public override void DoDamage()
     {
         //Debug.Log("Attacking");
+        //AudioManager.Instan.Attack.Play();
         curTarget.transform.GetComponent<Enemy>().TakeDamage(damage);
         canAttack = false;
         StartCoroutine(WaitOnAttack());
