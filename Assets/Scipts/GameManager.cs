@@ -98,6 +98,9 @@ public class GameManager : MonoBehaviour
     public GameObject PauseScreen;
     public bool PauseScreenOn;
 
+    public bool SoundEffectsOn = true;
+    public bool MusicOn = true;
+
     //public bool DragnirActive;
     //public bool GameEnd = false;
     //public int dmgMulti = 1;
