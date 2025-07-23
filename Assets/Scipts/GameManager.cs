@@ -120,35 +120,11 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
-        if (Input.GetMouseButtonDown(0) && TutorialOn == true){
-            //Debug.Log("Mouse Down");
-            if(TTS >= 18){
-                TutorialOn = false;
-                Haon.SetActive(false); 
-                TutText.SetActive(false);
-                TutorialText.text = " ";
-                //TutorialText.SetActive(false);
-            } else {
-                TTS++;
-                ChangeCurText();
-            }
-        }
-        */
+        
         GoldText.text = gold.ToString();
         WaveText.text = wave.ToString();
         TroopsText.text = TTroops.ToString();
         MaxTroopsText.text = maxTroops.ToString();
-        /*
-        if(TroopSpawner.Instanc.HeroActive == true && ManagerModeOn == true){
-        foreach (GameObject heros in Troops){
-        HeroDMGText.text = heros.GetComponent<Heros>().damage.ToString();
-        HeroHPText.text = heros.GetComponent<Heros>().health.ToString();
-        HeroSPDText.text = heros.GetComponent<Heros>().speed.ToString();
-        };
-        };
-        */
-        //TroopSpawner.Instance.TTroops = Troops.Count;
         if(targets.Count == 0)
         {
             wallsDead = true;
@@ -198,7 +174,7 @@ public class GameManager : MonoBehaviour
                 grid.SetActive(true);
                 Time.timeScale = GameSpeedSlider.Inst.slider.value;
             }
-            
+        
         }
     }
 
