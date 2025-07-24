@@ -96,10 +96,12 @@ public class GameManager : MonoBehaviour
     public Text ProductionUpgradeCost;
 
     public GameObject PauseScreen;
-    public bool PauseScreenOn;
+    public bool PauseScreenOn = true;
 
-    public bool SoundEffectsOn = true;
+    //public bool SoundEffectsOn = true;
     public bool MusicOn = true;
+
+    public Text TroopModeText;
 
     //public bool DragnirActive;
     //public bool GameEnd = false;
@@ -162,6 +164,12 @@ public class GameManager : MonoBehaviour
                 
             };
         }
+
+        if(TroopSpawning == true){
+            TroopModeText.text = "Troop Spawning ON";
+        } else {
+            TroopModeText.text = " ";
+        }
         /*
         if(Input.GetKeyDown(KeyCode.Z))
         {
@@ -180,25 +188,32 @@ public class GameManager : MonoBehaviour
         if(enemies.Count <= 0 && wave >= 100){
             Win();
         }
+        if(TTS <= 18){
+            HPText1.text = " ";
+            HPText2.text = " ";
+            HPText3.text = " ";
+            HPText4.text = " ";
+        } else {
             HPText1.text = TopWall.GetComponent<WallHealth>().wallHP.ToString();
             HPText2.text = RightWall.GetComponent<WallHealth>().wallHP.ToString();
             HPText3.text = LeftWall.GetComponent<WallHealth>().wallHP.ToString();
             HPText4.text = BottomWall.GetComponent<WallHealth>().wallHP.ToString();
+        };
+
             //walls.GetComponent<WallHealth>().maxHp += 1000;
 
         if(Input.GetKeyDown("escape")){
-            if(PauseScreenOn == false){
-                PauseScreen.SetActive(true);
-                PauseScreenOn = true;
-                grid.SetActive(false);
-                Time.timeScale = 0;
-            } else {
+            if(PauseScreenOn == true){
                 PauseScreen.SetActive(false);
                 PauseScreenOn = false;
                 grid.SetActive(true);
                 Time.timeScale = GameSpeedSlider.Inst.slider.value;
+            } else if(PauseScreenOn == false) {
+                PauseScreen.SetActive(true);
+                PauseScreenOn = true;
+                grid.SetActive(false);
+                Time.timeScale = 0;
             }
-            
         }
     }
 
@@ -219,15 +234,15 @@ public class GameManager : MonoBehaviour
        } else if (TTS == 7) {
         TutorialText.text = "The troops are on the bottom right of the screen, press that button and a list of troops and buttons will show up. Each of the troops have a cooldown, so make sure you use them strategically";
        } else if(TTS == 8){
-        TutorialText.text = "Once you press on the Button of a troop, if you click with your Mouse, the troop will be placed where your mouse is currently at";
+        TutorialText.text = "By the way, the Hero troop is a revenge like troop. It can only be spawned after a troop on the field has died. This hero is also the only troop that can be upgraded, the hero upgrades will only affect the heros that are currently placed on the field. ";
        } else if (TTS == 9) {
-        TutorialText.text = "You can stop putting down the troops with the Q key, and all the troops can be placed until you've reached your max amount.";
+        TutorialText.text = "Once you press on the Button of a troop, if you click with your Mouse, the troop will be placed where your mouse is currently at. You can stop putting down the troops with the Q key, and all the troops can be placed until you've reached your max amount.";
        } else if(TTS == 10){
         TutorialText.text = "on the bottom left corner of your screen, you will see the upgrades menu. If you press the Anvil, you can upgrade your heroes damage, health, speed and even base health. You can also unlock new Troops with research upgrades and reduce cooldown times";
        } else if (TTS == 11) {
-        TutorialText.text = "In that menu, every research cooldown upgrade decreases the cooldown of your troops by roughly 25%, adding up to a total of 50% across all troops.";
+        TutorialText.text = "In that menu, every research cooldown upgrade decreases the cooldown of your troops by roughly 25%, adding up to a total of 50% across all troops, excluding the Hero.";
        } else if(TTS == 12){
-        TutorialText.text = "Now, if you look above the upgrades menu, you will see a slider bar. This here will help you progress faster as it will speed up the game, this can go as slow as 0x speed and as fast as 10x the speed of the game.";
+        TutorialText.text = "Now, if you look above the upgrades menu, you will see a slider bar. This here will help you progress faster as it will speed up the game, this can go as slow as 0x speed and as fast as 10x the speed of the game. You can also press 'Escape' to pause the game and mute the music, or return back to the start screen.";
        } else if (TTS == 13) {
         TutorialText.text = "After this tutorial has ended, the enemies will spawn soon, make sure to defend them. Enemies appear in waves, each one increasing in difficulty. These enemies will drop some gold to aid in your kingdom.";
        } else if(TTS == 14){
@@ -373,6 +388,21 @@ public class GameManager : MonoBehaviour
         };
         SceneManager.LoadScene(3);
         }
+    }
+
+    public void PauseButtonSwitcher()
+    {
+        if(PauseScreenOn == true){
+                PauseScreen.SetActive(false);
+                PauseScreenOn = false;
+                grid.SetActive(true);
+                Time.timeScale = GameSpeedSlider.Inst.slider.value;
+            } else if(PauseScreenOn == false) {
+                PauseScreen.SetActive(true);
+                PauseScreenOn = true;
+                grid.SetActive(false);
+                Time.timeScale = 0;
+            }
     }
 
     

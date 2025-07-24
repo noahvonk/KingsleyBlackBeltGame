@@ -71,27 +71,30 @@ public class AudioManager : MonoBehaviour
         };
 
 
-        if(GameManager.Instance.SoundEffectsOn == false)
+        /*if(GameManager.Instance.SoundEffectsOn == false)
         {
             SFXSource = null;
         }else
         {
             
         }
+        */
     }
 
     public void MusicChanger()
     {
         if (GameManager.Instance.MusicOn == true) {
+            Debug.Log("MusicOff");
             GameManager.Instance.MusicOn = false;
             //MusicControl.SetActive(false);
         } else {
+            Debug.Log("MusicOn");
             GameManager.Instance.MusicOn = true;
             //MusicControl.SetActive(true);
         };
     }
 
-    public void SoundEffectChanger()
+    /*public void SoundEffectChanger()
     {
         if (GameManager.Instance.SoundEffectsOn == true)
         {
@@ -104,4 +107,5 @@ public class AudioManager : MonoBehaviour
             //SoundEffectsControl.SetActive(true);
         };
     }
+    */
 };
