@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class TroopsCursor : MonoBehaviour
 {
-   public GameObject Warrior;
-   public GameObject Spearman;
-   public GameObject Shieldman;
-   public GameObject Brawler;
-   public GameObject Builder;
-   public GameObject Farmer;
-   public GameObject Thief;
-   public GameObject Prince;
-   public GameObject ArcherTower;
-   public GameObject Bahamut;
+   [SerializeField] Texture2D Warrior;
+   [SerializeField] Texture2D Spearman;
+   [SerializeField] Texture2D Shieldman;
+   [SerializeField] Texture2D Wizard;
+   [SerializeField] Texture2D Brawler;
+   [SerializeField] Texture2D Builder;
+   [SerializeField] Texture2D Farmer;
+   [SerializeField] Texture2D Thief;
+   [SerializeField] Texture2D Prince;
+   [SerializeField] Texture2D ArcherTower;
+   [SerializeField] Texture2D Bahamut;
 
    //public image warriorImg;
     // Start is called before the first frame update

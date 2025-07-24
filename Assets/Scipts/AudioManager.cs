@@ -16,7 +16,6 @@ public class AudioManager : MonoBehaviour
    public AudioClip Death;
    public AudioClip RecieveDamage;
    public AudioClip WallAttack;
-   public bool MusicOn = true;
 
    //public GameObject MusicControl;
    //public GameObject SoundEffectsControl;
@@ -30,7 +29,6 @@ public class AudioManager : MonoBehaviour
         musicSource.Play();
    }
 
-<<<<<<< Updated upstream
     public void Update() {
         if (GameManager.Instance.MusicOn == false)
         {
@@ -106,43 +104,4 @@ public class AudioManager : MonoBehaviour
             //SoundEffectsControl.SetActive(true);
         };
     }
-=======
-   public void Update(){
-      if(MusicOn == true){
-     if(GameManager.Instance.TTS >= 19 && musicSource.clip != BackgroundMusic && GameManager.Instance.wave <= 24){
-        //Debug.Log("Music Change");
-        musicSource.clip = BackgroundMusic;
-        musicSource.Play();
-     } else {
-
-     };
-      } else {
-
-      };
-
-   if(MusicOn == true){
-     if(GameManager.Instance.wave >= 25 && musicSource.clip != Wave25OnwardsMusic && GameManager.Instance.wave <= 49){
-        musicSource.clip = Wave25OnwardsMusic;
-        musicSource.Play();
-     } else if (GameManager.Instance.wave >= 50 && musicSource.clip != Wave50OnwardsMusic && GameManager.Instance.wave <= 74){
-        musicSource.clip = Wave50OnwardsMusic;
-        musicSource.Play();
-     } else if (GameManager.Instance.wave >= 75 && musicSource.clip != Wave75OnwardsMusic && GameManager.Instance.wave <= 98){
-        musicSource.clip = Wave75OnwardsMusic;
-        musicSource.Play();
-    } else if (GameManager.Instance.wave >= 99 && musicSource.clip != FinalWaveMusic){
-        musicSource.clip = FinalWaveMusic;
-        musicSource.Play();
-    } else {
-
-   };
-   } else {
-
-   };
-
-}
-
-
-   
->>>>>>> Stashed changes
 };
