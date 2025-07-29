@@ -5,7 +5,6 @@
 /Library/
 /Temp/
 /Obj/
-/Build/
 /Builds/
 /Logs/
 /MemoryCaptures/
@@ -58,3 +57,4 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+GUID.txt
