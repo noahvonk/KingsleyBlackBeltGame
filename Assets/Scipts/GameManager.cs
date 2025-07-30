@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
 {   
     public static GameManager Instance;
 
-    [SerializeField] private PerkManager perkManager;
+    //[SerializeField] private PerkManager perkManager;
 
     public int gold;
     public Text GoldText;
