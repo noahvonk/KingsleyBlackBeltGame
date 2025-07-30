@@ -242,7 +242,7 @@ public class GameManager : MonoBehaviour
        } else if (TTS == 11) {
         TutorialText.text = "In that menu, every research cooldown upgrade decreases the cooldown of your troops by roughly 25%, adding up to a total of 50% across all troops, excluding the Hero.";
        } else if(TTS == 12){
-        TutorialText.text = "Now, if you look above the upgrades menu, you will see a slider bar. This here will help you progress faster as it will speed up the game, this can go as slow as 0x speed and as fast as 10x the speed of the game. You can also press 'Escape' to pause the game and mute the music, or return back to the start screen.";
+        TutorialText.text = "Now, if you look above the upgrades menu, you will see a slider bar. This here will help you progress faster as it will speed up the game, this can go as slow as 1x speed and as fast as 10x the speed of the game. You can also press 'Escape' to pause the game and mute the music, or return back to the start screen.";
        } else if (TTS == 13) {
         TutorialText.text = "After this tutorial has ended, the enemies will spawn soon, make sure to defend them. Enemies appear in waves, each one increasing in difficulty. These enemies will drop some gold to aid in your kingdom.";
        } else if(TTS == 14){
@@ -373,7 +373,7 @@ public class GameManager : MonoBehaviour
             foreach (GameObject enemy in enemies){
             Destroy(enemy);
             };
-            SceneManager.LoadScene(4);
+            SceneManager.LoadScene(3);
     }
     
 
@@ -386,7 +386,7 @@ public class GameManager : MonoBehaviour
         foreach (GameObject enemy in enemies){
             Destroy(enemy);
         };
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(2);
         }
     }
 

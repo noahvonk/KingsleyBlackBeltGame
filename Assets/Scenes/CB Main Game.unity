@@ -5652,10 +5652,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1997603138}
   m_HandleRect: {fileID: 236710156}
   m_Direction: 0
-  m_MinValue: 0
+  m_MinValue: 1
   m_MaxValue: 10
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -6008,7 +6008,7 @@ MonoBehaviour:
     m_BestFit: 1
     m_MinSize: 1
     m_MaxSize: 300
-    m_Alignment: 4
+    m_Alignment: 7
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -10339,7 +10339,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acf35ed152f977b40b2ef4a335f2c5df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  perkManager: {fileID: 0}
   gold: 500
   GoldText: {fileID: 534061536}
   WaveText: {fileID: 930033820}
